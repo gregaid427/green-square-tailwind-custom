@@ -74,7 +74,7 @@ function JobSeekerSignup(props) {
   return (
     <>
       <div
-        className={`justify-center  bg-no-repeat bg-cover bg-center md:h-screen sm:h-screen
+        className={`justify-center  bg-no-repeat bg-cover bg-center md:sm:h-max sm:sm:h-max
     
     
     `}
