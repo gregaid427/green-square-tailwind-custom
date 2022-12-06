@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 // import { UserContext } from "../../Context/auth.context";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 import { useNavigate } from "react-router-dom";
-import Background from "./../../Assets/images/formal-handshake.jpeg";
+import Background from "./../../Assets/images/bg2.jpg";
 import { Link } from "react-router-dom";
 
 function ResetPassword(props) {

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import LoadingModal from "../../Components/Modal/loading-modal.component";
 // import { UserContext } from "../../Context/auth.context";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
-import Background from "./../../Assets/images/background2.jpg";
+import Background from "./../../Assets/images/bg2.jpg";
 
 
 function ForgotPassword(props) {
@@ -92,7 +92,7 @@ function ForgotPassword(props) {
                         />
                       </div>
                   
-                      <div className="flex k justify-between flex-col">
+                      <div className="flex justify-between flex-col">
                         <label for="Label">
                         
                           <Link to="/login">

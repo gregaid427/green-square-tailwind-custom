@@ -156,7 +156,7 @@ function Login(props) {
                         <span className="text-md font-light mr-2 ">
                         Just heard about us? 
                         </span>
-                        <Link to="/forgot-password">
+                        <Link to="/job-seeker-signup">
                           {" "}
                           <span className="text-md font-light text-green-500 ">
                           Sign Up
