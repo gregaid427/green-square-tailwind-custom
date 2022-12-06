@@ -54,7 +54,7 @@ function GuidePage(props) {
           With Green Square, finding the right candidate has never been easier.
         </h3>
 
-        <div className="flex md:px-[130px] md:gap-4 sm:gap-1 w-full sm:flex-col md:flex-row   justify-between ">
+        <div className="flex md:px-[130px] md:gap-2 sm:gap-1 w-full sm:flex-col md:flex-row   justify-between ">
           {" "}
           <input
             required
