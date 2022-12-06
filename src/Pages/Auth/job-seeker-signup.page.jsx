@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 import { Link, useNavigate } from "react-router-dom";
 // import LoadingModal from "../../Components/Modal/loading-modal.component";
-import Background from "./../../Assets/images/formal-handshake.jpeg";
+import Background from "./../../Assets/images/background2.jpg";
 
 function JobSeekerSignup(props) {
   props.setShowNavBar(false);
@@ -80,7 +80,7 @@ function JobSeekerSignup(props) {
     `}
         style={{ backgroundImage: `url(${Background})` }}
       >
-        <div className="wrapper mx-auto sm:pb-8 ">
+        <div className="wrapper mx-auto sm:pb-8 md:pb-[70px] ">
           <div className="flex sm:justify-center md:justify-start ">
             {" "}
             <img src={GreenSquareLogo} className=" w-[200px]   " />

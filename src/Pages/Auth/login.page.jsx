@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import GoogleIcon from "@mui/icons-material/Google";
 // import LinkedInIcon from "@mui/icons-material/LinkedIn";
 // import FacebookIcon from "@mui/icons-material/Facebook";
-import Background from "./../../Assets/images/formal-handshake.jpeg";
+import Background from "./../../Assets/images/background1.jpg";
 
 function Login(props) {
   props.setShowNavBar(false);

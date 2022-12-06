@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import LoadingModal from "../../Components/Modal/loading-modal.component";
 // import { UserContext } from "../../Context/auth.context";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
-import Background from "./../../Assets/images/formal-handshake.jpeg";
+import Background from "./../../Assets/images/background2.jpg";
 
 
 function ForgotPassword(props) {
