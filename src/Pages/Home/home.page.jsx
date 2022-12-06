@@ -25,7 +25,7 @@ function Home(props) {
           <div className="flex justify-center flex-col items-center gap-7  my-auto ">
             <h3 className="md:text-7xl sm:text-5xl text-white">It all starts here.</h3>
             <div className="grid grid-cols-2 md:grid-flow-col md:w-7/12 sm:w-12/12 gap-3  sm:flex sm:flex-col">
-              <div className="flex flex-col justify-between rounded-xl px-5 py-6 w-full row-span-1 bg-green-600 bg  content-center mx-auto  ">
+              <div className="flex flex-col justify-between rounded-xl px-5 py-4 w-full row-span-1 bg-green-600 bg  content-center mx-auto  ">
                 <h4
                   
                   className=" md:text-3xl sm:text-3xl text-center text-white"
@@ -43,7 +43,7 @@ function Home(props) {
                 </div>
                 </Link>
               </div>
-              <div className="flex flex-col justify-between rounded-xl px-5 py-6 w-full row-span-1 bg-green-600 bg  content-center mx-auto  ">
+              <div className="flex flex-col justify-between rounded-xl px-5 py-4 w-full row-span-1 bg-green-600 bg  content-center mx-auto  ">
                 <h4
                   
                   className="md:text-3xl sm:text-3xl text-4xl text-center text-white"
