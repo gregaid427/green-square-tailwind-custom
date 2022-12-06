@@ -83,7 +83,7 @@ function CompanySignup(props) {
         </h3>
 
         <div className="flex flex-row">
-          <div className=" flex-col md:w-4/12 sm:w-11/12 mt-10  mx-auto    gap-3 rounded-md shadow-lg ">
+          <div className=" flex-col md:w-4/12 sm:w-11/12 mt-2  mx-auto    gap-3 rounded-md shadow-lg ">
             <div className="flex flex-col items-center justify-center "></div>
 
             <div className=" px-5 bg-white py-5 rounded-xl ">
