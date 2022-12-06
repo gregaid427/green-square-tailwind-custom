@@ -32,7 +32,7 @@ function Home(props) {
                 >
                   The career of <br /> your dreams.
                 </h4>{" "}
-                <Link  to="/employee-guide" >
+                <Link  to="/company-guide" >
                 <div
                  
                   className=" justify-end w-8/12 md:p-3 sm:p-2 mt-2 align-bottom  rounded-md text-3xl mx-auto  text-center fw-bold bg-yellow-200 text-black"
