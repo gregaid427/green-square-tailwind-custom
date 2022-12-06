@@ -57,7 +57,7 @@ function Home(props) {
                   
                 // onClick={(e) => setIsCompany(true)}
                 >
-                  JOB SEEKER
+                  EMPLOYERS
                 </div>
                 </Link>
               </div>
