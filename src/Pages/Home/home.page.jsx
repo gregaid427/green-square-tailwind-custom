@@ -21,7 +21,7 @@ function Home(props) {
         <div className="wrapper mx-auto sm:pb-8 ">
           <div className="flex sm:justify-center md:justify-start " >  <img src={GreenSquareLogo} className=" w-[200px]   " /></div>
         
-          <div className="  md:mt-[200px] sm:mt-20 " >
+          <div className="  md:mt-[180px] sm:mt-20 " >
           <div className="flex justify-center flex-col items-center gap-7  my-auto ">
             <h3 className="md:text-7xl sm:text-5xl text-white">It all starts here.</h3>
             <div className="grid grid-cols-2 md:grid-flow-col md:w-7/12 sm:w-12/12 gap-3  sm:flex sm:flex-col">
