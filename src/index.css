@@ -32,3 +32,8 @@ code {
       padding: 0px 90px;
     }
     } */
+
+    .how-it-works-img {
+      background-image: url("./Assets/images/african-man-black-suit-big-tv-screen-guy-shows-presentation.png");
+      background-size: cover;
+    }

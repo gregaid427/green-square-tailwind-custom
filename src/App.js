@@ -14,8 +14,8 @@ import Home from "./Pages/Home/home.page";
 // import ManageResumeDashboard from "./Pages/Candidates/manage-resume.pages";
 // import MyProfilePage from "./Pages/Account/my-profile.pages";
 // import MyApplicationsPage from "./Pages/Candidates/my-applications.pages";
-// import CompanyGuide from "./Pages/Guide/company-guide.pages";
-// import EmployeeGuide from "./Pages/Guide/employee-guide.pages";
+import CompanyGuide from "./Pages/Guide/company-guide.pages";
+import EmployeeGuide from "./Pages/Guide/employee-guide.pages";
 // import BrowseJobs from "./Pages/Jobs/browse-jobs.pages";
 // import JobsPostedByCompany from "./Pages/Company/jobs-posted-by-company.pages";
 // import BrowseCVs from "./Pages/Company/browse-cvs.pages";
@@ -30,8 +30,8 @@ import Home from "./Pages/Home/home.page";
 // import BrowseSchoolApplicantCVs from "./Pages/Company/browse-applicants.pages";
 import ForgotPassword from "./Pages/Auth/forgot-password.page";
 import ResetPassword from "./Pages/Auth/reset-password.page";
-// import { UserProvider } from "./Context/auth.context";
-// import JobsProvider from "./Context/jobs.context";
+import { UserProvider } from "./Context/auth.context";
+import JobsProvider from "./Context/jobs.context";
 // import CompanyFaqs from "./Pages/faqs/company-faqs.pages";
 // import JobseekerFaqs from "./Pages/faqs/job-seeker-faqs.pages";
 
@@ -41,7 +41,8 @@ function App() {
   return (
     <>
       <Router>
-      
+      <UserProvider>
+          <JobsProvider>
    
             <Routes>
               <Route
@@ -69,7 +70,7 @@ function App() {
                 element={<JobSeekerSignup setShowNavBar={setShowNavBar} />}
               />{" "} 
              
-{/*                
+               
       
               <Route
                 path="/company-guide"
@@ -81,11 +82,12 @@ function App() {
               <Route
                 path="/employee-guide"
                 element={<EmployeeGuide setShowNavBar={setShowNavBar} />}
-              /> */}
+              />
              
             
             </Routes>
-
+            </JobsProvider>
+        </UserProvider>
       </Router>
     </>
   );
