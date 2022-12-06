@@ -92,7 +92,7 @@ function ForgotPassword(props) {
                         />
                       </div>
                   
-                      <div className="flex justify-between flex-col">
+                      <div className="flex k justify-between flex-col">
                         <label for="Label">
                         
                           <Link to="/login">
