@@ -66,7 +66,7 @@ function CompanySignup(props) {
   return (
     <>
     <div
-      className={`justify-center  bg-no-repeat bg-cover bg-center md:h-screen sm:h-screen
+      className={`justify-center  bg-no-repeat bg-cover bg-center md:h-screen sm:h-screen gradient
   
   
   `}
