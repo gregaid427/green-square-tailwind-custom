@@ -3,7 +3,7 @@ import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 // import LoadingModal from "../../Components/Modal/loading-modal.component";
-import Background from "./../../Assets/images/background2.jpg";
+import Background from "./../../Assets/images/bg2.jpg";
 
 function CompanySignup(props) {
   props.setShowNavBar(false);
@@ -66,7 +66,7 @@ function CompanySignup(props) {
   return (
     <>
     <div
-      className={`justify-center   bg-no-repeat bg-cover bg-center md:sm:h-max sm:h-max
+      className={`justify-center   bg-no-repeat bg-cover bg-center md:h-screen sm:h-max
   
   
   `}
@@ -150,13 +150,13 @@ function CompanySignup(props) {
                       />
                     </div>
                   <div className="flex justify-between flex-col">
-                    <label for="Label">
-                      <span className="text-xl font-light mr-2 ">
+                  <label for="Label" className="flex justify-center ">
+                      <span className="text-md font-light mr-2 ">
                        Already Registered?
                       </span>
                       <Link to="/login">
                         {" "}
-                        <span className="text-xl font-light text-green-500 ">
+                        <span className="text-md font-light text-green-500 ">
                           Click here to log in{" "}
                         </span>
                       </Link>
@@ -164,7 +164,7 @@ function CompanySignup(props) {
                   </div>
 
                   <input
-                    className="text-xl mt-3 w-full py-2 bg-yellow-400 hover:bg-green-600 cursor-pointer font-bold text-white"
+                    className="text-xl mt-3 w-full py-2 bg-[#FFBE24]  cursor-pointer font-bold text-white"
                     type="submit"
                     id=""
                     value="SIGN UP"

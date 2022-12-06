@@ -6,7 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 // import GoogleIcon from "@mui/icons-material/Google";
 // import LinkedInIcon from "@mui/icons-material/LinkedIn";
 // import FacebookIcon from "@mui/icons-material/Facebook";
-import Background from "./../../Assets/images/background1.jpg";
+import Background from "./../../Assets/images/bg1.jpg";
+import { ImGooglePlus, ImFacebook, ImLinkedin2 } from "react-icons/im";
 
 function Login(props) {
   props.setShowNavBar(false);
@@ -98,63 +99,97 @@ function Login(props) {
             it all starts here.
           </h3>
 
-            <div className="flex flex-row">
-              <div className=" flex-col md:w-4/12 sm:w-12/12 mt-10  mx-auto    gap-3 rounded-md shadow-lg ">
-                <div className="flex flex-col items-center justify-center "></div>
+          <div className="flex flex-row">
+            <div className=" flex-col md:w-4/12 sm:w-12/12 mt-10  mx-auto    gap-3 rounded-md shadow-lg ">
+              <div className="flex flex-col items-center justify-center "></div>
 
-                <div className=" px-5 bg-white py-5 rounded-xl ">
-                  <form onSubmit={(e) => handleFormSubmit(e)}>
-                    <div className=" flex flex-col   gap-2 ">
-                      <h4 className="text-2xl mb-2 font-bold text-center text-green-500 ">
-                        Log In
-                      </h4>
+              <div className=" px-5 bg-white py-5 rounded-xl ">
+                <form onSubmit={(e) => handleFormSubmit(e)}>
+                  <div className=" flex flex-col   gap-2 ">
+                    <h4 className="text-2xl mb-2 font-bold text-center text-green-500 ">
+                      Log In
+                    </h4>
 
-                      <div className="flex justify-between flex-col ">
-                        <input
-                          type="email"
-                          required
-                          placeholder="Email Address"
-                          className=" w-full  p-2 text-center text-xl text-black font-semibold  bg-slate-200 "
-                          name=""
-                        />
-                      </div>
-                      <div className="flex justify-between flex-col">
-                        <input
-                          type="password"
-                          required
-                          placeholder="Password"
-                          className="w-full p-2 text-center text-xl font-semibold text-black bg-slate-200  "
-                          name=""
-                        />
-                      </div>
-                      <div className="flex justify-between flex-col">
-                        <label for="Label">
-                          <span className="text-xl font-light mr-2 ">
-                            Forgot Password?
-                          </span>
-                          <Link to="/forgot-password">
-                            {" "}
-                            <span className="text-xl font-light text-green-500 ">
-                              Click here to reset {" "}
-                            </span>
-                          </Link>
-                        </label>
-                      </div>
-
+                    <div className="flex justify-between flex-col ">
                       <input
-                        className="text-xl mt-3 w-full py-2 bg-green-500 hover:bg-green-600 cursor-pointer font-bold text-white"
-                        type="submit"
-                        id=""
-                        value="LOGIN"
+                        type="email"
+                        required
+                        placeholder="Email Address"
+                        className=" w-full  p-2 text-center text-xl text-black font-semibold  bg-slate-200 "
+                        name=""
                       />
                     </div>
-                  </form>
-                </div>
+                    <div className="flex justify-between flex-col">
+                      <input
+                        type="password"
+                        required
+                        placeholder="Password"
+                        className="w-full p-2 text-center text-xl font-semibold text-black bg-slate-200  "
+                        name=""
+                      />
+                    </div>
+           
+                  
+
+                    <input
+                      className="text-xl mt-3 w-full py-2 bg-[#FFBE24] cursor-pointer font-bold text-white"
+                      type="submit"
+                      id=""
+                      value="LOGIN"
+                    />
+                    
+                    <div className="flex justify-between flex-col">
+                    <label for="Label" className="flex justify-center ">
+                        <span className="text-md font-light mr-2 ">
+                          Forgot Password?
+                        </span>
+                        <Link to="/forgot-password">
+                          {" "}
+                          <span className="text-md font-light text-green-500 ">
+                            Click here to reset{" "}
+                          </span>
+                        </Link>
+                      </label>
+                    </div>
+                    <div className="flex justify-center flex-col">
+                      <label for="Label" className="flex justify-center ">
+                        <span className="text-md font-light mr-2 ">
+                        Just heard about us? 
+                        </span>
+                        <Link to="/forgot-password">
+                          {" "}
+                          <span className="text-md font-light text-green-500 ">
+                          Sign Up
+                          </span>
+                        </Link>
+                      </label>
+                    </div>
+                    
+                    <div className="text-center flex items-center justify-center mx-auto md:gap-2 sm:gap-0 ">
+                        <Link to="/login" className="  mx-2 display-8">
+                          <ImGooglePlus
+                            style={{ fontSize: 40, color: "#ffc40c " }}
+                          />
+                        </Link>
+                        <Link to="/login" className="  mx-2 display-8 ">
+                          <ImFacebook
+                            style={{ fontSize: 30, color: "#ffc40c " }}
+                          />
+                        </Link>
+
+                        <Link to="/login" className=" mx-2">
+                          <ImLinkedin2
+                            style={{ fontSize: 36, color: "#ffc40c " }}
+                          />
+                        </Link>
+                      </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
     </>
   );
 }

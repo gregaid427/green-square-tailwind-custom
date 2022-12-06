@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 import { Link, useNavigate } from "react-router-dom";
 // import LoadingModal from "../../Components/Modal/loading-modal.component";
-import Background from "./../../Assets/images/background2.jpg";
+import Background from "./../../Assets/images/bg3.jpg";
 
 function JobSeekerSignup(props) {
   props.setShowNavBar(false);
@@ -74,7 +74,7 @@ function JobSeekerSignup(props) {
   return (
     <>
       <div
-        className={`justify-center  bg-no-repeat bg-cover bg-center md:sm:h-max sm:sm:h-max
+        className={`justify-center  bg-no-repeat bg-cover bg-center md:h-screen sm:sm:h-max
     
     
     `}
@@ -105,7 +105,7 @@ function JobSeekerSignup(props) {
                         <input
                           type="email"
                           required
-                          placeholder="Email Address"
+                          placeholder="Last Name"
                           className=" w-full py-2 px-1 text-center text-xl font-semibold text-black bg-slate-200 "
                           name=""
                         />
@@ -114,7 +114,7 @@ function JobSeekerSignup(props) {
                         <input
                       type="text"
                           required
-                          placeholder="Password"
+                          placeholder="First Name"
                           className="w-full py-2 px-1 text-center text-xl font-semibold text-black bg-slate-200  "
                           name=""
                         />
@@ -138,15 +138,7 @@ function JobSeekerSignup(props) {
                           name=""
                         />
                       </div>
-                      <div className="flex justify-between flex-col">
-                        <input
-                          type="text"
-                          required
-                          placeholder="Role"
-                          className="w-full p-2 text-center text-xl font-semibold text-black bg-slate-200  "
-                          name=""
-                        />
-                      </div>
+                 
                       <div className="flex justify-between flex-col">
                         <input
                           type="password"
@@ -156,26 +148,27 @@ function JobSeekerSignup(props) {
                           name=""
                         />
                       </div>
-                    <div className="flex justify-between flex-col">
-                      <label for="Label">
-                        <span className="text-xl font-light mr-2 ">
+                  
+
+                    <input
+                      className="text-xl mt-3 w-full py-2 bg-[#FFBE24] hover:bg-bg-[#FFBE23] cursor-pointer font-bold text-white"
+                      type="submit"
+                      id=""
+                      value="SIGN UP"
+                    />
+                      <div className="flex justify-between flex-col">
+                    <label for="Label" className="flex justify-center ">
+                        <span className="text-md font-light mr-2 ">
                          Already Registered?
                         </span>
                         <Link to="/login">
                           {" "}
-                          <span className="text-xl font-light text-green-500 ">
+                          <span className="text-md font-light text-green-500 ">
                             Click here to log in{" "}
                           </span>
                         </Link>
                       </label>
                     </div>
-
-                    <input
-                      className="text-xl mt-3 w-full py-2 bg-yellow-400 hover:bg-green-600 cursor-pointer font-bold text-white"
-                      type="submit"
-                      id=""
-                      value="SIGN UP"
-                    />
                   </div>
                 </form>
               </div>
