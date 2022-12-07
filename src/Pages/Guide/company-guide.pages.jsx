@@ -89,8 +89,8 @@ function GuidePage(props) {
 
       <div className="wrapper flex flex-col justify-center items-center md:gap-10 sm:gap-2 md:my-[60px] sm:my-10  ">
         <h3 className="text-5xl  ">How it works</h3>
-        <div className="flex gap-5 w-full md:flex-row sm:flex-col">
-          <div className="md:w-4/12 sm:w-12/12  how-it-works-img h-[430px] text-center py-3 px-5 ">
+        <div className="flex gap-5 w-full md:flex-row h-[500px] sm:flex-col">
+          <div className="md:w-4/12 sm:w-12/12  how-it-works-img  text-center py-3 px-5 ">
             <h3 className="font-semibold text-2xl ">Create your Job Post</h3>
             <h2 className=" text-md">
               {" "}
@@ -98,7 +98,7 @@ function GuidePage(props) {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </h2>
           </div>
-          <div className="md:w-4/12 sm:w-12/12 how-it-works-img h-[450px] text-center py-3 px-5 ">
+          <div className="md:w-4/12 sm:w-12/12 how-it-works-img  text-center py-3 px-5 ">
             <h3 className="font-semibold text-2xl ">Reach Top Candidates</h3>
             <h2 className=" text-md">
               {" "}
@@ -106,7 +106,7 @@ function GuidePage(props) {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </h2>
           </div>
-          <div className="md:w-4/12 sm:w-12/12 how-it-works-img h-[450px] text-center py-3 px-5 ">
+          <div className="md:w-4/12 sm:w-12/12 how-it-works-img text-center py-3 px-5 ">
             <h3 className="font-semibold text-2xl ">
               Review Your Great Matches
             </h3>

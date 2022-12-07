@@ -149,6 +149,14 @@ function CompanySignup(props) {
                         name=""
                       />
                     </div>
+                  
+
+                  <input
+                    className="text-xl mt-3 w-full py-2 bg-[#FFBE24]  cursor-pointer font-bold text-white"
+                    type="submit"
+                    id=""
+                    value="SIGN UP"
+                  />
                   <div className="flex justify-between flex-col">
                   <label for="Label" className="flex justify-center ">
                       <span className="text-md font-light mr-2 ">
@@ -162,13 +170,6 @@ function CompanySignup(props) {
                       </Link>
                     </label>
                   </div>
-
-                  <input
-                    className="text-xl mt-3 w-full py-2 bg-[#FFBE24]  cursor-pointer font-bold text-white"
-                    type="submit"
-                    id=""
-                    value="SIGN UP"
-                  />
                 </div>
               </form>
             </div>

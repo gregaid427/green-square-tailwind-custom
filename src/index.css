@@ -34,7 +34,7 @@ code {
     } */
 
     .how-it-works-img {
-      background-image: url("./Assets/images/african-man-black-suit-big-tv-screen-guy-shows-presentation.png");
+      background-image: url("./Assets/images/african-man-black-suit-big-tv-screen-guy-shows-presentation.jpg");
       background-size: cover;
     }
 
@@ -94,7 +94,9 @@ code {
     flex-direction: column;
 }
 
-
+.float-right{
+  float: right !important;
+}
 
 
 
@@ -131,9 +133,13 @@ code {
       padding-bottom: auto;
     }
     .faq-questn {
-      padding-right: px !important;
+      padding-right: 0px !important;
+      border-left: 3px solid #69C080 !important;
     }
-  
+  .faq-ans{
+    border-left: 3px solid #93A3A1 !important;
+    
+  }
     .faq-text-pad-alt {
       margin-left: 0px !important ;
       margin-top: 280px !important;

@@ -11,6 +11,7 @@ import { UserContext } from "../../Context/auth.context";
 import { ReactComponent as IconPack1 } from "./../../Assets/icons/Icons-04.svg";
 import { ReactComponent as IconPack2 } from "./../../Assets/icons/Icons-02.svg";
 import { ReactComponent as IconPack3 } from "./../../Assets/icons/Icons-03.svg";
+import { ReactComponent as IconPack4 } from "./../../Assets/icons/Icons-01.svg";
 import SmilingWoman from "./../../Assets/images/testimon1.jpg";
 import SmilingMan from "./../../Assets/images/smiling_man.jpg";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
@@ -117,43 +118,48 @@ function GuidePage(props) {
         <h3 className="text-4xl wrapper mt-5 mb-8 text-center ">
           Featured Jobs
         </h3>
-        <div className="wrapper flex w-12/12 gap-3 sm:flex-col ">
-          <div className="md:w-6/12 sm:w-12/12 flex bg-white ">
-            <img src={smilingMan} className="w-4/12   "></img>
+        <div className="wrapper flex w-12/12 gap-3 flex-col ">
 
-            <div className="w-8/12  p-2  flex flex-col justify-between">
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img src={smilingMan} className="md:w-4/12 sm:w-12/12   "></img>
+
+            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
               <h3 className="text-xl ">
                 Python Software Engineering Associate – Credit Technology
               </h3>
               <h4 className="text-md">London, England</h4>
               <h4 className="text-md">$100,000</h4>
-              <div className=" flex md:flex-row  sm:flex-col md:justify-between sm:items-start">
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row relative sm:flex-col  md:justify-between sm:items-start">
                 {" "}
-                <h4 className="text-md">Full Time Role</h4>{" "}
-                <div className="p-2 mb-2 flex gap-2 rounded-md bg-[#69C080] ">
-                  <h4 className=" text-md  ">APPLY FOR THIS JOB </h4>{" "}
+                
+                <div className="p-2 mb-2 flex gap-2 md:absolute  sm:mx-auto bottom-5 right-0   rounded-md bg-[#69C080] ">
+                  <h4 className="  text-md text-white  ">APPLY FOR THIS JOB </h4>{" "}
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="md:w-6/12 sm:w-12/12 flex bg-white ">
-            <img src={smilingMan} className="w-4/12   "></img>
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img src={smilingMan} className="md:w-4/12 sm:w-12/12   "></img>
 
-            <div className="w-8/12 p-2 flex flex-col justify-between ">
-              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
+            <h3 className="text-xl ">Associate Software Engineer Java</h3>
               <h4 className="text-md">London, England</h4>
               <h4 className="text-md">$100,000</h4>
-              <div className=" flex md:flex-row  sm:flex-col md:justify-between sm:items-start">
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
                 {" "}
-                <h4 className="text-md">Full Time Role</h4>{" "}
-                <div className="p-2 mb-2 flex  gap-2 rounded-md bg-[#FFBE24] ">
-                  <IconPack1 fill="#000000" className="h-5 my-auto" />
+                
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
                   <h4 className=" text-md  "> PRO</h4>{" "}
                 </div>
               </div>
             </div>
           </div>
+
+        
 
           
         </div>{" "}
