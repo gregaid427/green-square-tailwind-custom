@@ -26,8 +26,8 @@ import { FaQuoteLeft } from "react-icons/fa";
 import Nav1, { NavAlt } from "../../Components/NavBar/nav.component.alt";
 import Nav from "../../Components/NavBar/nav.component";
 
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+
+
 
 function GuidePage(props) {
   const { user } = useContext(UserContext);
