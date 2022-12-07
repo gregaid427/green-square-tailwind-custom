@@ -71,6 +71,7 @@ function GuidePage(props) {
 
       <div className="relative">
         <Carousel
+      
           className="low-z"
           wrapAround={true}
           withoutControls={true}
@@ -91,13 +92,13 @@ function GuidePage(props) {
             today.
           </h2>
           <button
-            className=" md:mt-2  md:px-4  sm:px-2 sm:mx-auto sm:flex     md:py-2 sm:p-2 mt-2   rounded-md text-2xl   text-center font-semibold bg-[#69C080]  text-white"
+            className=" md:mt-5  md:px-4  sm:px-2 sm:mx-auto sm:flex     md:py-2 sm:p-2 mt-2   rounded-md text-2xl   text-center font-semibold bg-[#69C080]  text-white"
 
             // onClick={(e) => setIsCompany(false)}
           >
-            <Link to="/employee-guide w-6/12 ">
+            <Link to="/employee-guide w-6/12  ">
               {" "}
-              <p className="text-center flex mx-auto  uppercase">
+              <p className="text-center flex mx-auto   uppercase">
                 APPLY FOR JOBS
               </p>{" "}
             </Link>

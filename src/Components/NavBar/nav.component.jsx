@@ -62,10 +62,10 @@ export const Nav = () => {
         </div>
         </div>
         {/* Hamburger */}
-        <div className=" h-auto w-auto" >
+        <div className=" h-auto w-auto realtive" >
         <div
           onClick={handleClick}
-          className="md:hidden z-1000  flex justify-between w-full bg-slate-200 items-center px-7"
+          className="md:hidden z-1000  flex justify-between w-full  items-center px-7"
         >
           <img src={ GreenSquareLogo} className="w-4/12"  ></img>
           {!nav ? <FaBars /> : <FaTimes />}
@@ -77,7 +77,7 @@ export const Nav = () => {
           className={
             !nav
               ? "hidden"
-              : "absolute  wrapper  z-10  left-0 w-full text-[#69C080] bg-slate-200 flex flex-col   justify-center px-12"
+              : "absolute  right-0  z-10  left-0 w-11/12 mx-auto rounded-sm  text-[#69C080] bg-slate-200 flex flex-col   justify-center px-5"
           }
         >  <div className="py-1" >
           <Link   to="/employee-guide">
