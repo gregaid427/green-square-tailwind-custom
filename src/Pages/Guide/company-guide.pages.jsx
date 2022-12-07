@@ -18,6 +18,7 @@ import {  FaQuoteLeft } from 'react-icons/fa';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import { Carousel } from "react-responsive-carousel";
+import Footer from "../../Components/Footer/footer.component";
 
 // import { Fragment } from 'react'
 // // import { Disclosure, Menu, Transition } from '@headlessui/react'
@@ -89,7 +90,7 @@ function GuidePage(props) {
       <div className="wrapper flex flex-col justify-center items-center md:gap-10 sm:gap-2 md:my-[60px] sm:my-10  ">
         <h3 className="text-5xl  ">How it works</h3>
         <div className="flex gap-5 w-full md:flex-row sm:flex-col">
-          <div className="md:w-4/12 sm:w-12/12  how-it-works-img h-[600px] text-center py-3 px-5 ">
+          <div className="md:w-4/12 sm:w-12/12  how-it-works-img h-[430px] text-center py-3 px-5 ">
             <h3 className="font-semibold text-2xl ">Create your Job Post</h3>
             <h2 className=" text-md">
               {" "}
@@ -97,7 +98,7 @@ function GuidePage(props) {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </h2>
           </div>
-          <div className="md:w-4/12 sm:w-12/12 how-it-works-img h-[600px] text-center py-3 px-5 ">
+          <div className="md:w-4/12 sm:w-12/12 how-it-works-img h-[450px] text-center py-3 px-5 ">
             <h3 className="font-semibold text-2xl ">Reach Top Candidates</h3>
             <h2 className=" text-md">
               {" "}
@@ -105,7 +106,7 @@ function GuidePage(props) {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </h2>
           </div>
-          <div className="md:w-4/12 sm:w-12/12 how-it-works-img h-[600px] text-center py-3 px-5 ">
+          <div className="md:w-4/12 sm:w-12/12 how-it-works-img h-[450px] text-center py-3 px-5 ">
             <h3 className="font-semibold text-2xl ">
               Review Your Great Matches
             </h3>
@@ -217,103 +218,7 @@ function GuidePage(props) {
         </div>
       </div>
 
-      <div className="wrapper bg-black ">
-        <div className=" flex md:flex-row sm:flex-col sm:text-center py-12 text-white ">
-          <div className=" flex flex-col md:w-3/12  sm:w-12/12 ">
-            {" "}
-            <img
-              src={GreenSquareLogo}
-              alt="Green Square Logo"
-              className="w-5/12 sm:mx-auto "
-            />{" "}
-            <p className="text-xl">
-              35 Green Street,
-              <p className="text-md"></p>
-              Accra, Ghana
-              <p className="text-md"> </p>
-              +233 (0) 302 345 678
-              <p className="text-md"> </p>
-              info@greensquare.com
-            </p>
-          </div>
-          <div className="flex md:flex-col sm:mt-5 md:w-9/12 sm:w-12/12 flex-wrap ">
-            <div className="flex md:flex-row sm:flex-col sm:justify-center sm:mx-auto sm:items-center sm:gap-5">
-              <div className="flex flex-col gap-2 md:w-4/12 sm:mx-auto sm:w-12/12 ">
-                {" "}
-                <h5 className="text-xl text-[#69C080] font-bold ">Companies</h5>
-                <p className="text-xl">
-                  <Link to="/" className="text-reset">
-                    Search Resumes
-                  </Link>
-                </p>
-                <p className="text-xl">
-                  <Link to="/company-faq" className="text-reset">
-                    How it Works
-                  </Link>
-                </p>
-                <p className="text-xl">
-                  <Link to="/" className="text-reset">
-                    Support
-                  </Link>
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 sm:w-12/12 md:w-4/12">
-                <h5 className="text-xl text-[#69C080] font-bold ">
-                  Job Seekers
-                </h5>
-                <p className="text-xl">
-                  <Link to="/" className="text-reset">
-                    Search Jobs
-                  </Link>
-                </p>
-                <p className="text-xl">
-                  <Link to="/browse-jobs" className="text-reset">
-                    Browse Jobs
-                  </Link>
-                </p>
-                <p className="text-xl">
-                  <Link to="/" className="text-reset">
-                    Find a Job
-                  </Link>
-                </p>
-                <p className="text-xl">
-                  <Link to="/job-seeker-faq" className="text-reset">
-                    FAQs
-                  </Link>
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 md:w-4/12 sm:w-12/12">
-                {" "}
-                <h5 className="text-xl text-[#69C080] font-bold ">Company</h5>
-                <p className="text-xl">
-                  <Link to="/" className="text-reset">
-                    About Us
-                  </Link>
-                </p>
-                <p className="text-xl">
-                  <Link to="/" className="text-reset">
-                    Careers
-                  </Link>
-                </p>
-                <p className="text-xl">
-                  <Link to="/" className="text-reset">
-                    Contact Us
-                  </Link>
-                </p>
-                <p className="text-xl">
-                  <Link to="/" className="text-reset">
-                    Partner with Us
-                  </Link>
-                </p>
-              </div>
-            </div>
-            <div className=" flex sm:text-center sm:mx-auto sm:mt-5">
-              {" "}
-              <p>Privacy Policy | Green Square © 2022 All Rights Reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <Footer></Footer>
     </>
   );
 }
