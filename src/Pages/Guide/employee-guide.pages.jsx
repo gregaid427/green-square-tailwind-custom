@@ -13,7 +13,7 @@ import Carousel from "nuka-carousel";
 // import OurTrackRecord from "../../Components/Containers/Sections/our-track-record.component";
 // import TakeControlComponent from "../../Components/Containers/Sections/take-control.component";
 // import EmployeeTestimonialComponent from "../../Components/Containers/Sections/employee-testimonial.component";
-// import PopularCategory from "../../Components/Containers/Sections/popular-categories.component";
+
 import { UserContext } from "../../Context/auth.context";
 import { ReactComponent as IconPack1 } from "./../../Assets/icons/Icons-04.svg";
 import { ReactComponent as IconPack2 } from "./../../Assets/icons/Icons-02.svg";
