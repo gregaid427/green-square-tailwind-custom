@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import businessWoman from "./../../Assets/images/african-american-business-woman-by-window.png";
+// import  from "./../../Assets/images/african-american-business-woman-by-window.png";
+import caro1 from "./../../Assets/images/african-american-business-woman-by-window.png";
+import caro4 from "./../../Assets/images/smiling-young-african-man-sitting-coworking-chatting-by-phone.png";
+import caro3 from "./../../Assets/images/testimon1.jpg";
+import caro2 from "./../../Assets/images/smiling_man.jpg";
 // import IdealCandidateSection from "../../Components/Containers/Sections/ideal-candidate.component";
 // import Footer from "../../Components/Footer/footer.component";
 // import EmployeeTestimonialComponent from "../../Components/Containers/Sections/employee-testimonial.component";
@@ -13,16 +17,11 @@ import { ReactComponent as IconPack3 } from "./../../Assets/icons/Icons-03.svg";
 import SmilingWoman from "./../../Assets/images/testimon1.jpg";
 import SmilingMan from "./../../Assets/images/smiling_man.jpg";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
-import {  FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteLeft } from "react-icons/fa";
+import Carousel from "nuka-carousel";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-
-import { Carousel } from "react-responsive-carousel";
 import Footer from "../../Components/Footer/footer.component";
-
-// import { Fragment } from 'react'
-// // import { Disclosure, Menu, Transition } from '@headlessui/react'
-// // import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import NavAlt from "../../Components/NavBar/nav.component.alt";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -41,30 +40,51 @@ function GuidePage(props) {
 
   return (
     <>
-      {/* <div>
-        <Carousel
-          autoPlay
-          interval="5000"
-          renderItem
-          transitionTime="1000"
-          infiniteLoop
-          showThumbs="no"
-          showStatus="false"
-          labels="false"
-        >
-          <div>
-            <img src={businessWoman} alt="" />
-          </div>
+      <NavAlt className0="high-z" />
 
-          <div>
-            <img src={businessWoman} alt="" />
-          </div>
+
+
+      <div className="relative">
+        <Carousel
+          className="low-z"
+          wrapAround={true}
+          withoutControls={true}
+          autoplay={true}
+          slidesToShow={1}
+          speed={1000}
+        >
+          <img src={caro1} className="h-screen w-full z-0 " alt="" />
+          {/* <img src={caro2} className="h-screen w-full z-0 " alt="" /> */}
+          {/* <img src={caro3} className="h-screen w-full z-0 " alt="" /> */}
+          <img src={caro4} className="h-screen w-full z-0 " alt="" />
         </Carousel>
-      </div> */}
+        <div className="absolute wrapper text-white margNegative mx-auto left-0 right-0 high-z">
+          {" "}
+          <h2 className="md:text-6xl  md:font-bold sm:text-3xl sm:text-center  sm:font-bold ">
+            Find the<br></br>
+            most qualified <br></br>
+            candidates, fast.
+          </h2>
+          <button
+            className=" md:mt-2  md:px-4  sm:px-2 sm:mx-auto sm:flex     md:py-2 sm:p-2 mt-2   rounded-md text-2xl   text-center font-semibold bg-[#69C080] text-white"
+
+            // onClick={(e) => setIsCompany(false)}
+          >
+            <Link to="/employee-guide w-6/12 ">
+              {" "}
+              <p className="text-center flex mx-auto  uppercase">
+                Post a job
+              </p>{" "}
+            </Link>
+          </button>{" "}
+        </div>
+      </div>
 
       <div className="flex  flex-col py-12 items-center justify-center gap-2 bg-[#F2F2F2]  ">
-        <h3 className="text-4xl text-center font-semibold ">The smartest way to hire.</h3>
-        <h3 className="text-xl text-center text-slate-600 ">
+        <h3 className="text-4xl text-center font-semibold ">
+          The smartest way to hire.
+        </h3>
+        <h3 className="text-xl text-center text-slate-600 wrapper ">
           {" "}
           With Green Square, finding the right candidate has never been easier.
         </h3>
@@ -89,10 +109,10 @@ function GuidePage(props) {
 
       <div className="wrapper flex flex-col justify-center items-center md:gap-10 sm:gap-2 md:my-[60px] sm:my-10  ">
         <h3 className="text-5xl  ">How it works</h3>
-        <div className="flex gap-5 w-full md:flex-row h-[500px] sm:flex-col">
+        <div className="flex gap-5 w-full md:flex-row md:h-[500px]  sm:flex-col">
           <div className="md:w-4/12 sm:w-12/12  how-it-works-img  text-center py-3 px-5 ">
             <h3 className="font-semibold text-2xl ">Create your Job Post</h3>
-            <h2 className=" text-md">
+            <h2 className=" text-md  ">
               {" "}
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -165,11 +185,11 @@ function GuidePage(props) {
           </div>
         </div>
       </div>
-      
+
       <div className=" flex bg-[#69C080]  md:flex-row sm:flex-col w-full justify-center items-center text-center my-auto ">
         <img src={SmilingWoman} className=" md:w-6/12 sm:12/12 " />
         <div className=" md:w-6/12 sm:12/12 flex flex-col gap-4  p-12 ">
-          <FaQuoteLeft className="text-white text-5xl mx-auto" ></FaQuoteLeft>
+          <FaQuoteLeft className="text-white text-5xl mx-auto"></FaQuoteLeft>
           <h3 className="text-xl ">
             {" "}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -182,7 +202,7 @@ function GuidePage(props) {
       </div>
       <div className=" flex md:flex-row bg-[#FFBE24]  sm:flex-col-reverse  w-full justify-center items-center text-center my-auto ">
         <div className=" md:w-6/12 sm:12/12 flex flex-col gap-4 p-12 ">
-        <FaQuoteLeft className="text-white text-5xl mx-auto" ></FaQuoteLeft>
+          <FaQuoteLeft className="text-white text-5xl mx-auto"></FaQuoteLeft>
           <h3 className="text-xl ">
             {" "}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -206,7 +226,9 @@ function GuidePage(props) {
 
             // onClick={(e) => setIsCompany(false)}
           >
-            <Link to="/employee-guide w-6/12  " className="" >POST A JOB</Link>
+            <Link to="/employee-guide w-6/12  " className="">
+              POST A JOB
+            </Link>
           </button>
           <button
             className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
@@ -218,7 +240,7 @@ function GuidePage(props) {
         </div>
       </div>
 
-  <Footer></Footer>
+      <Footer></Footer>
     </>
   );
 }

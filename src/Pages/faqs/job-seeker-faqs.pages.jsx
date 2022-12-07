@@ -3,9 +3,16 @@ import Footer from "../../Components/Footer/footer.component";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../Context/auth.context";
 import Faq from "../../Components/Faq/faq.component";
-import FaqImg1 from "./../../Assets/images/african-american-business-woman-by-window.png";
+
 import FaqSteps from "../../Components/Faq/faqSteps.component";
 import FaqStepsAlt from "../../Components/Faq/faqSteps.componentAlt";
+import Nav from "../../Components/NavBar/nav.component";
+
+import FaqImg1 from "./../../Assets/faq/faq2.jpeg";
+import FaqImg2 from "./../../Assets/faq/faq4.jpeg";
+import FaqImg3 from "./../../Assets/faq/faq1.jpeg";
+import FaqImg4 from "./../../Assets/faq/faq5.jpeg";
+import FaqImg5 from "./../../Assets/faq/faq8.jpeg";
 
 function jobseekerfaq(props) {
 
@@ -22,13 +29,15 @@ function jobseekerfaq(props) {
       ToggleState === index ? className : "";
 
     return (  
-      <div className="wrapper  md:mb-5  sm:mb-2 ">
-        <ul className="tab-list">
+    
+     
+      <div className="wrapper   md:mb-5  sm:mb-2 ">
+        <ul className="tab-list z-0">
           <li
             className={`tabs ${getActiveClass(1, "active-tabs")}`}
             onClick={() => toggleTab(1)}
           >
-            <h4 className="text-xl font-bold py-2">FAQs</h4>
+            <h4 className="text-xl z-0 font-bold py-2">FAQs</h4>
           </li>
           <li
             className={`tabs ${getActiveClass(2, "active-tabs")}`}
@@ -73,7 +82,7 @@ function jobseekerfaq(props) {
               text={
                 "Browse through our database of hundreds of company proﬁles and job postings from your home."
               }
-              image={FaqImg1}
+              image={FaqImg2}
             ></FaqStepsAlt>
             ;
             <FaqSteps
@@ -81,25 +90,27 @@ function jobseekerfaq(props) {
               text={
                 "Apply, contact and gain the interest of employers all over the country"
               }
-              image={FaqImg1}
+              image={FaqImg3}
             ></FaqSteps>
             ;
             <FaqStepsAlt
+      
               number={4}
               text={
                 "Answer questions and have interviews on your own time, on your own schedule, straight from the comfort of your bed with our GreenView feature.*"
                 
               }
-              image={FaqImg1}
+              image={FaqImg4}
             ></FaqStepsAlt>
             ;
             <FaqSteps
+                  className=" sm:mt-[90px] "
               number={5}
               text={
                 "Accept, Decline or simply contemplate all job offers, to see which one gets you to your dreams the fastest. All for free!"
                 
               }
-              image={FaqImg1}
+              image={FaqImg5}
             ></FaqSteps>
             ;
             <h3 className="wrapper text-center font-semibold my-4 text-2xl text-[#69C080]">
@@ -115,7 +126,10 @@ function jobseekerfaq(props) {
   };
 
   return (
-    <><div className="" >
+
+    <>
+     <Nav />
+    <div className="" >
       <div className="mb-4" style={{ background: "rgb(241,245,249)" }}>
         <div className=" md:py-8 sm:py-4 flex items-center   text-[#69C080]  ">
           <h3 className="wrapper md:text-4xl sm:text-2xl font-semibold ">

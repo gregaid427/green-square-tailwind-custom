@@ -3,7 +3,11 @@ import Footer from "../../Components/Footer/footer.component";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../Context/auth.context";
 import Faq from "../../Components/Faq/faq.component";
-import FaqImg1 from "./../../Assets/images/african-american-business-woman-by-window.png";
+import FaqImg1 from "./../../Assets/faq/faq3.jpeg";
+import FaqImg2 from "./../../Assets/faq/faq9.jpeg";
+import FaqImg3 from "./../../Assets/faq/faq11.jpg";
+import FaqImg4 from "./../../Assets/faq/faq4.jpeg";
+import FaqImg5 from "./../../Assets/faq/faq6.jpeg";
 import FaqSteps from "../../Components/Faq/faqSteps.component";
 import FaqStepsAlt from "../../Components/Faq/faqSteps.componentAlt";
 
@@ -72,7 +76,7 @@ function CompanyFaq(props) {
               text={
                 "Post your job offer with all the necessary information, and get access to thousands of students, professionals and aspirants in a nation wide database that is growing daily."
               }
-              image={FaqImg1}
+              image={FaqImg2}
             ></FaqStepsAlt>
             ;
             <FaqSteps
@@ -80,7 +84,7 @@ function CompanyFaq(props) {
               text={
                 "Browse through CV’s, create tailor-made questionnaires and review all your applicants with features like our exclusive pre-interview function that allows you to interview aspirants all at the same time! *"
               }
-              image={FaqImg1}
+              image={FaqImg3}
             ></FaqSteps>
             ;
             <FaqStepsAlt
@@ -88,7 +92,7 @@ function CompanyFaq(props) {
               text={
                 "Invite applicants to meetings,shortlist or hire directly, all on the Greensquare platform."
               }
-              image={FaqImg1}
+              image={FaqImg4}
             ></FaqStepsAlt>
             ;
             <FaqSteps
@@ -96,7 +100,7 @@ function CompanyFaq(props) {
               text={
                 "Be certain you’re hiring the right people that would truly take your business to the next level, with unlimited access to our entire database of CVs from all current and soon-to-be employee hopefuls in the country.*"
               }
-              image={FaqImg1}
+              image={FaqImg5}
             ></FaqSteps>
             ;
             <h3 className="wrapper text-center font-semibold my-4 text-2xl text-[#69C080]">

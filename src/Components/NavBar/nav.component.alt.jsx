@@ -12,16 +12,17 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
-export const Nav = () => {
+export const NavAlt = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
   };
+  
   return (
-    <div className="">
-      <div className=" w-full high-z flex items-center  text-black">
+
+      <div className="navPadding absolute w-full  high-z flex items-center   text-white">
     
-        <div className="wrapper sm:hidden flex w-full items-center   justify-between  ">
+        <div className="wrapper sm:hidden flex w-full items-center  justify-between  ">
         <img src={ GreenSquareLogo}  className="w-2/12 sm:hidden "  ></img>
         <div className="w-10/12 flex  justify-between pl-20 " >
           <ul className="sm:hidden md:flex ">
@@ -62,26 +63,25 @@ export const Nav = () => {
         </div>
         </div>
         {/* Hamburger */}
-        <div className=" h-auto w-auto" >
+        <div className=" h-auto w-auto relative  "  >
         <div
           onClick={handleClick}
-          className="md:hidden z-1000  flex justify-between w-full bg-slate-200 items-center px-7"
+          className="md:hidden z-1000  flex justify-between w-full  items-center px-7"
         >
           <img src={ GreenSquareLogo} className="w-4/12"  ></img>
           {!nav ? <FaBars /> : <FaTimes />}
         </div>
 
         {/* Mobile menu */}
-      
+       
         <ul
           className={
             !nav
               ? "hidden"
-              : "absolute  wrapper  z-10  left-0 w-full text-[#69C080] bg-slate-200 flex flex-col   justify-center px-12"
+              : "absolute  right-0  z-10  left-0 w-11/12 mx-auto rounded-sm  text-[#69C080] bg-slate-200 flex flex-col   justify-center px-5"
           }
-        >  <div className="py-1" >
+          >  <div className="py-1" >
           <Link   to="/employee-guide">
-      
               <li>
                 <p className="text-xl">How It Works</p>
               </li>
@@ -101,27 +101,28 @@ export const Nav = () => {
               </li>
             </Link>
          
-            <div className="" >
+
             <Link to="/browse-jobs">
               <li>
-                <p className="  text-xl">Plans and pricing</p>
+                <p className="text-xl">Plans and pricing</p>
               </li>
             </Link>
-            </div>
     
-            <Link to="/browse-jobs">
+    
+            <Link to="/browse-jobs"  >
               <li>
                 <p className="text-xl"> Browse Jobs</p>
               </li>
             </Link>
-
             </div>
+
         </ul>
-        </div></div>
+
         {/* ends here */}
       </div>
- 
+    </div>
+   
   );
 };
 
-export default Nav;
+export default NavAlt;

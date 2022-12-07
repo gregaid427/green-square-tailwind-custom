@@ -3,6 +3,13 @@ import Footer from "../../Components/Footer/footer.component";
 import { Link } from "react-router-dom";
 // import JobContainer from "./../../Components/Containers/job-container.components";
 import smilingMan from "./../../Assets/images/smiling-young-african-man-sitting-coworking-chatting-by-phone.png";
+import feature1 from "./../../Assets/images/feature1.png";
+import feature2 from "./../../Assets/images/feature2.png";
+import feature3 from "./../../Assets/images/feature5.png";
+import feature4 from "./../../Assets/images/feature4.png";
+import caro1 from "./../../Assets/images/african-american-business-woman-by-window.png";
+import caro4 from "./../../Assets/images/smiling-young-african-man-sitting-coworking-chatting-by-phone.png";
+import Carousel from "nuka-carousel";
 // import OurTrackRecord from "../../Components/Containers/Sections/our-track-record.component";
 // import TakeControlComponent from "../../Components/Containers/Sections/take-control.component";
 // import EmployeeTestimonialComponent from "../../Components/Containers/Sections/employee-testimonial.component";
@@ -16,6 +23,11 @@ import SmilingWoman from "./../../Assets/images/testimon1.jpg";
 import SmilingMan from "./../../Assets/images/smiling_man.jpg";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 import { FaQuoteLeft } from "react-icons/fa";
+import Nav1, { NavAlt } from "../../Components/NavBar/nav.component.alt";
+import Nav from "../../Components/NavBar/nav.component";
+
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 function GuidePage(props) {
   const { user } = useContext(UserContext);
@@ -44,8 +56,55 @@ function GuidePage(props) {
       });
   }, []);
 
+
+  // minicarousel
+  const handleDragStart = (e) => e.preventDefault();
+  const items = [
+    <img src={feature1} onDragStart={handleDragStart} role="presentation" />,
+    <img src={feature1} onDragStart={handleDragStart} role="presentation" />,
+    <img src={feature1} onDragStart={handleDragStart} role="presentation" />,
+  ];
+
   return (
     <>
+      <NavAlt />
+
+      <div className="relative">
+        <Carousel
+          className="low-z"
+          wrapAround={true}
+          withoutControls={true}
+          autoplay={true}
+          slidesToShow={1}
+          speed={1000}
+        >
+          <img src={caro1} className="h-screen w-full z-0 " alt="" />
+          {/* <img src={caro2} className="h-screen w-full z-0 " alt="" /> */}
+          {/* <img src={caro3} className="h-screen w-full z-0 " alt="" /> */}
+          <img src={caro4} className="h-screen w-full z-0 " alt="" />
+        </Carousel>
+        <div className="absolute wrapper text-white margNegative mx-auto left-0 right-0 high-z">
+          {" "}
+          <h2 className="md:text-6xl  md:font-bold sm:text-5xl sm:text-center  sm:font-bold ">
+            Find your <br></br>
+            dream job<br></br>
+            today.
+          </h2>
+          <button
+            className=" md:mt-2  md:px-4  sm:px-2 sm:mx-auto sm:flex     md:py-2 sm:p-2 mt-2   rounded-md text-2xl   text-center font-semibold bg-[#69C080]  text-white"
+
+            // onClick={(e) => setIsCompany(false)}
+          >
+            <Link to="/employee-guide w-6/12 ">
+              {" "}
+              <p className="text-center flex mx-auto  uppercase">
+                APPLY FOR JOBS
+              </p>{" "}
+            </Link>
+          </button>{" "}
+        </div>
+      </div>
+
       <div className="flex  flex-col py-12 items-center justify-center gap-2 bg-[#F2F2F2]  ">
         <h3 className="text-4xl text-center font-semibold ">
           The smartest way to job search.
@@ -104,7 +163,16 @@ function GuidePage(props) {
 
       <div className="wrapper flex flex-col justify-center items-center md:gap-10 sm:gap-2 md:my-[60px] sm:my-10  ">
         <h3 className="text-5xl  ">How it works</h3>
-        carousel here
+
+
+
+
+
+carousel goes here
+
+
+
+
         <button
           className=" md:w-2/12 sm:w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2 align-center  rounded-md text-xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
 
@@ -119,9 +187,11 @@ function GuidePage(props) {
           Featured Jobs
         </h3>
         <div className="wrapper flex w-12/12 gap-3 flex-col ">
-
           <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
-            <img src={smilingMan} className="md:w-4/12 sm:w-12/12   "></img>
+            <img
+              src={feature1}
+              className="md:w-4/12 sm:w-12/12 h-[250px]  "
+            ></img>
 
             <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
               <h3 className="text-xl ">
@@ -132,25 +202,28 @@ function GuidePage(props) {
               <h4 className="text-md">Full Time Role</h4>{" "}
               <div className=" flex md:flex-row relative sm:flex-col  md:justify-between sm:items-start">
                 {" "}
-                
                 <div className="p-2 mb-2 flex gap-2 md:absolute  sm:mx-auto bottom-5 right-0   rounded-md bg-[#69C080] ">
-                  <h4 className="  text-md text-white  ">APPLY FOR THIS JOB </h4>{" "}
+                  <h4 className="  text-md text-white  ">
+                    APPLY FOR THIS JOB{" "}
+                  </h4>{" "}
                 </div>
               </div>
             </div>
           </div>
 
           <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
-            <img src={smilingMan} className="md:w-4/12 sm:w-12/12   "></img>
+            <img
+              src={feature2}
+              className="md:w-4/12 sm:w-12/12  h-[250px] "
+            ></img>
 
             <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
-            <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
               <h4 className="text-md">London, England</h4>
               <h4 className="text-md">$100,000</h4>
               <h4 className="text-md">Full Time Role</h4>{" "}
               <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
                 {" "}
-                
                 <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
                   <IconPack4 fill="#000000" className="h-5 my-auto" />
                   <h4 className=" text-md  "> PRO</h4>{" "}
@@ -159,9 +232,47 @@ function GuidePage(props) {
             </div>
           </div>
 
-        
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature3}
+              className="md:w-4/12 sm:w-12/12  h-[250px] "
+            ></img>
 
-          
+            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+                {" "}
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
+                  <h4 className=" text-md  "> PRO</h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature4}
+              className="md:w-4/12 sm:w-12/12  h-[250px] "
+            ></img>
+
+            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+                {" "}
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
+                  <h4 className=" text-md  "> PRO</h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>{" "}
       </div>
 
