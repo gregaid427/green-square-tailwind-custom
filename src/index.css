@@ -163,6 +163,9 @@ z-index: 10000000 !important;
     .faq-space {
       margin-bottom: 60px !important;
     }
+    .margNegative{
+      margin-top: -320px;
+    }
   }
     
 

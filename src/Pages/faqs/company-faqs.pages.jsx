@@ -10,6 +10,7 @@ import FaqImg4 from "./../../Assets/faq/faq4.jpeg";
 import FaqImg5 from "./../../Assets/faq/faq6.jpeg";
 import FaqSteps from "../../Components/Faq/faqSteps.component";
 import FaqStepsAlt from "../../Components/Faq/faqSteps.componentAlt";
+import Nav from "../../Components/NavBar/nav.component";
 
 function CompanyFaq(props) {
 
@@ -26,6 +27,10 @@ function CompanyFaq(props) {
       ToggleState === index ? className : "";
 
     return (
+
+
+     
+
       <div className="wrapper  md:mb-5  sm:mb-2 ">
       <ul className="tab-list">
           <li
@@ -117,7 +122,10 @@ function CompanyFaq(props) {
   };
 
   return (
-    <><div className="" >
+    
+    <>
+    <Nav />
+    <div className="" >
     <div className="mb-4" style={{ background: "rgb(241,245,249)" }}>
       <div className=" md:py-8 sm:py-4 flex items-center   text-[#69C080]  ">
         <h3 className="wrapper md:text-4xl sm:text-2xl font-semibold ">
