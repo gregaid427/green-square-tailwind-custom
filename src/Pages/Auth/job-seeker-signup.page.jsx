@@ -97,7 +97,7 @@ function JobSeekerSignup(props) {
               <div className=" px-5 bg-white py-5 rounded-xl ">
                 <form onSubmit={(e) => handleFormSubmit(e)}>
                   <div className=" flex flex-col   gap-2 ">
-                    <h4 className="text-2xl mb-2 font-bold text-center text-green-500 ">
+                    <h4 className="text-2xl mb-2 font-bold text-center text-[#69C080] ">
                       Sign Up
                     </h4>
                     <div className="flex flex-wrap  ">
@@ -163,7 +163,7 @@ function JobSeekerSignup(props) {
                         </span>
                         <Link to="/login">
                           {" "}
-                          <span className="text-md font-light text-green-500 ">
+                          <span className="text-md font-light text-[#69C080] ">
                             Click here to log in{" "}
                           </span>
                         </Link>

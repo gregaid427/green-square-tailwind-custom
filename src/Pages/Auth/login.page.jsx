@@ -106,7 +106,7 @@ function Login(props) {
               <div className=" px-5 bg-white py-5 rounded-xl ">
                 <form onSubmit={(e) => handleFormSubmit(e)}>
                   <div className=" flex flex-col   gap-2 ">
-                    <h4 className="text-2xl mb-2 font-bold text-center text-green-500 ">
+                    <h4 className="text-2xl mb-2 font-bold text-center text-[#69C080] ">
                       Log In
                     </h4>
 
@@ -145,7 +145,7 @@ function Login(props) {
                         </span>
                         <Link to="/forgot-password">
                           {" "}
-                          <span className="text-md font-light text-green-500 ">
+                          <span className="text-md font-light text-[#69C080] ">
                             Click here to reset{" "}
                           </span>
                         </Link>
@@ -158,7 +158,7 @@ function Login(props) {
                         </span>
                         <Link to="/job-seeker-signup">
                           {" "}
-                          <span className="text-md font-light text-green-500 ">
+                          <span className="text-md font-light text-[#69C080] ">
                           Sign Up
                           </span>
                         </Link>

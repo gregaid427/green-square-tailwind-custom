@@ -32,8 +32,8 @@ import ForgotPassword from "./Pages/Auth/forgot-password.page";
 import ResetPassword from "./Pages/Auth/reset-password.page";
 import { UserProvider } from "./Context/auth.context";
 import JobsProvider from "./Context/jobs.context";
-// import CompanyFaqs from "./Pages/faqs/company-faqs.pages";
-// import JobseekerFaqs from "./Pages/faqs/job-seeker-faqs.pages";
+import CompanyFaqs from "./Pages/faqs/company-faqs.pages";
+import JobseekerFaqs from "./Pages/faqs/job-seeker-faqs.pages";
 
 function App() {
   // use state
@@ -76,7 +76,15 @@ function App() {
                 path="/company-guide"
                 element={<CompanyGuide setShowNavBar={setShowNavBar} />}
               />
-             
+               <Route
+                path="/job-seeker-faq"
+                element={<JobseekerFaqs setShowNavBar={setShowNavBar} />}
+              />{" "}
+              {/* Company */}
+              <Route
+                path="/company-faq"
+                element={<CompanyFaqs setShowNavBar={setShowNavBar} />}
+              />{" "} 
            
 
               <Route

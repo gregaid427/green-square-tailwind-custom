@@ -7,10 +7,15 @@ function FaqStepsAlt(props) {
  
   return (
     <>
-      <div className="container my-2 faq-space">
-        <div className="row d-flex relative  items-center justify-center mx-auto">
+      <div className=" my-2 faq-space">
+        <div className=" flex relative md:flex-row-reverse  items-center justify-center mx-auto">
+        <img
+            className="  faq-text-pad-img md:rounded-[40px] sm:rounded-[20px] md:w-6/12 sm:w-12/12  p-0  "
+     
+            src={props.image}
+          ></img>
         <div
-            className="p-3 d-flex  col-md-6 my-auto faq-text-pad-alt "
+            className=" flex  faq-text-pad-alt sm:my-auto md:py-10  sm:mx-auto md:rounded-[40px] sm:rounded-[20px] md:w-6/12 sm:w-11/12 p-0"
             style={{
               background: "#fff",
               marginRight: -100,
@@ -19,24 +24,26 @@ function FaqStepsAlt(props) {
               zIndex:1
             }}
           >
-            {" "}
-            <div className="text-success   px-4 ">
-              <h3 className="display-2  fw-bold faq-text-pad-number ">{props.number}</h3>
+           {" "}
+            <div className="text-[#69C080]  md:px-4 sm:px-2 ">
+              <h3 className="md:text-3xl sm:text-2xl   font-semibold faq-text-pad-number ">{props.number}</h3>
             </div>{" "}
-            <div className="d-flex items-center justify-center" >
-              <p className="fw-bold faq-text-pad-text py-auto ">
+            <div className="flex items-center justify-center" >
+              <p className="font-semibold text-xl faq-text-pad-text py-auto ">
                {props.text}
               </p>
             </div>{" "}
           </div>
-          <img
-            className=" faq-text-pad-img col-md-6 p-0 "
-            style={{ borderRadius: 40 }}
-            src={props.image}
-          ></img>
+         
+
+          
          
         </div>
+
+
+        
       </div>
+      
     </>
   );
 }

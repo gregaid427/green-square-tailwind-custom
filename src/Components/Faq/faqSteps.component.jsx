@@ -7,15 +7,15 @@ function FaqSteps(props) {
  
   return (
     <>
-      <div className="container my-2">
-        <div className="row d-flex items-center justify-center mx-auto">
+      <div className=" my-2">
+        <div className=" flex  sm:flex-col items-center justify-center mx-auto">
           <img
-            className=" faq-text-pad-img col-md-6 p-0 "
-            style={{ borderRadius: 40 }}
+            className=" faq-text-pad-img md:rounded-[40px] sm:rounded-[20px] md:w-6/12 sm:w-12/12  p-0 "
+        
             src={props.image}
           ></img>
           <div
-            className="p-3 d-flex col-md-6 my-auto faq-text-pad "
+            className="p-3 flex md:w-6/12 sm:w-11/12  sm:my-auto md:py-10 faq-text-pad "
             style={{
               background: "#fff",
               marginLeft: -100,
@@ -24,11 +24,11 @@ function FaqSteps(props) {
             }}
           >
             {" "}
-            <div className="text-success   px-4 ">
-              <h3 className="display-2  fw-bold faq-text-pad-number ">{props.number}</h3>
+            <div className="text-[#69C080]  md:px-4 sm:px-2 ">
+              <h3 className="md:text-3xl sm:text-2xl   font-semibold faq-text-pad-number ">{props.number}</h3>
             </div>{" "}
-            <div className="d-flex items-center justify-center" >
-              <p className="fw-bold faq-text-pad-text py-auto ">
+            <div className="flex items-center justify-center" >
+              <p className="font-semibold text-xl faq-text-pad-text py-auto ">
                {props.text}
               </p>
             </div>{" "}

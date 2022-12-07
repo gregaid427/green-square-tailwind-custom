@@ -21,20 +21,20 @@ function jobseekerfaq(props) {
     const getActiveClass = (index, className) =>
       ToggleState === index ? className : "";
 
-    return (
-      <div className="container">
+    return (  
+      <div className="wrapper  md:mb-5  sm:mb-2 ">
         <ul className="tab-list">
           <li
             className={`tabs ${getActiveClass(1, "active-tabs")}`}
             onClick={() => toggleTab(1)}
           >
-            <h4 className="display-6 fw-bold py-2">FAQs</h4>
+            <h4 className="text-xl font-bold py-2">FAQs</h4>
           </li>
           <li
             className={`tabs ${getActiveClass(2, "active-tabs")}`}
             onClick={() => toggleTab(2)}
           >
-            <h4 className="display-6 fw-bold py-2">How it Works</h4>
+            <h4 className="text-xl font-bold py-2">How it Works</h4>
           </li>
         </ul>
         <div className="content-container">
@@ -102,6 +102,9 @@ function jobseekerfaq(props) {
               image={FaqImg1}
             ></FaqSteps>
             ;
+            <h3 className="wrapper text-center font-semibold my-4 text-2xl text-[#69C080]">
+        That’s the Green Square way!
+      </h3>
           </div>
           <div className={`content ${getActiveClass(3, "active-content")}`}>
             <h2>Dolor</h2>
@@ -112,19 +115,17 @@ function jobseekerfaq(props) {
   };
 
   return (
-    <>
+    <><div className="" >
       <div className="mb-4" style={{ background: "rgb(241,245,249)" }}>
-        <div className="container py-4 d-flex items-center diplay-2 text-success  ">
-          <h3 className="fw-bolder mb-0   ">
+        <div className=" md:py-8 sm:py-4 flex items-center   text-[#69C080]  ">
+          <h3 className="wrapper md:text-4xl sm:text-2xl font-semibold ">
             Frequently Asked Questions (FAQs)
           </h3>
         </div>
       </div>
       <Tab />
-
-      <h3 className="text-center fw-bold my-4 display-6 text-success">
-        That’s the Green Square way!
-      </h3>
+      </div>
+      
       <Footer></Footer>
     </>
   );
