@@ -55,7 +55,7 @@ function jobseekerfaq(props) {
               }
             ></Faq>
             <Faq
-              title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit?"}
+              title={"Lore ipsum dolor sit amet, consectetur adipiscing elit?"}
               info={
                 "Loremg ipsum dolor sit amet, consectetur adipiscing elLorem ipsum dolor sit amet, consectetur adipiscing elLorem ipsum dolor sit amet, consectetur adipiscing elLorem ipsum dolor sit amet, consectetur adipiscing elit?"
               }
