@@ -5,7 +5,7 @@ import JobSeekerSignup from "./Pages/Auth/job-seeker-signup.page";
 import CompanySignup from "./Pages/Auth/company-signup.page";
 import Login from "./Pages/Auth/login.page";
 import Home from "./Pages/Home/home.page";
-// import JobDetails from "./Pages/Jobs/job-details.page";
+import JobDetails from "./Pages/Jobs/job-details.page";
 
 import CompanyList from "./Pages/Company/browse-companies.pages";
 import CompanyDetails from "./Pages/Company/company-details.pages";
@@ -120,6 +120,10 @@ function App() {
                 <Route
                 path="/company-details"
                 element={<CompanyDetails setShowNavBar={setShowNavBar} />}
+              />
+                 <Route
+                path="/job-details"
+                element={<JobDetails setShowNavBar={setShowNavBar} />}
               />
               
                  <Route

@@ -4,213 +4,270 @@ import JobDetailSection from "../../Components/Hero/job.component";
 import Footer from "../../Components/Footer/footer.component";
 import SmilingManWithLaptop from "../../Assets/images/african-american-man-working-laptop-writing-notebook-man-with-beard-sitting-cafe.jpeg";
 import { UserContext } from "../../Context/auth.context";
+import comp1 from "../../Assets/images/morgan-stanley.jpeg";
 
 import { Link } from "react-router-dom";
 import RelatedJobs from "./job-list.component";
-
-function DetailSection(props) {
-  return (
-    <>
-      <div>
-        <b className="mb-1">{props.title}</b>
-        <p className="text-muted mb-0">
-          Porttitor amet massa Done cporttitor dolor et nisl molestie ium
-          feliscon lore ipsum dolor tfringilla. lorem lorem ipsum. ollcitudin
-          est dolor time.
-        </p>
-        <ul>
-          <li>lorem lorem ipsum ollcitudin est dolor time</li>
-          <li>lorem lorem ipsum ollcitudin est dolor time</li>
-          <li>lorem lorem ipsum ollcitudin est dolor time</li>
-        </ul>
-      </div>
-    </>
-  );
-}
+import Nav from "../../Components/NavBar/nav.component";
+import feature1 from "./../../Assets/images/feature1.png";
+import feature2 from "./../../Assets/images/feature2.png";
+import feature3 from "./../../Assets/images/feature5.png";
+import feature4 from "./../../Assets/images/feature4.png";
+import { ReactComponent as IconPack4 } from "./../../Assets/icons/Icons-01.svg";
+import { ReactComponent as IconPack6 } from "./../../Assets/icons/Icons-02.svg";
 
 function JobDetails(props) {
-  props.setShowNavBar(true);
-  const location = useLocation();
-  const data = location.state;
-  let job_id = data._id;
-
-  // useState
-  const [job, setJob] = useState(null);
-
-  // useNavigate
-  const navigate = useNavigate();
-
-  // Todo: change to user id saved in,.
-  // use context
-  let { user } = useContext(UserContext);
-  let user_id = "";
-  if (user && user.user) {
-    user_id = user.user.user_id;
-  }
-
-  useEffect(() => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    fetch(`${process.env.REACT_APP_HOST}/jobs/${job_id}`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        if (result.success) {
-          setJob(result.job);
-        }
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  }, [job_id]);
-
-  const handleApplyToJob = (e) => {
-    e.preventDefault();
-
-    if (user_id === "") {
-      alert("Please create an account to apply.");
-      navigate("/job-seeker-signup");
-    }
-
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var raw = JSON.stringify({
-      jobId: job_id,
-    });
-
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch(
-      `${process.env.REACT_APP_HOST}/users/${user_id}/apply-job`,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        if (result.success) {
-          console.log("Application successful.");
-          alert(result.message);
-          navigate(`/job-applications`);
-        }
-      })
-      .catch((error) => {});
-  };
-
   return (
     <>
-      <div className="bg-light rounded-3 text-left">
-        <div className="container py-2">
-          <JobDetailSection
-            image={SmilingManWithLaptop}
-            name={job && job.positon}
-            company={job && job.company}
-            location={job && `${job.location.country}, ${job.location.region}`}
-          />
-        </div>
-      </div>
+      <Nav></Nav>
 
-      <div className="container py-4">
-        <div className="row">
-          <div className="col-12 col-md-8">
-            <div>
-              <p>{job && job.description}</p>
-              <hr />
-
-              <div className="d-grid gap-4">
-                <DetailSection title="Job Requirements" />
-                <DetailSection title="Other Requirements" />
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-md-4">
-            <div className="card mb-4 p-3">
-              <div className="card-body">
-                <div className="text-center">
-                  <h5 className="display-6 card-title">Job Details</h5>
-                  <p className="card-subtitle text-muted mb-2">
-                    {job && `${job.location.country} ${job.location.region}`}
-                  </p>
-                  <p className="card-subtitle text-muted mb-2">
-                    {job && `${job.salary.currency}${job.salary.budget}`}
-                  </p>
-                  <p className="card-subtitle text-muted mb-2">
-                    {job && job.mode}
-                  </p>
-                </div>
-                <hr />
-                <div className="d-flex gap-4">
-                  <i
-                    className="fa-solid fa-suitcase text-success"
-                    style={{ fontSize: "56px" }}
-                  ></i>
-                  <div className="text-left">
-                    <p className="text-muted mb-0">
-                      X open positions at his company
-                    </p>
-                    <Link className="text-success" to={"/company-details"}>
-                      View Profile
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="d-grid gap-2">
-              {/* todo convert this to a form */}
-              <form onSubmit={(e) => handleApplyToJob(e)}>
-                <div className="d-grid">
-                  <input
-                    value={"Apply Now"}
-                    className="btn btn-success btn-lg"
-                    type="submit"
-                  />
-                </div>
-              </form>
-            </div>
+      <div className=" wrapper bg-[#f2f2f2]">
+        <div className=" py-5 flex md:flex-row sm:flex-col gap-7 ">
+          <img
+            src={comp1}
+            className="rounded-xl object-cover  md:w-3/12  sm:w-12/12 sm:mx-auto"
+          ></img>
+          <div className="flex flex-col justify-center gap-3">
+            <h2 className="text-4xl sm:text-center md:text-left ">
+              Python Software Engineering Associate – Credit Technology
+            </h2>
+            <h3 className="text-2xl text-slate-500 sm:text-center md:text-left ">Company Name</h3>
           </div>
         </div>
       </div>
 
-      <div className="bg-light rounded-3 text-left">
-        <div className="d-grid container gap-2 py-5">
-          <h3 className="display-5 text-center">Related Jobs</h3>
-          <RelatedJobs backgroundColor="white" />
+      <div className="wrapper flex md:flex-row sm:flex-col gap-5 p-3 my-10 ">
+        <div className=" md:w-8/12 sm:w-12/12">
+          <h3 className="text-xl font-semibold py-8">
+            {" "}
+            Porttitor amet massa Done cporttitor dolor et nisl molestie ium
+            feliscon lore ipsum dolor tfringilla. lorem lorem ipsum. ollcitudin
+            est dolor time. Porttitor amet massa Done cporttitor dolor et nisl
+            molestie ium feliscon lore ipsum dolor tfringilla. lorem lorem
+            ipsum. ollcitudin est dolor time.
+          </h3>
+          <hr></hr>
+          <div className="my-3">
+            <h3 className="text-xl font-semibold my-3 ">
+              Experience Required/More Information
+            </h3>
+            <h3 className="text-xl   ">
+              Porttitor amet massa Done cporttitor dolor et nisl molestie ium
+              feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+              ollcitudin est dolor time.
+            </h3>
+            <ul style={{ listStyleType: "square" }} className="pl-5">
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+            </ul>
+          </div>
+
+          <div className="my-3">
+            <h3 className="text-xl font-semibold my-3 ">
+              Experience Required/More Information
+            </h3>
+            <h3 className="text-xl   ">
+              Porttitor amet massa Done cporttitor dolor et nisl molestie ium
+              feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+              ollcitudin est dolor time.
+            </h3>
+            <ul style={{ listStyleType: "square" }} className="pl-5">
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+              <li>
+                feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
+                ollcitudin
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="md:w-4/12 flex flex-col sm:w-12/12 ">
+          <div className=" flex shadow-2xl p-4 rounded-xl h-fit flex-col gap-3  text-center">
+            <h3 className="text-4xl font-semibold py-3">Jobs Details</h3>
+            <h3 className="text-xl font-semibold text-slate-400 ">
+              London, England
+            </h3>
+            <h3 className="text-xl font-semibold text-slate-400 ">$100,000</h3>
+            <h3 className="text-xl font-semibold text-slate-400 ">
+              Full Time Role
+            </h3>
+            <hr></hr>
+            <div className="justify-center items-center px-2 flex gap-3">
+              <IconPack6
+                className="w-2/12  stroke-[7px]"
+                style={{
+                  height: "auto",
+                  width: "auto",
+
+                  fill: "#69C080",
+                }}
+              ></IconPack6>
+              <div className="  flex flex-col text-start justify-between gap-3">
+                <h3 className="text-md  font-semibold text-slate-400 ">
+                  24 Open positions at this company
+                </h3>
+                <h3 className="text-xl font-semibold text-[#69C080] ">
+                  view Profile
+                </h3>
+              </div>
+            </div>
+          </div>
+    
+        <button className=" my-3 p-4 text-white text-3xl fon bg-[#69C080] font-bold w-full rounded-md ">
+          <Link to="">APPLY NOW</Link>
+        </button>
         </div>
       </div>
 
-      <div className="row" style={{ height: "40vh" }}>
-        <div className="bg-success col-6 d-flex justify-content-center align-items-center p-5">
-          <div>
-            <h3 className="display-5 text-white">
-              Put your best <br />
+      <div className="flex  wrapper flex-col w-full  bg-[#F2F2F2]">
+        <h3 className="text-4xl  mt-5 mb-8 text-center ">Related Jobs</h3>
+        <div className="flex py-7  w-12/12 gap-3 flex-col ">
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature1}
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
+            ></img>
+
+            <div className="md:w-9/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-3 md:my-auto ">
+              <h3 className="text-xl ">
+                Python Software Engineering Associate – Credit Technology
+              </h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row relative sm:flex-col  md:justify-between sm:items-start">
+                {" "}
+                <div className="p-2 mb-2 flex gap-2 md:absolute  sm:mx-auto bottom-5 right-0   rounded-md bg-[#69C080] ">
+                  <h4 className="  text-md text-white  ">
+                    APPLY FOR THIS JOB{" "}
+                  </h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature2}
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
+            ></img>
+
+            <div className="md:w-9/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-3 md:my-auto ">
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+                {" "}
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
+                  <h4 className=" text-md  "> PRO</h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature3}
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
+            ></img>
+
+            <div className="md:w-9/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-3 md:my-auto ">
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+                {" "}
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
+                  <h4 className=" text-md  "> PRO</h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature4}
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
+            ></img>
+
+            <div className="md:w-9/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-3 md:my-auto ">
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+                {" "}
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
+                  <h4 className=" text-md  "> PRO</h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>{" "}
+      </div>
+
+      <div className=" w-full flex md:flex-row  bg-[#69C080] sm:flex-col">
+        <div className="md:w-6/12 flex my-auto sm:text-center sm:justify-center sm:py-7  sm:12/12">
+          <div className="flex md:pl-[134px] sm:pl-0 sm:justify-center flex-col gap-4  ">
+            <h3 className="text-5xl font-semibold text-white">
+              Put your best <br></br>
               foot forward.
             </h3>
-
-            <p className="fw-bold">
-              Best practice and advice <br />
-              for creating the perfect CV
-            </p>
-
-            <button type="button" className="btn btn-warning">
-              Learn More
+            <h3 className="text-2xl font-semibold">
+              Best practices and advice <br></br>
+              for creating the perfect CV.
+            </h3>
+            <button className=" sm:mx-auto md:mx-0 bg-[#FFBE24] font-semibold w-fit rounded-md p-2 px-3 ">
+              <Link to="">LEARN MORE</Link>
             </button>
           </div>
         </div>
-
-        <div
-          className="col-6"
-          style={{
-            backgroundImage: `url(${SmilingManWithLaptop})`,
-            backgroundSize: `cover`,
-          }}
-        ></div>
+        <img className="md:w-6/12 sm:12/12" src={SmilingManWithLaptop}></img>
       </div>
 
       <Footer></Footer>
