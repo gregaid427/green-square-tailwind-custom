@@ -161,18 +161,18 @@ function CompanyList(props) {
       <div className=" w-full flex md:flex-row  bg-[#69C080] sm:flex-col">
         <div className="md:w-6/12 flex my-auto sm:text-center sm:justify-center sm:py-7  sm:12/12">
           <div className="flex md:pl-[134px] sm:pl-0 sm:justify-center flex-col gap-4  ">
-            <h3 className="text-5xl font-semibold text-white"  >
+            <h3 className="text-5xl font-semibold text-white">
               Join the best <br></br>
               companies.
             </h3>
-            <h3 className="text-2xl font-semibold"  >
+            <h3 className="text-2xl font-semibold">
               {" "}
               View our list of the top <br />
               20 companies to work for.{" "}
             </h3>
-            <button className=" mx-auto bg-[#FFBE24] font-semibold w-fit rounded-md p-2 px-3 ">
-              <Link to="" >LEARN MORE
-</Link></button>
+            <button className=" sm:mx-auto md:mx-0 bg-[#FFBE24] font-semibold w-fit rounded-md p-2 px-3 ">
+              <Link to="">LEARN MORE</Link>
+            </button>
           </div>
         </div>
         <img className="md:w-6/12 sm:12/12" src={SmilingWomanWithLaptop}></img>
