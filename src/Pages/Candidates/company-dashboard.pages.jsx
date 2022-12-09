@@ -1,190 +1,178 @@
 import Footer from "../../Components/Footer/footer.component";
-
+import React from "react";
 import { Link } from "react-router-dom";
+import Nav from "../../Components/NavBar/nav.component";
+import Header from "../../Components/header/header";
+import { ReactComponent as IconPack1 } from "./../../Assets/icons/Icons-02.svg";
+import { ReactComponent as IconPack2 } from "./../../Assets/icons/Icons-10.svg";
+import { ReactComponent as IconPack3 } from "./../../Assets/icons/Icons-03.svg";
+
+import { ReactComponent as IconPack11 } from "./../../Assets/icons/Icons-11.svg";
+import { ReactComponent as IconPack12 } from "./../../Assets/icons/Icons-14.svg";
+import { ReactComponent as IconPack13 } from "./../../Assets/icons/Icons-09.svg";
+import { ReactComponent as IconPack14 } from "./../../Assets/icons/Icons-16.svg";
+import { ReactComponent as IconPack15 } from "./../../Assets/icons/Icons-13.svg";
+import { ReactComponent as IconPack16 } from "./../../Assets/icons/Icons-15.svg";
 
 function EmployeeDashboardPage(props) {
   props.setShowNavBar(true);
   return (
     <>
-      <div className="bg-light rounded-3 p-3">
-        <div className="container py-4">
-          <div className="row">
-            <div className="col-6">
-              <h1 className="display-4">
-                Welcome,
-                <br />
-                <span className="text-success">CompanyName</span>
-              </h1>
+      <Nav />
+      <Header title={"Company Name"} subtitle={"Post a job"} amount={"25.0"} />
+
+      <div className="flex gap-4 md:flex-row sm:flex-col wrapper my-8 ">
+        <div className=" justify-center py-5 flex flex-col shadow-md rounded-md border-2 md:w-4/12 sm:12/12">
+          <h3 className="flex justify-center font-semibold  text-2xl py-5 ">
+            Account Activty
+          </h3>
+
+          <div className="flex ml-14 py-5 border-b  ">
+            {" "}
+            <div className="flex  justify-between items-center gap-6">
+              <IconPack1
+                className="w-2/12"
+                style={{ stroke: "#FFBE24", fill: "#FFBE24" }}
+              />{" "}
+              <h3 className="text-4xl w-2/12 font-semibold">2</h3>{" "}
+              <div className="flex w-8/12 font-semibold gap flex-col">
+                <h3>Job Posted</h3>
+                <Link to="">
+                  <h3 className="text-[#69C080]">view</h3>
+                </Link>
+              </div>{" "}
             </div>
-            <div className="col-6">
-              <div className="card float-end" style={{ width: "15rem" }}>
-                <div className="card-body">
-                  <h3 className="display-6">
-                    <span style={{ fontSize: "14px" }} className="">
-                      GHS
-                    </span>{" "}
-                    <span>25.00</span>
-                  </h3>
-                  <div className="d-flex gap-3">
-                    <span>Available Credit</span>
-                    <Link
-                      to="/plans-and-pricing-companies"
-                      className="text-success"
-                    >
-                      Top Up
-                    </Link>
-                  </div>
-                </div>
-              </div>
+          </div>
+
+          <div className="flex ml-14 py-5 border-b  ">
+            {" "}
+            <div className="flex  justify-between items-center gap-6">
+              <IconPack2 
+                className="w-2/12"
+                style={{ stroke: "#FFBE24", fill: "#FFBE24" }}
+              />{" "}
+              <h3 className="text-4xl w-2/12 font-semibold">2</h3>{" "}
+              <div className="flex w-8/12 font-semibold gap flex-col">
+                <h3>Job Views</h3>
+                <Link to="">
+                  <h3 className="text-[#69C080]">view</h3>
+                </Link>
+              </div>{" "}
+            </div>
+          </div>
+
+          <div className="flex ml-14 py-5 border-b  ">
+            {" "}
+            <div className="flex  justify-between items-center gap-6">
+              <IconPack3
+                className="w-2/12  "
+                style={{ stroke: "#FFBE24", fill: "#FFBE24" }}
+              />{" "}
+              <h3 className="text-4xl w-2/12 font-semibold">2</h3>{" "}
+              <div className="flex w-8/12 font-semibold gap flex-col">
+                <h3>Job Applicants</h3>
+                <Link to="">
+                  <h3 className="text-[#69C080]">view</h3>
+                </Link>
+              </div>{" "}
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="container py-5">
-        <div className="row">
-          <div className="col-12 col-md-4">
-            <div className="card rounded-4">
-              <div className="card-body">
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">
-                    <h3>Account Activity</h3>
-                  </li>
-                  <li className="list-group-item d-flex gap-4 p-3">
-                    <i
-                      className="fa-solid fa-suitcase text-warning"
-                      style={{ fontSize: "52px" }}
-                    ></i>
-
-                    <h3 className="display-5">2</h3>
-
-                    <div className="d-grid">
-                      Jobs Posted
-                      <Link className="text-success" to="/company-jobs">
-                        View
-                      </Link>
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex gap-4 p-3">
-                    <i
-                      className="fa-solid fa-users text-warning"
-                      style={{ fontSize: "52px" }}
-                    ></i>
-
-                    <h3 className="display-5">2</h3>
-
-                    <div className="d-grid">
-                      Jobs Views
-                      <Link className="text-success" to="#">
-                        View
-                      </Link>
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex gap-4 p-3">
-                    <i
-                      className="fa-solid fa-suitcase text-warning"
-                      style={{ fontSize: "52px" }}
-                    ></i>
-
-                    <h3 className="display-5">2</h3>
-
-                    <div className="d-grid">
-                      Jobs Applicants
-                      <Link className="text-success" to="#">
-                        View
-                      </Link>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+        <div className="flex md:w-8/12 flex-col sm:w-12/12  ">
+          <div className="md:grid-cols-3 sm:grid-cols-2 grid  w-full gap-4 ">
+            <div className="flex flex-col  text-center h-[200px] row-span-1 rounded-md p-5 bg-[#69C080]">
+              {" "}
+              <IconPack16
+                className="w-2/12 stroke-white stroke-[7px]"
+                style={{
+                  // height: "100px",
+                  width: "auto",
+                  stroke: "#FFF",
+                  fill: "#69C080",
+            
+                
+                }}
+              />{" "}
+              <p className="font-semibold text-white text-xl ">Post a Job</p>{" "}
             </div>
-          </div>
-
-          <div className="col-12 col-md-8">
-            <div className="container text-center">
-              <div className="row g-4">
-                <div className="col-12 col-sm-6 col-lg-4">
-                  <Link to={"/post-a-job"}>
-                    <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4">
-                      <div className="d-grid" style={{ minHeight: "15vh" }}>
-                        <i
-                          className="dashboard-icon fa-solid fa-square-plus"
-                          style={{ fontSize: "96px" }}
-                        ></i>
-                        <p className="text-black">Post a job</p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-12 col-sm-6 col-lg-4">
-                  <Link to={"/cvs"}>
-                    <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4">
-                      <div className="d-grid" style={{ minHeight: "15vh" }}>
-                        <i
-                          className="dashboard-icon fa-solid fa-file"
-                          style={{ fontSize: "96px" }}
-                        ></i>
-                        <p className="text-black">Browse CVs</p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-12 col-sm-6 col-lg-4">
-                  <Link to={"#"}>
-                    <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4">
-                      <div className="d-grid" style={{ minHeight: "15vh" }}>
-                        <i
-                          className="dashboard-icon fa-solid fa-user-pen"
-                          style={{ fontSize: "96px" }}
-                        ></i>
-                        <p className="text-black">Edit Profile</p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-12 col-sm-6 col-lg-4">
-                  <Link to={"/company-jobs"}>
-                    <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4">
-                      <div className="d-grid" style={{ minHeight: "15vh" }}>
-                        <i
-                          className="dashboard-icon fa-solid fa-suitcase"
-                          style={{ fontSize: "96px" }}
-                        ></i>
-                        <p className="text-black">View Jobs</p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-12 col-sm-6 col-lg-4">
-                  <Link to={"/browse-schools"}>
-                    <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4">
-                      <div className="d-grid" style={{ minHeight: "15vh" }}>
-                        <i
-                          className="dashboard-icon fa-solid fa-graduation-cap"
-                          style={{ fontSize: "96px" }}
-                        ></i>
-                        <p className="text-black">Browse Schools</p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-12 col-sm-6 col-lg-4">
-                  <Link to={"/messages"}>
-                    <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4">
-                      <div className="d-grid" style={{ minHeight: "15vh" }}>
-                        <i
-                          className="dashboard-icon fa-solid fa-envelope"
-                          style={{ fontSize: "96px" }}
-                        ></i>
-                        <p className="text-black">Messages</p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
+            <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
+              {" "}
+              <IconPack11
+                className="w-2/12  stroke-[7px]"
+                style={{
+                  // height: "100px",
+                  width: "auto",
+                  stroke: "#94a3b8",
+                  fill: "#f2f2f2",
+            
+                
+                }}
+              />{" "}
+              <p className="font-semibold text-xl ">Browse CVs</p>{" "}
+            </div>
+            <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
+              {" "}
+              <IconPack12
+                className="w-2/12  stroke-[7px]"
+                style={{
+                  // height: "100px",
+                  width: "auto",
+                  stroke: "#94a3b8",
+                  fill: "#f2f2f2",
+            
+                
+                }}
+              />{" "}
+              <p className="font-semibold text-xl ">Edit Profile</p>{" "}
+            </div>
+            <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
+              {" "}
+              <IconPack13
+                className="w-2/12  stroke-[7px]"
+                style={{
+                  // height: "100px",
+                  width: "auto",
+                  stroke: "#94a3b8",
+                  fill: "#f2f2f2",
+            
+                
+                }}
+              />{" "}
+              <p className="font-semibold text-xl ">View Posted Jobs</p>{" "}
+            </div>
+            <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
+              {" "}
+              <IconPack14
+                className="w-2/12  stroke-[7px]"
+                style={{
+                  // height: "100px",
+                  width: "auto",
+                  stroke: "#94a3b8",
+                  fill: "#f2f2f2",
+            
+                
+                }}
+              />{" "}
+              <p className="font-semibold text-xl ">Browse Schools</p>{" "}
+            </div>
+            <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
+              {" "}
+              <IconPack15
+                className="w-2/12  stroke-[7px]"
+                style={{
+                  // height: "100px",
+                  width: "auto",
+                  stroke: "#94a3b8",
+                  fill: "#f2f2f2",
+            
+                
+                }}
+              />{" "}
+              <p className="font-semibold text-xl ">Messages</p>{" "}
             </div>
           </div>
         </div>
+        
       </div>
 
       <Footer></Footer>

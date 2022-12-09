@@ -10,7 +10,7 @@ import Home from "./Pages/Home/home.page";
 // import CompanyList from "./Pages/Company/browse-companies.pages";
 // import CompanyDetails from "./Pages/Company/company-details.pages";
 // import EmployeeDashboard from "./Pages/Candidates/employee-dashboard.pages";
-// import CompanyDashboard from "./Pages/Candidates/company-dashboard.pages";
+import CompanyDashboard from "./Pages/Candidates/company-dashboard.pages";
 // import ManageResumeDashboard from "./Pages/Candidates/manage-resume.pages";
 // import MyProfilePage from "./Pages/Account/my-profile.pages";
 // import MyApplicationsPage from "./Pages/Candidates/my-applications.pages";
@@ -91,7 +91,10 @@ function App() {
                 path="/employee-guide"
                 element={<EmployeeGuide setShowNavBar={setShowNavBar} />}
               />
-             
+              <Route
+                path="/company-dashboard"
+                element={<CompanyDashboard setShowNavBar={setShowNavBar} />}
+              />
             
             </Routes>
             </JobsProvider>
