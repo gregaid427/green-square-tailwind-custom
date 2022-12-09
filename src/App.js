@@ -18,7 +18,7 @@ import CompanyGuide from "./Pages/Guide/company-guide.pages";
 import EmployeeGuide from "./Pages/Guide/employee-guide.pages";
 // import BrowseJobs from "./Pages/Jobs/browse-jobs.pages";
 import JobsPostedByCompany from "./Pages/Company/jobs-posted-by-company.pages";
-// import BrowseCVs from "./Pages/Company/browse-cvs.pages";
+import BrowseCVs from "./Pages/Company/browse-cvs.pages";
 // import MessageList from "./Pages/Account/messages.pages";
 import PostJobsByCompany from "./Pages/Company/post-jobs-by-company.pages";
 // import JobApplications from "./Pages/Candidates/applications.pages";
@@ -103,6 +103,10 @@ function App() {
                <Route
                 path="/company-jobs"
                 element={<JobsPostedByCompany setShowNavBar={setShowNavBar} />}
+              />
+                 <Route
+                path="/cvs"
+                element={<BrowseCVs setShowNavBar={setShowNavBar} />}
               />
             
             </Routes>

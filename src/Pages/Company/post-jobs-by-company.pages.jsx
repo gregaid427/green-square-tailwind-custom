@@ -187,6 +187,25 @@ function PostJobsByCompany(props) {
         </div>
      
         </div>
+        <div className="flex gap-4  mx-auto  md:w-[400px] sm:w-full items-center sm:px-6  justify-center ">
+          {" "}
+          <button
+            className=" w-6/12    md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-black rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#FFBE24] "
+
+            // onClick={(e) => setIsCompany(false)}
+          >
+            <Link to=" " className="">
+          Save Draft
+            </Link>
+          </button>
+          <button
+            className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  bg-[#69C080] rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold  text-white"
+
+            // onClick={(e) => setIsCompany(false)}
+          >
+            <Link to=" ">Post Job</Link>
+          </button>
+        </div>
         
        
       </div>
