@@ -7,7 +7,7 @@ import Login from "./Pages/Auth/login.page";
 import Home from "./Pages/Home/home.page";
 // import JobDetails from "./Pages/Jobs/job-details.page";
 
-// import CompanyList from "./Pages/Company/browse-companies.pages";
+import CompanyList from "./Pages/Company/browse-companies.pages";
 // import CompanyDetails from "./Pages/Company/company-details.pages";
 import EmployeeDashboard from "./Pages/Candidates/employee-dashboard.pages";
 import CompanyDashboard from "./Pages/Candidates/company-dashboard.pages";
@@ -107,6 +107,11 @@ function App() {
                 path="/company-jobs"
                 element={<JobsPostedByCompany setShowNavBar={setShowNavBar} />}
               />
+                  <Route
+                path="/browse-companies"
+                element={<CompanyList setShowNavBar={setShowNavBar} />}
+              />
+              
                  <Route
                 path="/cvs"
                 element={<BrowseCVs setShowNavBar={setShowNavBar} />}

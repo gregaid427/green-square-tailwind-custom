@@ -119,7 +119,7 @@ function GuidePage(props) {
           {" "}
           <input
             required
-            type="email"
+            type="text"
             name="emailAddress"
             id="emailAddress"
             placeholder="Job title or keyword"
@@ -130,7 +130,7 @@ function GuidePage(props) {
           />
           <input
             required
-            type="email"
+            type="text"
             name="emailAddress"
             id="emailAddress"
             placeholder="Location "
@@ -141,7 +141,7 @@ function GuidePage(props) {
           />
           <input
             required
-            type="email"
+            type="text"
             name="emailAddress"
             id="emailAddress"
             placeholder="[variable goes here] "
