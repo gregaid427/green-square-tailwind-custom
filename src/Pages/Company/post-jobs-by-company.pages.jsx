@@ -101,263 +101,95 @@ function PostJobsByCompany(props) {
 
   return (
     <>
-       <Nav />
+      <Nav />
       <Header title={"Company Name"} subtitle={"Post a job"} amount={"25.0"} />
-      <div className="bg-light rounded-3 p-3">
-        <div className="container py-5">
-          <div className="row">
-            <div className="col-6">
-              <h1 className="display-4">
-                <span className="text-success">CompanyName,</span>
-                <br />
-                Post A Job
-              </h1>
-            </div>
-            <div className="col-6">
-              <div className="card float-end" style={{ width: "15rem" }}>
-                <div className="card-body">
-                  <h3 className="display-6">
-                    <span style={{ fontSize: "14px" }} className="">
-                      GHS
-                    </span>{" "}
-                    <span>25.00</span>
-                  </h3>
-                  <div className="d-flex gap-3">
-                    <span>Available Credit</span>
-                    <Link
-                      to="/plans-and-pricing-companies"
-                      className="text-success"
-                    >
-                      Top Up
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+      <div className="flex wrapper flex-col my-5 gap-4 ">
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full  sm:flex-col" >
+        <div className=" flex flex-col gap-2 w-full ">
+          <h2 className="font-semibold text-xl" >Job Title</h2>
+          <input
+            type="text"          
+            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+            name=""
+            onChange={(e) => setPosition(e.target.value)}
+          />
         </div>
+        <div className=" flex flex-col gap-2 w-full ">
+          <h2 className="font-semibold text-xl" >Location</h2>
+          <input
+            type="text"          
+            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+            name=""
+            onChange={(e) => setPosition(e.target.value)}
+          />
+        </div>
+        </div>
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col" >
+        <div className=" flex flex-col gap-2 w-full ">
+          <h2 className="font-semibold text-xl" >Work Mode</h2>
+          <input
+            type="text"          
+            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+            name=""
+            onChange={(e) => setMode(e.target.value)}
+          />
+        </div>
+        <div className=" flex flex-col gap-2 w-full ">
+          <h2 className="font-semibold text-xl" >Cartegory</h2>
+          <input
+            type="text"          
+            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+            name=""
+            onChange={(e) => setCountry(e.target.value)}
+          />
+        </div>
+        </div>
+
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col" >
+        <div className=" flex flex-col gap-2 w-full ">
+          <h2 className="font-semibold text-xl" >Job Description</h2>
+          <textarea
+          rows={6}
+            type="text"          
+            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+            name=""
+            onChange={(e) => setRegion(e.target.value)}
+          />
+        </div>
+     
+        </div>
+
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col" >
+        <div className=" flex flex-col gap-2 w-full ">
+          <h2 className="font-semibold text-xl" >Job Requirements</h2>
+          <textarea
+          rows={6}
+            type="text"          
+            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+            name=""
+            onChange={(e) => setRegion(e.target.value)}
+          />
+        </div>
+     
+        </div>
+
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col" >
+        <div className=" flex flex-col gap-2 w-full ">
+          <h2 className="font-semibold text-xl" >Other Requirements</h2>
+          <textarea
+          rows={6}
+            type="text"          
+            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+            name=""
+            onChange={(e) => setRegion(e.target.value)}
+          />
+        </div>
+     
+        </div>
+        
+       
       </div>
-
-      <div className="container">
-        <form onSubmit={(e) => handleJobSubmit(e)}>
-          <div className="row p-5">
-            <div className="col-12 col-md-6 form-group">
-              <label
-                htmlFor="job-title"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Job Title
-              </label>
-              <input
-                required
-                type="text"
-                name="job-title"
-                id="job-title"
-                className="form-control"
-                onChange={(e) => setPosition(e.target.value)}
-              />
-            </div>
-
-            <div className="col-12 col-md-6 form-group">
-              <label
-                htmlFor="work-mode"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Work Mode
-              </label>
-              <select
-                required
-                type="text"
-                name="work-mode"
-                id="work-mode"
-                autoComplete="email"
-                className="form-control"
-                onChange={(e) => setMode(e.target.value)}
-              >
-                {/* Change this to the list of categories */}
-                <option></option>
-                <option value={"Office"}> Office</option>
-                <option value={"Hybrid"}>Hybrid</option>
-                <option value={"Remote"}>Remote</option>
-              </select>
-            </div>
-
-            <div className="col-12 col-md-6 form-group">
-              <label
-                htmlFor="country"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Country
-              </label>
-              <input
-                required
-                type="text"
-                name="country"
-                id="country"
-                className="form-control"
-                onChange={(e) => setCountry(e.target.value)}
-              />
-            </div>
-
-            <div className="col-12 col-md-6 form-group">
-              <label
-                htmlFor="region"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Region
-              </label>
-              <input
-                required
-                type="text"
-                name="region"
-                id="region"
-                className="form-control"
-                onChange={(e) => setRegion(e.target.value)}
-              />
-            </div>
-
-            <div className="col-12 col-md-6 form-group">
-              <label
-                htmlFor="currency"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Currency
-              </label>
-              <select
-                required
-                type="text"
-                name="currency"
-                id="currency"
-                autoComplete="email"
-                className="form-control"
-                onChange={(e) => setCurrency(e.target.value)}
-              >
-                {/* Change this to the list of categories */}
-                <option></option>
-                <option value={"$"}>USD</option>
-                <option value={"£"}>Pound</option>
-                <option value={"€"}>Euro</option>
-                <option value={"₵"}>Cedi</option>
-              </select>
-            </div>
-
-            <div className="col-12 col-md-6 form-group">
-              <label
-                htmlFor="salary"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Salary
-              </label>
-              <input
-                required
-                id="salary"
-                name="salary"
-                className="form-control"
-                onChange={(e) => setSalary(e.target.value)}
-              />
-            </div>
-
-            <div className="col-12 col-md-6 form-group">
-              <label
-                htmlFor="category"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Category
-              </label>
-              <select
-                required
-                id="category"
-                name="category"
-                className="form-control"
-                onChange={(e) => setCategory(e.target.value)}
-              >
-                {/* Change this to the list of categories */}
-                <option></option>
-                {jobCategories &&
-                  jobCategories.map((category, index) => (
-                    <option key={index} value={category}>
-                      {category}
-                    </option>
-                  ))}
-              </select>
-            </div>
-
-            <div className="col-12">
-              <label
-                htmlFor="description"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Job Description
-              </label>
-              <textarea
-                type="text"
-                name="description"
-                id="description"
-                autoComplete="description"
-                className="form-control"
-                onChange={(e) => setDescription(e.target.value)}
-              ></textarea>
-            </div>
-
-            <div className="col-12">
-              <label
-                htmlFor="requirements"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Job Requirements
-              </label>
-              <textarea
-                type="text"
-                name="requirements"
-                id="requirements"
-                autoComplete="requirements"
-                className="form-control"
-                onChange={(e) => setRequirements(e.target.value)}
-              ></textarea>
-            </div>
-
-            <div className="col-12">
-              <label
-                htmlFor="otherRequirements"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Other Requirements
-              </label>
-              <textarea
-                type="text"
-                name="otherRequirements"
-                id="otherRequirements"
-                autoComplete="otherRequirements"
-                className="form-control"
-                onChange={(e) => setOtherRequirements(e.target.value)}
-              ></textarea>
-            </div>
-          </div>
-
-          <div className="d-flex align-items-center justify-content-center p-3 text-center">
-            <div className="d-grid gap-2">
-              <div className="">
-                <button
-                  className="btn btn-warning btn-lg"
-                  type="submit"
-                  style={{ width: "200px", marginRight: "5px" }}
-                >
-                  Save Draft
-                </button>
-
-                <button
-                  className="btn btn-success btn-lg"
-                  type="submit"
-                  style={{ width: "200px", marginLeft: "5px" }}
-                >
-                  Post Job
-                </button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-
       <Footer></Footer>
     </>
   );

@@ -13,13 +13,14 @@ import { ReactComponent as IconPack13 } from "./../../Assets/icons/Icons-09.svg"
 import { ReactComponent as IconPack14 } from "./../../Assets/icons/Icons-16.svg";
 import { ReactComponent as IconPack15 } from "./../../Assets/icons/Icons-13.svg";
 import { ReactComponent as IconPack16 } from "./../../Assets/icons/Icons-15.svg";
+import HeaderCompany from "../../Components/header/headercompany";
 
 function EmployeeDashboardPage(props) {
   props.setShowNavBar(true);
   return (
     <>
-      <Nav />
-      <Header title={"Company Name"} subtitle={"Post a job"} amount={"25.0"} />
+     <Nav />
+      <HeaderCompany title={"Welcome,"} subtitle={"CompanyName"} amount={"25.0"} />
 
       <div className="flex gap-4 md:flex-row sm:flex-col wrapper my-8 ">
         <div className=" justify-center py-5 flex flex-col shadow-md rounded-md border-2 md:w-4/12 sm:12/12">

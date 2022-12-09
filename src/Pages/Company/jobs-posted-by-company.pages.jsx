@@ -48,7 +48,7 @@ function JobsPostedByCompany(props) {
   return (
     <>
       <Nav />
-      <Header title={"Company Name"} subtitle={"Post a job"} amount={"25.0"} />
+      <Header title={"Company Name"} subtitle={"Posted jobs"} amount={"25.0"} />
 
       {/* 
       <div className="container py-5" style={{ minHeight: "40vh" }}>
