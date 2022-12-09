@@ -8,7 +8,7 @@ import { ReactComponent as IconPack12 } from "./../../Assets/icons/Icons-14.svg"
 import { ReactComponent as IconPack13 } from "./../../Assets/icons/Icons-07.svg";
 import { ReactComponent as IconPack14 } from "./../../Assets/icons/Icons-12.svg";
 import { ReactComponent as IconPack15 } from "./../../Assets/icons/Icons-13.svg";
-import { ReactComponent as IconPack16 } from "./../../Assets/icons/Icons-15.svg";
+import { ReactComponent as IconPack16 } from "./../../Assets/icons/Icons-09.svg";
 
 import { Link } from "react-router-dom";
 import Nav from "../../Components/NavBar/nav.component";
