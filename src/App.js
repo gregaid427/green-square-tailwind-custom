@@ -16,7 +16,7 @@ import CompanyDashboard from "./Pages/Candidates/company-dashboard.pages";
 // import MyApplicationsPage from "./Pages/Candidates/my-applications.pages";
 import CompanyGuide from "./Pages/Guide/company-guide.pages";
 import EmployeeGuide from "./Pages/Guide/employee-guide.pages";
-// import BrowseJobs from "./Pages/Jobs/browse-jobs.pages";
+import BrowseJobs from "./Pages/Jobs/browse-jobs.pages";
 import JobsPostedByCompany from "./Pages/Company/jobs-posted-by-company.pages";
 import BrowseCVs from "./Pages/Company/browse-cvs.pages";
 // import MessageList from "./Pages/Account/messages.pages";
@@ -72,7 +72,10 @@ function App() {
                 path="/job-seeker-signup"
                 element={<JobSeekerSignup setShowNavBar={setShowNavBar} />}
               />{" "} 
-             
+                <Route
+                path="/browse-jobs"
+                element={<BrowseJobs setShowNavBar={setShowNavBar} />}
+              />
                
       
               <Route

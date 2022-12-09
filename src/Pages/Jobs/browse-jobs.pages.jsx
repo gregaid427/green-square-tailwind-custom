@@ -4,6 +4,17 @@ import JobContainer from "./../../Components/Containers/job-container.components
 import Footer from "../../Components/Footer/footer.component";
 import SmilingManWithLaptop from "./../../Assets/images/african-american-man-working-laptop-writing-notebook-man-with-beard-sitting-cafe.jpeg";
 import PopularCategory from "../../Components/Containers/Sections/popular-categories.component";
+import Nav from "../../Components/NavBar/nav.component";
+import { ReactComponent as IconPack11 } from "./../../Assets/icons/Icons-05.svg";
+import { ReactComponent as IconPack12 } from "./../../Assets/icons/Icons-06.svg";
+import { ReactComponent as IconPack13 } from "./../../Assets/icons/Icons-07.svg";
+import { ReactComponent as IconPack14 } from "./../../Assets/icons/Icons-08.svg";
+import { ReactComponent as IconPack15 } from "./../../Assets/icons/Icons-09.svg";
+import feature1 from "./../../Assets/images/feature1.png";
+import feature2 from "./../../Assets/images/feature2.png";
+import feature3 from "./../../Assets/images/feature5.png";
+import feature4 from "./../../Assets/images/feature4.png";
+import { ReactComponent as IconPack4 } from "./../../Assets/icons/Icons-01.svg";
 
 export default function BrowseJobs(props) {
   // const search = useLocation().search;
@@ -21,6 +32,8 @@ export default function BrowseJobs(props) {
       redirect: "follow",
     };
 
+    
+
     fetch(`${process.env.REACT_APP_HOST}/jobs`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
@@ -34,322 +47,274 @@ export default function BrowseJobs(props) {
         // alert(error.message);
       });
   }, []);
-
+  const [optionState, setoptionState] = useState("value");
   return (
     <>
-      <div className="bg-light rounded-3 text-left">
-        <div className="d-grid container gap-2 py-3">
-          <h1 className="display-4">
-            Browse
-            <span className="text-success"> Jobs</span>
-          </h1>
-
-          <div className="d-none d-md-block d-lg-block">
-            <div className="input-group d-flex mb-2 gap-3">
-              <input
-                type="text"
-                className="form-control search-input text-center"
-                placeholder="Job title or keyword"
-                aria-label=""
-                // onChange={(e) => setKeyword(e.target.value)}
-              />
-              <input
-                type="text"
-                className="form-control search-input text-center"
-                placeholder="Location"
-                aria-label=""
-                // onChange={(e) => setLocation(e.target.value)}
-              />
-              <select
-                className="form-select search-input text-center"
-                aria-label="Default select example"
-              >
-                <option defaultValue="1">All Categories</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-              <button
-                type="button"
-                className="search-input btn btn-success"
-                onClick={(e) => {}}
-              >
-                Search Jobs
-              </button>
-            </div>
+      <Nav></Nav>
+<div className="bg-[#f2f2f2] " >
+      <div className="mb-6  wrapper  flex flex-col gap-6">
+        <div className="pt-8 flex flex-col gap-6">
+          <div className=" sm:justify-center font-semibold gap-2 text-4xl flex">
+            <h3 className="">Browse </h3>
+            <h3 className=" text-[#69C080]">Jobs</h3>{" "}
           </div>
+        </div>
 
-          <div className="d-sm-block d-md-none d-lg-none">
-            <div className="d-grid gap-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Job Title, Skill, Industry"
-                aria-label="Username"
-              />
-              <input
-                type="text"
-                className="form-control"
-                placeholder="City, State or Zip"
-                aria-label="Username"
-              />
-              <select
-                className="form-select"
-                aria-label="Default select example"
-              >
-                <option selected>All Categories</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-              <button type="button" className=" btn btn-success">
-                Search
-              </button>
-            </div>
-          </div>
+        <div className="flex  md:gap-2 sm:gap-1 w-full sm:flex-col md:flex-row   justify-between ">
+          {" "}
+          <input
+            required
+            type="text"
+            name="emailAddress"
+            id="emailAddress"
+            placeholder="Job title or keyword"
+            className="form-control bg-white border-0 sm:rounded-sm md:w-3/12 sm:w-12/12 md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+            onChange={(e) => {
+              // setEmail(e.target.value);
+            }}
+          />
+          <input
+            required
+            type="text"
+            name="emailAddress"
+            id="emailAddress"
+            placeholder="Location "
+            className="form-control border-0 sm:rounded-sm md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+            onChange={(e) => {
+              // setEmail(e.target.value);
+            }}
+          />
+          <input
+            required
+            type="text"
+            name="emailAddress"
+            id="emailAddress"
+            placeholder="[variable goes here] "
+            className="form-control border-0 sm:rounded-sm md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+            onChange={(e) => {
+              // setEmail(e.target.value);
+            }}
+          />
+          <button
+            className=" sm:rounded-sm  md:w-3/12 sm:w-12/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2    rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-          <p className="">
-            Need more search options?{" "}
-            <Link className="text-success" to="/advanced-search">
-              Advanced Search
+            // onClick={(e) => setIsCompany(false)}
+          >
+            <Link to="/employee-guide w-6/12 " className="text-white">
+              SEARCH JOBS
             </Link>
-          </p>
+          </button>
+        </div>
+
+        <div className=" pb-8 text-xl flex gap-2 font-semibold  ">
+          <h3 className="">Need more search options? </h3>{" "}
+          <Link to="/advanced-search">
+            {" "}
+            <h3 className=" text-[#69C080]">Advanced Search</h3>{" "}
+          </Link>{" "}
         </div>
       </div>
-
-      <div className="d-grid container gap-5 py-5">
-        <div className="card">
-          <div className="card-body p-3">
-            <h5 className="card-title">Filters</h5>
-            <div className="d-flex align-content-stretch flex-wrap gap-3">
-              <div className="btn-group">
-                <button
-                  type="button"
-                  className="btn btn-light dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Posted Anytime
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Another action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Something else here
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Separated link
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="btn-group">
-                <button
-                  type="button"
-                  className="btn btn-light dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Location
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Another action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Something else here
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Separated link
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="btn-group">
-                <button
-                  type="button"
-                  className="btn btn-light dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Company
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Another action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Something else here
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Separated link
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="btn-group">
-                <button
-                  type="button"
-                  className="btn btn-light dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Salary
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Another action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Something else here
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Separated link
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="btn-group">
-                <button
-                  type="button"
-                  className="btn btn-light dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Employment Type
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Another action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Something else here
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Separated link
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+      </div>
+<div className="wrapper my-5" >
+      <div className=" flex   shadow-md p-8  w-full flex-col  ">
+          <h3 className="font-semibold text-3xl">Filters</h3>
+          <div className="flex   gap-2  md:gap-2 sm:gap-1 w-full sm:flex-col md:flex-row    justify-between ">
+            {" "}
+            <div className="bg-slate-50 md:w-3/12 sm:w-12/12 md:px-4 justify-center sm:px-2 w-full sm:rounded-sm flex gap-1  md:py-2 sm:p-2 mt-2">
+              <IconPack11 fill="#69C080" className="h-5 my-auto" />
+              <select
+                value={optionState}
+                className="form-control text-black border-0   bg-slate-50  text-center"
+              >
+                <option value="A">Posted Anytime</option>
+                <option value="B">Banana</option>
+                <option value="C">Cranberry</option>
+                onChange=
+                {(e) => {
+                  // setEmail(e.target.value);
+                }}
+              </select>
+            </div>
+            <div className="bg-slate-50 md:w-3/12 sm:w-12/12 md:px-4 justify-center  sm:px-2 w-full sm:rounded-sm flex gap-1  md:py-2 sm:p-2 mt-2">
+              <IconPack12 fill="#69C080" className="h-5 my-auto" />
+              <select
+                value={optionState}
+                className="form-control text-black border-0   bg-slate-50  text-center"
+              >
+                <option value="A">Location</option>
+                <option value="B">Banana</option>
+                <option value="C">Cranberry</option>
+                onChange=
+                {(e) => {
+                  // setEmail(e.target.value);
+                }}
+              </select>
+            </div>
+            <div className="bg-slate-50 md:w-3/12 sm:w-12/12 md:px-4  justify-center sm:px-2 w-full sm:rounded-sm flex gap-1  md:py-2 sm:p-2 mt-2">
+              <IconPack13 fill="#69C080" className="h-5 my-auto" />
+              <select
+                value={optionState}
+                className="form-control text-black border-0   bg-slate-50  text-center"
+              >
+                <option value="A">Company</option>
+                <option value="B">Banana</option>
+                <option value="C">Cranberry</option>
+                onChange=
+                {(e) => {
+                  // setEmail(e.target.value);
+                }}
+              </select>
+            </div>
+            <div className="bg-slate-50 md:w-3/12 sm:w-12/12 md:px-4  justify-center sm:px-2 w-full sm:rounded-sm flex gap-1  md:py-2 sm:p-2 mt-2">
+              <IconPack14 fill="#69C080" className="h-5 my-auto" />
+              <select
+                value={optionState}
+                className="form-control text-black border-0  bg-slate-50   text-center"
+              >
+                <option value="A">Salary</option>
+                <option value="B">Banana</option>
+                <option value="C">Cranberry</option>
+                onChange=
+                {(e) => {
+                  // setEmail(e.target.value);
+                }}
+              </select>
+            </div>
+            <div className="bg-slate-50 md:w-3/12 sm:w-12/12 md:px-4  justify-center w-full sm:px-2 sm:rounded-sm flex gap-1  md:py-2 sm:p-2 mt-2">
+              <IconPack15 fill="#69C080" className="h-5 my-auto" />
+              <select
+                value={optionState}
+                className="form-control text-black border-0 bg-slate-50    text-center"
+              >
+                <option value="A">Employment Type</option>
+                <option value="B">Banana</option>
+                <option value="C">Cranberry</option>
+                onChange=
+                {(e) => {
+                  // setEmail(e.target.value);
+                }}
+              </select>
             </div>
           </div>
         </div>
-
-        <div style={{ minHeight: "30vh" }} className="">
-          {jobs.length > 0 ? (
-            <>
-              {jobs &&
-                jobs
-                  // .filter((job) => {
-                  //   return (
-                  //     job.positon.includes(keyword) ||
-                  //     job.description.includes(keyword) ||
-                  //     job.category.toLowerCase() === searchQueryCategory
-                  //     // Object.values(job.location).includes(location)
-                  //   );
-                  // })
-                  .map((job, index) => (
-                    <Link
-                      className="text-decoration-none text-black"
-                      to="/job-details"
-                      state={job}
-                      key={index}
-                    >
-                      <JobContainer job={job} className="col-12 col-md-6" />
-                    </Link>
-                  ))}
-            </>
-          ) : (
-            <>
-              <p className="text-center">No jobs found.</p>
-            </>
-          )}
         </div>
-      </div>
 
-      <PopularCategory background="bg-light" cardBackground="bg-white" />
 
-      <div className="row" style={{ height: "60vh" }}>
-        <div className="bg-success col-6 d-flex justify-content-center align-items-center p-5">
-          <div>
-            <h3 className="display-5 text-white">
-              Put your best <br />
+        <div className="wrapper flex w-12/12 gap-3 flex-col my-20 ">
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature1}
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
+            ></img>
+
+            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-5 md:my-auto bg-[#f2f2f2] ">
+              <h3 className="text-xl ">
+                Python Software Engineering Associate – Credit Technology
+              </h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row relative sm:flex-col  md:justify-between sm:items-start">
+                {" "}
+                <div className="p-2 mb-2 flex gap-2 md:absolute  sm:mx-auto bottom-5 right-0   rounded-md bg-[#69C080] ">
+                  <h4 className="  text-md text-white  ">
+                    APPLY FOR THIS JOB{" "}
+                  </h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature2}
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
+            ></img>
+
+            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-5 md:my-auto bg-[#f2f2f2] ">
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+                {" "}
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
+                  <h4 className=" text-md  "> PRO</h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature3}
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
+            ></img>
+
+            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-5 md:my-auto bg-[#f2f2f2] ">
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+                {" "}
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
+                  <h4 className=" text-md  "> PRO</h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+            <img
+              src={feature4}
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
+            ></img>
+
+            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-5 md:my-auto bg-[#f2f2f2] ">
+              <h3 className="text-xl ">Associate Software Engineer Java</h3>
+              <h4 className="text-md">London, England</h4>
+              <h4 className="text-md">$100,000</h4>
+              <h4 className="text-md">Full Time Role</h4>{" "}
+              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+                {" "}
+                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                  <IconPack4 fill="#000000" className="h-5 my-auto" />
+                  <h4 className=" text-md  "> PRO</h4>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>{" "}
+
+        <div className="my-6 bg-[#f2f2f2]">
+          <div className=" wrapper  ">
+
+<h3 className="text-3xl font-semibold text-center py-4" >Popular Categories</h3>
+carouselgoes here
+          </div>
+
+        </div>
+
+      <div className=" w-full flex md:flex-row  bg-[#69C080] sm:flex-col">
+        <div className="md:w-6/12 flex my-auto sm:text-center sm:justify-center sm:py-7  sm:12/12">
+          <div className="flex md:pl-[134px] sm:pl-0 sm:justify-center flex-col gap-4  ">
+            <h3 className="text-5xl font-semibold text-white">
+              Put your best <br></br>
               foot forward.
             </h3>
-
-            <p className="fw-bold">
-              Best practice and advice <br />
-              for creating the perfect CV
-            </p>
-
-            <button type="button" className="btn btn-warning">
-              Learn More
+            <h3 className="text-2xl font-semibold">
+              Best practices and advice <br></br>
+              for creating the perfect CV.
+            </h3>
+            <button className=" sm:mx-auto md:mx-0 bg-[#FFBE24] font-semibold w-fit rounded-md p-2 px-3 ">
+              <Link to="">LEARN MORE</Link>
             </button>
           </div>
         </div>
-
-        <div
-          className="col-6"
-          style={{
-            backgroundImage: `url(${SmilingManWithLaptop})`,
-            backgroundSize: `cover`,
-          }}
-        ></div>
+        <img className="md:w-6/12 sm:12/12" src={SmilingManWithLaptop}></img>
       </div>
 
       <Footer></Footer>
