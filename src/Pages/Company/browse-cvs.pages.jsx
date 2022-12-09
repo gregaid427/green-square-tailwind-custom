@@ -107,7 +107,7 @@ function BrowseCVs(props) {
             className="md:w-4/12 sm:w-6/12 h-[300px] rounded-xl "
             src={SmilingWoman}
           ></img>
-          <div className="sm:w-6/12  flex flex-col md:justify-around sm:justify-center ">
+          <div className="sm:w-6/12 md:8/12  flex flex-col md:justify-around sm:justify-center ">
             <h3 className="font-semibold text-3xl  ">Applicant Name</h3>
             <h3 className="font-semibold text-xl text-slate-500 ">
               Accra, Ghana
