@@ -108,7 +108,10 @@ function App() {
                 path="/cvs"
                 element={<BrowseCVs setShowNavBar={setShowNavBar} />}
               />
-            
+                <Route
+                path="*"
+                element={<Home setShowNavBar={setShowNavBar} />}
+              />
             </Routes>
             </JobsProvider>
         </UserProvider>
