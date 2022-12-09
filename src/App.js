@@ -17,10 +17,10 @@ import CompanyDashboard from "./Pages/Candidates/company-dashboard.pages";
 import CompanyGuide from "./Pages/Guide/company-guide.pages";
 import EmployeeGuide from "./Pages/Guide/employee-guide.pages";
 // import BrowseJobs from "./Pages/Jobs/browse-jobs.pages";
-// import JobsPostedByCompany from "./Pages/Company/jobs-posted-by-company.pages";
+import JobsPostedByCompany from "./Pages/Company/jobs-posted-by-company.pages";
 // import BrowseCVs from "./Pages/Company/browse-cvs.pages";
 // import MessageList from "./Pages/Account/messages.pages";
-// import PostJobsByCompany from "./Pages/Company/post-jobs-by-company.pages";
+import PostJobsByCompany from "./Pages/Company/post-jobs-by-company.pages";
 // import JobApplications from "./Pages/Candidates/applications.pages";
 // import UploadCV from "./Pages/Candidates/upload-cv.pages";
 // import ViewProfileDashboard from "./Pages/Candidates/view-profile-dashboard.pages";
@@ -91,9 +91,18 @@ function App() {
                 path="/employee-guide"
                 element={<EmployeeGuide setShowNavBar={setShowNavBar} />}
               />
+                <Route
+                path="/post-a-job"
+                element={<PostJobsByCompany setShowNavBar={setShowNavBar} />}
+              />
+        
               <Route
                 path="/company-dashboard"
                 element={<CompanyDashboard setShowNavBar={setShowNavBar} />}
+              />
+               <Route
+                path="/company-jobs"
+                element={<JobsPostedByCompany setShowNavBar={setShowNavBar} />}
               />
             
             </Routes>

@@ -191,7 +191,7 @@ carousel goes here
           <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
             <img
               src={feature1}
-              className="md:w-4/12 sm:w-12/12 h-[250px]  "
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
             ></img>
 
             <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
@@ -215,7 +215,7 @@ carousel goes here
           <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
             <img
               src={feature2}
-              className="md:w-4/12 sm:w-12/12  h-[250px] "
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
             ></img>
 
             <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
@@ -236,7 +236,7 @@ carousel goes here
           <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
             <img
               src={feature3}
-              className="md:w-4/12 sm:w-12/12  h-[250px] "
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
             ></img>
 
             <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">
@@ -257,7 +257,7 @@ carousel goes here
           <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
             <img
               src={feature4}
-              className="md:w-4/12 sm:w-12/12  h-[250px] "
+              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
             ></img>
 
             <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4  flex flex-col gap-5 md:my-auto ">

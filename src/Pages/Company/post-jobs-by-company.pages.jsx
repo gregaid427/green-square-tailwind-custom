@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import Footer from "../../Components/Footer/footer.component";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../Context/auth.context";
+import Nav from "../../Components/NavBar/nav.component";
+import Header from "../../Components/header/header";
 
 function PostJobsByCompany(props) {
   const { user } = useContext(UserContext);
@@ -99,6 +101,8 @@ function PostJobsByCompany(props) {
 
   return (
     <>
+       <Nav />
+      <Header title={"Company Name"} subtitle={"Post a job"} amount={"25.0"} />
       <div className="bg-light rounded-3 p-3">
         <div className="container py-5">
           <div className="row">

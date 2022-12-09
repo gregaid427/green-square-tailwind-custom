@@ -3,34 +3,36 @@ import { Link } from "react-router-dom";
 function IdealCandidateSection() {
   return (
     <>
-      <div
-        className="bg-success d-flex align-items-center justify-content-center p-5 text-center"
-       
-      >
-        <div className="d-grid gap-3">
-          <h3 className="display-5 text-white">
-            Your ideal candidate is just a click away
-          </h3>
-          <div className=" mx-auto d-flex">
-            <Link
-              to={"/post-a-job"}
-              className="btn btn-dark btn-lg"
-              style={{ width: "200px", marginRight: "5px" }}
-            >
+
+
+<div className="flex  flex-col py-12 items-center justify-center gap-2 bg-[#69C080]  ">
+        <h3 className="text-4xl text-center font-semibold sm:font-normal sm:text-2xl py-4 text-white ">
+          Your ideal candidate is just a click away
+        </h3>
+
+        <div className="flex gap-4  md:w-[400px] sm:w-full items-center sm:px-6  justify-center ">
+          {" "}
+          <button
+            className=" w-6/12    md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#000000] text-white"
+
+            // onClick={(e) => setIsCompany(false)}
+          >
+            <Link     to={"/post-a-job"}className="">
               POST A JOB
             </Link>
+          </button>
+          <button
+            className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
 
-            <Link
-              to={"/cvs"}
-              className="btn btn-warning btn-lg"
-              style={{ width: "200px", marginLeft: "5px" }}
-            >
-              BROWSE CVS
-            </Link>
-          </div>
+            // onClick={(e) => setIsCompany(false)}
+          >
+            <Link   to={"/cvs"}>BROWSE CVS</Link>
+          </button>
         </div>
-        
       </div>
+
+
+
     </>
   );
 }

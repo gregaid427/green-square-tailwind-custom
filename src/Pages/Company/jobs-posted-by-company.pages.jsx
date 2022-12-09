@@ -4,79 +4,53 @@ import { Link } from "react-router-dom";
 import JobContainer from "./../../Components/Containers/job-container.components";
 import IdealCandidateSection from "../../Components/Containers/Sections/ideal-candidate.component";
 import { UserContext } from "../../Context/auth.context";
+import Nav from "../../Components/NavBar/nav.component";
+import Header from "../../Components/header/header";
 
 function JobsPostedByCompany(props) {
-  props.setShowNavBar(true);
+  // props.setShowNavBar(true);
   // const [keyword, setKeyword] = useState("");
   // const [location, setLocation] = useState({});
-  const [jobs, setJobs] = useState([]);
+  // const [jobs, setJobs] = useState([]);
 
   // use context
-  const { user } = useContext(UserContext);
-  let company_id = user.company.company_id;
+  // const { user } = useContext(UserContext);
+  // let company_id = user.company.company_id;
 
   // let company_id = `636d024e71c76e2a8c6f9725`;
 
-  useEffect(() => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
+  // useEffect(() => {
+  //   var requestOptions = {
+  //     method: "GET",
+  //     redirect: "follow",
+  //   };
 
-    console.log(`${process.env.REACT_APP_HOST}/jobs/company/${company_id}`);
+  //   console.log(`${process.env.REACT_APP_HOST}/jobs/company/${company_id}`);
 
-    fetch(
-      `${process.env.REACT_APP_HOST}/jobs/company/${company_id}`,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result);
-        if (result.success) {
-          console.log(result.jobs);
-          setJobs(result.jobs);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        // alert(error.message);
-      });
-  }, [company_id]);
+  //   fetch(
+  //     `${process.env.REACT_APP_HOST}/jobs/company/${company_id}`,
+  //     requestOptions
+  //   )
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //       console.log(result);
+  //       if (result.success) {
+  //         console.log(result.jobs);
+  //         setJobs(result.jobs);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       // alert(error.message);
+  //     });
+  // }, [company_id]);
 
   return (
     <>
-      <div className="bg-light rounded-3 p-3">
-        <div className="container py-5">
-          <div className="row">
-            <div className="col-6">
-              <h1 className="display-4">
-                <span className="text-success">CompanyName,</span>
-                <br />
-                Posted Jobs
-              </h1>
-            </div>
-            <div className="col-6">
-              <div className="card float-end" style={{ width: "15rem" }}>
-                <div className="card-body">
-                  <h3 className="display-6">
-                    <span style={{ fontSize: "14px" }} className="">
-                      GHS
-                    </span>{" "}
-                    <span>25.00</span>
-                  </h3>
-                  <div className="d-flex gap-3">
-                    <span>Available Credit</span>
-                    <Link to="#" className="text-success">
-                      Top Up
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Nav />
+      <Header title={"Company Name"} subtitle={"Post a job"} amount={"25.0"} />
 
+      {/* 
       <div className="container py-5" style={{ minHeight: "40vh" }}>
         <div className="d-flex justify-content-between row gx-4">
           {jobs && jobs.length > 0 ? (
@@ -102,6 +76,54 @@ function JobsPostedByCompany(props) {
               <p className="text-center">Found no posted jobs</p>
             </>
           )}
+        </div>
+      </div> */}
+
+      <div className=" my-5 flex wrapper gap-3  flex-col justify-between ">
+        <div className="py-3 px-4 w-full rounded-md  bg-[#f2f2f2] flex sm:flex-col justify-between">
+          <div className="  w-[9/12] flex flex-col justify-between gap-3">
+            <h3 className="text-xl ">
+              Python Software Engineering Associate – Credit Technology
+            </h3>
+            <h4 className="text-md">London, England</h4>
+            <h4 className="text-md">$100,000</h4>
+            <h4 className="text-md">Full Time Role</h4>{" "}
+          </div>
+
+          <div className="w-[3/12] flex mt-2 gap-3 sm:flex-start   ">
+            {" "}
+            <button className="px-2 py-1  flex uppercase   h-fit  rounded-md bg-[#69C080] ">
+              <h4 className="  text-md text-white  ">View</h4>
+            </button>
+            <button className="px-2 py-1 flex uppercase  h-fit  rounded-md bg-[#69C080] ">
+              <h4 className="  text-md text-white  ">Edit</h4>
+            </button>
+            <button className="px-2  py-1 flex uppercase   h-fit  rounded-md bg-[#69C080] ">
+              <h4 className="  text-md text-white  ">Hide</h4>
+            </button>
+          </div>
+        </div>
+
+        <div className="py-3 px-4 w-full rounded-md  bg-[#f2f2f2] flex sm:flex-col justify-between">
+          <div className="  w-[9/12] flex flex-col justify-between gap-3">
+            <h3 className="text-xl ">Associate Software Engineer Java</h3>
+            <h4 className="text-md">London, England</h4>
+            <h4 className="text-md">$100,000</h4>
+            <h4 className="text-md">Full Time Role</h4>{" "}
+          </div>
+
+          <div className="w-[3/12] flex mt-2 gap-3 sm:flex-start   ">
+            {" "}
+            <button className="px-2 py-1  flex uppercase   h-fit  rounded-md bg-[#69C080] ">
+              <h4 className="  text-md text-white  ">View</h4>
+            </button>
+            <button className="px-2 py-1 flex uppercase  h-fit  rounded-md bg-[#69C080] ">
+              <h4 className="  text-md text-white  ">Edit</h4>
+            </button>
+            <button className="px-2  py-1 flex uppercase   h-fit  rounded-md bg-[#69C080] ">
+              <h4 className="  text-md text-white  ">Hide</h4>
+            </button>
+          </div>
         </div>
       </div>
 
