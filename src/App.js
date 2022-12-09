@@ -9,7 +9,7 @@ import Home from "./Pages/Home/home.page";
 
 // import CompanyList from "./Pages/Company/browse-companies.pages";
 // import CompanyDetails from "./Pages/Company/company-details.pages";
-// import EmployeeDashboard from "./Pages/Candidates/employee-dashboard.pages";
+import EmployeeDashboard from "./Pages/Candidates/employee-dashboard.pages";
 import CompanyDashboard from "./Pages/Candidates/company-dashboard.pages";
 // import ManageResumeDashboard from "./Pages/Candidates/manage-resume.pages";
 // import MyProfilePage from "./Pages/Account/my-profile.pages";
@@ -85,7 +85,10 @@ function App() {
                 path="/company-faq"
                 element={<CompanyFaqs setShowNavBar={setShowNavBar} />}
               />{" "} 
-           
+               <Route
+                path="/employee-dashboard"
+                element={<EmployeeDashboard setShowNavBar={setShowNavBar} />}
+              />
 
               <Route
                 path="/employee-guide"
