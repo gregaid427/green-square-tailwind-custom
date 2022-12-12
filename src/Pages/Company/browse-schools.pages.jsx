@@ -4,6 +4,12 @@ import Suitcase from "./../../Assets/images/suitcase.png";
 
 import { Link } from "react-router-dom";
 import IdealCandidateSection from "../../Components/Containers/Sections/ideal-candidate.component";
+import img1 from "../../Assets/images/feature2.png";
+import img2 from "../../Assets/images/feature4.png";
+import img3 from "../../Assets/images/feature1.png";
+import Nav from "../../Components/NavBar/nav.component";
+import { ReactComponent as IconPack1 } from "./../../Assets/icons/Icons-18.svg";
+import { ReactComponent as IconPack2 } from "./../../Assets/icons/Icons-19.svg";
 
 function SchoolsList(props) {
   props.setShowNavBar(true);
@@ -39,131 +45,139 @@ function SchoolsList(props) {
 
   return (
     <>
-      <div className="bg-light rounded-3 text-left">
-        <div className="d-grid container gap-2 py-3">
-          <h1 className="display-4">
-            Browse
-            <span className="text-success"> Schools</span>
-          </h1>
-
-          <div className="d-none d-md-block d-lg-block">
-            <div className="input-group d-flex mb-2 gap-3">
-              <input
-                type="text"
-                className="form-control search-input text-center"
-                placeholder="School Name"
-                aria-label=""
-                // onChange={(e) => setKeyword(e.target.value)}
-              />
-              <input
-                type="text"
-                className="form-control search-input text-center"
-                placeholder="Location"
-                aria-label=""
-                // onChange={(e) => setLocation(e.target.value)}
-              />
-              <select
-                className="form-select search-input text-center"
-                aria-label="Default select example"
-                // onChange={(e) => setKeyword(e.target.value)}
-              >
-                <option selected>All Categories</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-              <button type="button" className="search-input btn btn-success">
-                Search Jobs
-              </button>
-            </div>
+      <Nav></Nav>
+      <div className="wrapper bg-[#f2f2f2]  ">
+        <div className="flex flex-col md:py-10 sm:py-4  gap-8">
+          <div className=" sm:justify-center font-semibold gap-2 text-4xl flex">
+            <h3 className="">Browse </h3>
+            <h3 className=" text-[#69C080]">Companies</h3>{" "}
           </div>
+        </div>
 
-          <div className="d-sm-block d-md-none d-lg-none">
-            <div className="d-grid gap-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Job Title, Skill, Industry"
-                aria-label="Username"
-              />
-              <input
-                type="text"
-                className="form-control"
-                placeholder="City, State or Zip"
-                aria-label="Username"
-              />
-              <select
-                className="form-select"
-                aria-label="Default select example"
-              >
-                <option selected>All Categories</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-              <button type="button" className=" btn btn-success">
-                Search
-              </button>
-            </div>
-          </div>
+        <div className="flex  md:gap-2 sm:gap-1 w-full sm:flex-col md:flex-row   justify-between ">
+          {" "}
+          <input
+            required
+            type="text"
+            name="emailAddress"
+            id="emailAddress"
+            placeholder="School title or keyword"
+            className="form-control border-0 sm:rounded-sm  md:w-3/12 sm:w-12/12 md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+            onChange={(e) => {
+              // setEmail(e.target.value);
+            }}
+          />
+          <input
+            required
+            type="text"
+            name="emailAddress"
+            id="emailAddress"
+            placeholder="Location"
+            className="form-control border-0 sm:rounded-sm mx-5 md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+            onChange={(e) => {
+              // setEmail(e.target.value);
+            }}
+          />
+          <input
+            required
+            type="text"
+            name="emailAddress"
+            id="emailAddress"
+            placeholder="Graduation Year"
+            className="form-control border-0 sm:rounded-sm mx-5 md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+            onChange={(e) => {
+              // setEmail(e.target.value);
+            }}
+          />
+          <button
+            className=" sm:rounded-sm  md:w-3/12 sm:w-12/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2    rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-          <p className="">
-            Need more search options?
-            <Link className="text-success" to="/advanced-search">
-              Advanced Search
+            // onClick={(e) => setIsCompany(false)}
+          >
+            <Link to="/employee-guide w-6/12 " className="text-white">
+              SEARCH JOBS
             </Link>
-          </p>
+          </button>
+        </div>
+        <div className=" pb-8 text-xl flex gap-2 md:py-10 sm:py-4 font-semibold  ">
+          <h3 className="">Need more search options? </h3>{" "}
+          <Link to="/advanced-search">
+            {" "}
+            <h3 className=" text-[#69C080]">Advanced Search</h3>{" "}
+          </Link>{" "}
         </div>
       </div>
 
-      <div className="container py-5" style={{ minHeight: "40vh" }}>
-        <div className="row">
-          {schools && schools.length > 0 ? (
-            <>
-              {schools &&
-                schools
-                  // .filter((school) => {
-                  //   return (
-                  //     school.name.includes(keyword) ||
-                  //     school.symbol.includes(keyword)
-                  //   );
-                  // })
-                  .map((company) => (
-                    <div className="col-12 col-sm-6 col-xl-3">
-                      <Link
-                        to={"/school-details"}
-                        className={"text-decoration-none text-dark"}
-                        state={company}
-                      >
-                        <div className="card mb-3">
-                          <img
-                            src={company.image ? company.image : Suitcase}
-                            className="card-img-top img-fluid"
-                            alt="..."
-                          />
+      <div className="wrapper my-6 md:grid-cols-3 sm:grid-cols-1 gap-5 grid">
+        <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
+          <img className="rounded-md h-[300px]  " src={img1}></img>
+          <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">
+                {" "}
+                <IconPack1 fill="#ffc107" />
+              </div>
+          <div className=" flex p-3  bg-[#f2f2f2] flex-col gap-3 ">
+            <h3 className="font-semibold">School Name Here</h3>
+            <h3 className="text-slate-400">24 Applicants from this school</h3>
+            <button className=" bg-[#69C080] w-fit rounded-md p-1 px-2 ">
+              <Link to={"/company-details"} className="text-white">
+                {" "}
+                VIEW PROFILES{" "}
+              </Link>
+            </button>
+          </div>
+        </div>
 
-                          <div className="card-body bg-light">
-                            <h6 className="card-title">{company.symbol}</h6>
-                            <p className="card-text">
-                              {company.location} Applicants from this school
-                            </p>
-                            <Link
-                              to={"/browse-applicants"}
-                              className="btn btn-success"
-                            >
-                              View Profiles
-                            </Link>
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
-                  ))}
-            </>
-          ) : (
-            <>
-              <p className="text-center">Found no schools</p>
-            </>
-          )}
+        <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
+          <img className="rounded-md h-[300px]  " src={img1}></img>
+          <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">
+                {" "}
+                <IconPack2 fill="#ffc107" />
+              </div>
+          <div className=" flex p-3  bg-[#f2f2f2] flex-col gap-3 ">
+            <h3 className="font-semibold">School Name Here</h3>
+            <h3 className="text-slate-400">24 Applicants from this school</h3>
+            <button className=" bg-[#69C080] w-fit rounded-md p-1 px-2 ">
+              <Link to={"/company-details"} className="text-white">
+                {" "}
+                VIEW PROFILES{" "}
+              </Link>
+            </button>
+          </div>
+        </div>
+
+        <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
+          <img className="rounded-md h-[300px]  " src={img1}></img>
+          <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">
+                {" "}
+                <IconPack1 fill="rgb(148,162,184)" />
+              </div>
+          <div className=" flex p-3  bg-[#f2f2f2] flex-col gap-3 ">
+            <h3 className="font-semibold">School Name Here</h3>
+            <h3 className="text-slate-400">4 Applicants from this school</h3>
+            <button className=" bg-[#69C080] w-fit rounded-md p-1 px-2 ">
+              <Link to={"/company-details"} className="text-white">
+                {" "}
+                VIEW PROFILES{" "}
+              </Link>
+            </button>
+          </div>
+        </div>
+        <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
+          <img className="rounded-md h-[300px]  " src={img1}></img>
+          <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">
+                {" "}
+                <IconPack1 fill="#ffc107" />
+              </div>
+          <div className=" flex p-3  bg-[#f2f2f2] flex-col gap-3 ">
+            <h3 className="font-semibold">School Name Here</h3>
+            <h3 className="text-slate-400">24 Applicants from this school</h3>
+            <button className=" bg-[#69C080] w-fit rounded-md p-1 px-2 ">
+              <Link to={"/company-details"} className="text-white">
+                {" "}
+                VIEW PROFILES{" "}
+              </Link>
+            </button>
+          </div>
         </div>
       </div>
 
