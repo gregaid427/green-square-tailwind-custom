@@ -101,6 +101,8 @@ function CompanyList(props) {
           </div>
         </div>
       </div>
+
+      
       <div className="wrapper my-6 md:grid-cols-3 sm:grid-cols-1 gap-5 grid">
         <div className=" row-span-1 rounded-md flex flex-col shadow-md ">
           <img className="rounded-md h-[300px]  " src={img1}></img>
