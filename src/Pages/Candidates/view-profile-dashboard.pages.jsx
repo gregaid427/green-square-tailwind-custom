@@ -5,6 +5,12 @@ import ApplicantModel from "./../../Assets/images/applicant.jpeg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { UserContext } from "../../Context/auth.context";
+import IdealCandidateSection from "../../Components/Containers/Sections/ideal-candidate.component";
+import Nav from "../../Components/NavBar/nav.component";
+import SmilingWoman from "./../../Assets/images/applicant.jpeg";
+import { ReactComponent as IconPack1 } from "./../../Assets/icons/Icons-11.svg";
+import { ReactComponent as IconPack2 } from "./../../Assets/icons/Icons-17.svg";
+import { ReactComponent as IconPack3 } from "./../../Assets/icons/Icons-13.svg";
 
 function ViewProfileDashboard(props) {
   props.setShowNavBar(true);
@@ -15,346 +21,82 @@ function ViewProfileDashboard(props) {
 
   return (
     <>
-      {!viewDetailedCV ? (
-        <>
-          <div className="rounded-3 bg-light text-left">
-            <div className="container py-3">
-              <div className="row">
-                <div className="col-12 col-md-4">
-                  <img
-                    style={{ height: "250px", width: "250px" }}
-                    src={ApplicantModel ? ApplicantModel : Suitcase}
-                    className="img-fluid rounded-5 d-flex align-items-center"
-                    alt="company-logo"
-                  />
-                </div>
-                <div className="col-12 col-md-8 d-grid gap-2 p-3">
-                  <h3 className="display-6 text-success text-capitalize">
-                    {applicant && applicant.name}
-                  </h3>
-                  <p className="text-muted m-0">
-                    I'm an <b className="text-uppercase mb-1">N/A</b>
-                  </p>
-                  <p className="text-muted m-0">
-                    I'm open to <b className="text-uppercase mb-1">N/A</b>
-                  </p>
-                  <p className="text-muted m-0">
-                    I'm located in <b className="text-uppercase mb-1">N/A</b>
-                  </p>
-                  <p className="text-muted m-0">
-                    I'm have a <b className="text-uppercase mb-1">N/A</b>
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="container py-5">
-            <div className="row g-4">
-              <div
-                className="col-12 col-md-4"
-                onClick={(e) => {
-                  setViewDetailedCV(true);
-                }}
-              >
-                <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4 text-center">
-                  <div className="d-grid gap-2">
-                    <i
-                      className="fa-solid fa-file-arrow-down"
-                      style={{ fontSize: "128px" }}
-                    ></i>
-                    <p>View Details</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-md-4" onClick={(e) => {}}>
-                <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4 text-center">
-                  <div className="d-grid gap-2">
-                    <i
-                      className="fa-solid fa-play"
-                      style={{ fontSize: "128px" }}
-                    ></i>
-                    <p>Watch Profile Video</p>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-12 col-md-4"
-                onClick={(e) => {
-                  if (user && user.hasOwnProperty("company")) {
-                    navigate("/messages");
-                  } else {
-                    alert("Please log in to send a message to this applicant.");
-                    navigate("/login");
-                  }
-                }}
-              >
-                <div className="bg-light rounded-4 d-flex align-items-center justify-content-center border p-4 text-center">
-                  <div className="d-grid gap-2">
-                    <i
-                      className="fa-solid fa-envelope"
-                      style={{ fontSize: "128px" }}
-                    ></i>
-                    <p>Send Message</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <div className="rounded-3 text-left">
-          <div className="container py-3">
-            <div className="row">
-              <div className="col-12 col-md-4">
-                <img
-                  style={{ height: "250px", width: "250px" }}
-                  src={ApplicantModel ? ApplicantModel : Suitcase}
-                  className="img-fluid rounded-5 d-flex align-items-center"
-                  alt="company-logo"
-                />
-              </div>
-              <div className="col-12 col-md-8 d-grid gap-2 p-3">
-                <h3 className="display-6 text-success text-capitalize">
-                  {applicant && applicant.name}
-                </h3>
-                <b className="text-uppercase mb-1">
-                  {
-                    // applicant && applicant.resume.profession.positions[0].position
-                    //   ? applicant.resume.profession.positions[0].position
-                    //   :
-                    "N/A"
-                  }
-                </b>
-
-                <p className="text-muted mb-1">
-                  Open to: Financial Consulting, Accounting, Auditing
-                </p>
-
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
-
-            <hr />
-
-            <div className="d-flex justify-content-between">
-              <div className="">
-                <p>
-                  <i className="fa-solid fa-phone text-success"></i>
-                  {applicant && applicant.number}
-                </p>
-              </div>
-              <div className="">
-                <p>
-                  <i className="fa-solid fa-envelope text-success"></i>
-                  {applicant && applicant.email}
-                </p>
-              </div>
-              <div className="">
-                <p>
-                  <i className="fa-solid fa-location-dot text-success"></i>
-                  {/* {applicant &&
-                  `${applicant.residential_address.streetAddress}, ${applicant.residential_address.streetAddress}`} */}
-                  {"N/A"}
-                </p>
-              </div>
-            </div>
-
-            <hr />
-
-            <div className="row">
-              <b className="text-success text-uppercase mb-1">Education</b>
-              <div className="row">
-                <div className="col-12 col-md-3">
-                  <b className="mb-1">University of Lorem</b>
-                  <p className="text-muted">2008 - 2010</p>
-                </div>
-                <div className="col-12 col-md-9">
-                  <b className="mb-1">Certificate/Degree Earned</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
-                    ollcitudin est dolor time.
-                  </p>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12 col-md-3">
-                  <b className="mb-1">University of Lorem</b>
-                  <p className="text-muted">2008 - 2010</p>
-                </div>
-                <div className="col-12 col-md-9">
-                  <b className="mb-1">Certificate/Degree Earned</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
-                    ollcitudin est dolor time.
-                  </p>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12 col-md-3">
-                  <b className="mb-1">University of Lorem</b>
-                  <p className="text-muted">2008 - 2010</p>
-                </div>
-                <div className="col-12 col-md-9">
-                  <b className="mb-1">Certificate/Degree Earned</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
-                    ollcitudin est dolor time.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <hr />
-
-            <div className="row">
-              <b className="text-success text-uppercase mb-1">
-                WORK EXPERIENCE
-              </b>
-              <div className="row">
-                <div className="col-12 col-md-3">
-                  <b className="mb-1">Company Name</b>
-                  <p className="text-muted">2008 - 2010</p>
-                </div>
-                <div className="col-12 col-md-9">
-                  <b className="mb-1">Job Title Here</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
-                    ollcitudin est dolor time.
-                  </p>
-                  <ul>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12 col-md-3">
-                  <b className="mb-1">Company Name</b>
-                  <p className="text-muted">2008 - 2010</p>
-                </div>
-                <div className="col-12 col-md-9">
-                  <b className="mb-1">Job Title Here</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
-                    ollcitudin est dolor time.
-                  </p>
-                  <ul>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12 col-md-3">
-                  <b className="mb-1">Company Name</b>
-                  <p className="text-muted">2008 - 2010</p>
-                </div>
-                <div className="col-12 col-md-9">
-                  <b className="mb-1">Job Title Here</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
-                    ollcitudin est dolor time.
-                  </p>
-                  <ul>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                    <li>lorem lorem ipsum ollcitudin est dolor time</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <hr />
-            <div className="row">
-              <b className="text-success text-uppercase mb-1">
-                SKILLS & ACHIEVEMENTS
-              </b>
-              <div className="row">
-                <div className="col-12">
-                  <b className="mb-1">Name of Skill/Achievement</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla.
-                  </p>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12">
-                  <b className="mb-1">Name of Skill/Achievement</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla.
-                  </p>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12">
-                  <b className="mb-1">Name of Skill/Achievement</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <hr />
-            <div className="row">
-              <b className="text-success text-uppercase mb-1">
-                HOBBIES & INTERESTS
-              </b>
-
-              <div className="row">
-                <div className="col-12">
-                  <b className="mb-1">Hobbies</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla.
-                  </p>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12">
-                  <b className="mb-1">Hobbies</b>
-                  <p className="text-muted">
-                    Porttitor amet massa Done cporttitor dolor et nisl molestie
-                    ium feliscon lore ipsum dolor tfringilla.
-                  </p>
-                </div>
-              </div>
-            </div>
+      <Nav />
+      <div className="py-9 wrapper bg-[#f2f2f2]">
+        <div className=" my-5 flex flex-row md:gap-8 sm:gap-2 py-9 sm:py-3  ">
+          <img
+            className="md:w-4/12 sm:w-6/12 h-[300px] rounded-xl "
+            src={SmilingWoman}
+          ></img>
+          <div className="sm:w-6/12 md:w-8/12  flex flex-col md:justify-around sm:justify-center ">
+            <h3 className="font-semibold text-3xl  ">Applicant Name</h3>
+            <h3 className="font-semibold text-xl text-slate-500 ">
+              Accra, Ghana
+            </h3>
+            <h3 className="font-semibold text-xl sm:hidden ">
+              Bio statement goes here. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Sed quis viverra diam. Nullam mauris eros,
+              lacinia id nunc et, malesuada scelerisque urna. Mauris eget erat
+              eu neque auctor Ă¡ÒÖÈĜŉ;ºÈ¡ŉ¡y´ŉÇÖy´ĝŉ®¡µŉá¡Òyŉº¡ºŉÌ¡Òŉy´ÒĝŉÖ¡Ì´ºŉ
+              pellentesque elit. Nulla eu metus varius, porta odio eu, volutpat
+              tortor
+            </h3>
           </div>
         </div>
-      )}
+        <h3 className="font- text-md md:hidden pb-3 ">
+          Bio statement goes here. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Sed quis viverra diam. Nullam mauris eros, lacinia id
+          nunc et, malesuada scelerisque urna. Mauris eget erat eu neque auctor
+          Ă¡ÒÖÈĜŉ;ºÈ¡ŉ¡y´ŉÇÖy´ĝŉ®¡µŉá¡Òyŉº¡ºŉÌ¡Òŉy´ÒĝŉÖ¡Ì´ºŉ pellentesque elit.
+          Nulla eu metus varius, porta odio eu, volutpat tortor
+        </h3>
+      </div>
 
-      {/* <IdealCandidateSection /> */}
+      <div className="flex md:w-12/12 flex-col sm:w-12/12 wrapper mt-5 my-10 ">
+        <div className="md:grid-cols-3 sm:grid-cols-2 grid  w-full gap-4 ">
+          <div className="flex flex-col  text-center h-[200px] row-span-1 rounded-md p-5 bg-[#69C080]">
+            {" "}
+            <IconPack1
+              className="w-2/12 stroke-white stroke-[7px]"
+              style={{
+                // height: "100px",
+                width: "auto",
+                stroke: "#FFF",
+                fill: "#69C080",
+              }}
+            />{" "}
+            <p className="font-semibold text-white text-xl ">Download CV</p>{" "}
+          </div>
+          <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
+            {" "}
+            <IconPack2
+              className="w-2/12  stroke-[7px]"
+              style={{
+                // height: "100px",
+                width: "auto",
+                stroke: "#94a3b8",
+                fill: "#f2f2f2",
+              }}
+            />{" "}
+            <p className="font-semibold text-xl ">Watch Profile Video</p>{" "}
+          </div>
+          <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
+            {" "}
+            <IconPack3
+              className="w-2/12  stroke-[7px]"
+              style={{
+                // height: "100px",
+                width: "auto",
+                stroke: "#94a3b8",
+                fill: "#f2f2f2",
+              }}
+            />{" "}
+            <p className="font-semibold text-xl ">Send Message</p>{" "}
+          </div>
+        </div>
+      </div>
+
+      <IdealCandidateSection />
 
       <Footer></Footer>
     </>

@@ -50,7 +50,7 @@ function SchoolsList(props) {
         <div className="flex flex-col md:py-10 sm:py-4  gap-8">
           <div className=" sm:justify-center font-semibold gap-2 text-4xl flex">
             <h3 className="">Browse </h3>
-            <h3 className=" text-[#69C080]">Companies</h3>{" "}
+            <h3 className=" text-[#69C080]">Schools</h3>{" "}
           </div>
         </div>
 

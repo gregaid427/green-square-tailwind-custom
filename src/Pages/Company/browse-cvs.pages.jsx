@@ -101,82 +101,153 @@ function BrowseCVs(props) {
   return (
     <>
       <Nav />
-      <div className="py-9 wrapper bg-[#f2f2f2]">
-        <div className=" my-5 flex flex-row md:gap-8 sm:gap-2 py-9 sm:py-3  ">
-          <img
-            className="md:w-4/12 sm:w-6/12 h-[300px] rounded-xl "
-            src={SmilingWoman}
-          ></img>
-          <div className="sm:w-6/12 md:w-8/12  flex flex-col md:justify-around sm:justify-center ">
-            <h3 className="font-semibold text-3xl  ">Applicant Name</h3>
-            <h3 className="font-semibold text-xl text-slate-500 ">
-              Accra, Ghana
-            </h3>
-            <h3 className="font-semibold text-xl sm:hidden ">
-              Bio statement goes here. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Sed quis viverra diam. Nullam mauris eros,
-              lacinia id nunc et, malesuada scelerisque urna. Mauris eget erat
-              eu neque auctor Ă¡ÒÖÈĜŉ;ºÈ¡ŉ¡y´ŉÇÖy´ĝŉ®¡µŉá¡Òyŉº¡ºŉÌ¡Òŉy´ÒĝŉÖ¡Ì´ºŉ
-              pellentesque elit. Nulla eu metus varius, porta odio eu, volutpat
-              tortor
-            </h3>
+      <div className="wrapper bg-[#f2f2f2]  ">
+        <div className="flex flex-col md:py-10 sm:py-4  gap-8">
+          <div className=" sm:justify-center font-semibold gap-2 text-4xl flex">
+            <h3 className="">Browse </h3>
+            <h3 className=" text-[#69C080]">CVs</h3>{" "}
+          </div>
+
+          <div className="flex  md:gap-2 sm:gap-1 w-full sm:flex-col md:flex-row   justify-between ">
+            {" "}
+            <input
+              required
+              type="text"
+              name="emailAddress"
+              id="emailAddress"
+              placeholder="Job title or keyword"
+              className="form-control border-0 rounded-md  md:w-3/12 sm:w-12/12 md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+              onChange={(e) => {
+                // setEmail(e.target.value);
+              }}
+            />
+            <input
+              required
+              type="text"
+              name="emailAddress"
+              id="emailAddress"
+              placeholder="Location "
+              className="form-control border-0 rounded-md md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+              onChange={(e) => {
+                // setEmail(e.target.value);
+              }}
+            />
+            <input
+              required
+              type="text"
+              name="emailAddress"
+              placeholder="[variable goes here] "
+              className="bg-white form-control border-0 sm:rounded-sm  md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+              onChange={(e) => {
+                // setEmail(e.target.value);
+              }}
+            />
+            <button
+              className="  md:w-3/12 sm:w-12/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2    rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
+
+              // onClick={(e) => setIsCompany(false)}
+            >
+              <Link to="/employee-guide w-6/12 " className="text-white">
+                SEARCH JOBS
+              </Link>
+            </button>
+          </div>
+          <div className=" text-xl flex gap-2 font-semibold  ">
+            <h3 className="">Need more search options? </h3>{" "}
+            <Link to="/advanced-search">
+              {" "}
+              <h3 className=" text-[#69C080]">Advanced Search</h3>{" "}
+            </Link>{" "}
           </div>
         </div>
-        <h3 className="font- text-md md:hidden pb-3 ">
-          Bio statement goes here. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Sed quis viverra diam. Nullam mauris eros, lacinia id
-          nunc et, malesuada scelerisque urna. Mauris eget erat eu neque auctor
-          Ă¡ÒÖÈĜŉ;ºÈ¡ŉ¡y´ŉÇÖy´ĝŉ®¡µŉá¡Òyŉº¡ºŉÌ¡Òŉy´ÒĝŉÖ¡Ì´ºŉ pellentesque elit.
-          Nulla eu metus varius, porta odio eu, volutpat tortor
-        </h3>
       </div>
 
-      <div className="flex md:w-12/12 flex-col sm:w-12/12 wrapper mt-5 my-10 ">
-        <div className="md:grid-cols-3 sm:grid-cols-2 grid  w-full gap-4 ">
-          <div className="flex flex-col  text-center h-[200px] row-span-1 rounded-md p-5 bg-[#69C080]">
-            {" "}
-            <IconPack1
-              className="w-2/12 stroke-white stroke-[7px]"
-              style={{
-                // height: "100px",
-                width: "auto",
-                stroke: "#FFF",
-                fill: "#69C080",
-              }}
-            />{" "}
-            <p className="font-semibold text-white text-xl ">Download CV</p>{" "}
-          </div>
-          <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
-            {" "}
-            <IconPack2
-              className="w-2/12  stroke-[7px]"
-              style={{
-                // height: "100px",
-                width: "auto",
-                stroke: "#94a3b8",
-                fill: "#f2f2f2",
-              }}
-            />{" "}
-            <p className="font-semibold text-xl ">Watch Profile Video</p>{" "}
-          </div>
-          <div className="flex flex-col text-center h-[200px] row-span-1 rounded-md p-5 bg-[#f2f2f2]">
-            {" "}
-            <IconPack3
-              className="w-2/12  stroke-[7px]"
-              style={{
-                // height: "100px",
-                width: "auto",
-                stroke: "#94a3b8",
-                fill: "#f2f2f2",
-              }}
-            />{" "}
-            <p className="font-semibold text-xl ">Send Message</p>{" "}
+      <div className="wrapper  ">
+        <div className=" gap-3 my-9   md:grid-cols-1 sm:grid-cols-1  grid">
+          <div className="flex row-span-1 md:flex-row sm:flex-col sm:gap-2 bg-[#f2f2f2] rounded-xl p-3  ">
+          <div className="flex flex-col gap-2 md:w-6/12 sm:w-12/12 sm:text-center ">
+              <h3 className="text-xl font-semibold  ">C. Mensah</h3>
+              <h3 className="text-xl   "> Accountant</h3>
+              <h3 className="text-xl   "> Accountant East Legon, Accra</h3>
+              <h3 className="text-xl">Master’s Degree holder </h3>
+            </div>
+            <div className="  flex  gap-2 md:w-6/12 sm:md:w-12/12 md:items-end md:flex-row sm:flex-col ">
+              <button
+                className=" w-10/12 py-1 h-fit  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
+
+                // onClick={(e) => setIsCompany(false)}
+              >
+                <Link to={"/post-a-job"} className="">
+                  VIEW PROFILE
+                </Link>
+              </button>
+              <button
+                className=" w-10/12 py-1  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
+
+                // onClick={(e) => setIsCompany(false)}
+              >
+                <Link to={"/post-a-job"} className="">
+                  DOWNLOAD CV
+                </Link>
+              </button>
+              <button
+                className=" w-10/12 py-1  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
+
+                // onClick={(e) => setIsCompany(false)}
+              >
+                <Link to={"/post-a-job"} className="">
+                  SEND MESSAGE
+                </Link>
+              </button>
+            </div>
           </div>
         </div>
+
+        <div className=" gap-3 my-9   md:grid-cols-1 sm:grid-cols-1  grid">
+          <div className="flex row-span-1 md:flex-row sm:flex-col sm:gap-2 bg-[#f2f2f2] rounded-xl p-3  ">
+            <div className="flex flex-col gap-2 md:w-6/12 sm:w-12/12 sm:text-center">
+              <h3 className="text-xl font-semibold  ">C. Mensah</h3>
+              <h3 className="text-xl   "> Accountant</h3>
+              <h3 className="text-xl   "> Accountant East Legon, Accra</h3>
+              <h3 className="text-xl">Master’s Degree holder </h3>
+            </div>
+            <div className="  flex  gap-2 md:w-6/12 sm:md:w-12/12 md:items-end md:flex-row sm:flex-col ">
+              <button
+                className=" w-10/12 py-1 h-fit  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
+
+                // onClick={(e) => setIsCompany(false)}
+              >
+                <Link to={"/post-a-job"} className="">
+                  VIEW PROFILE
+                </Link>
+              </button>
+              <button
+                className=" w-10/12 py-1  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
+
+                // onClick={(e) => setIsCompany(false)}
+              >
+                <Link to={"/post-a-job"} className="">
+                  DOWNLOAD CV
+                </Link>
+              </button>
+              <button
+                className=" w-10/12 py-1  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
+
+                // onClick={(e) => setIsCompany(false)}
+              >
+                <Link to={"/post-a-job"} className="">
+                  SEND MESSAGE
+                </Link>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
       </div>
 
       <IdealCandidateSection />
-
       <Footer></Footer>
     </>
   );

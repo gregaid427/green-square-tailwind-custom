@@ -22,8 +22,8 @@ import BrowseCVs from "./Pages/Company/browse-cvs.pages";
 // import MessageList from "./Pages/Account/messages.pages";
 import PostJobsByCompany from "./Pages/Company/post-jobs-by-company.pages";
 // import JobApplications from "./Pages/Candidates/applications.pages";
-// import UploadCV from "./Pages/Candidates/upload-cv.pages";
-// import ViewProfileDashboard from "./Pages/Candidates/view-profile-dashboard.pages";
+import UploadCV from "./Pages/Candidates/upload-cv.pages";
+import ViewProfileDashboard from "./Pages/Candidates/view-profile-dashboard.pages";
 // import PlansAndPricingIndividual from "./Pages/Guide/plans-and-pricing.pages";
 // import PlansAndPricingCompanies from "./Pages/Guide/plans-and-pricing-companies.pages";
 import SchoolsList from "./Pages/Company/browse-schools.pages";
@@ -36,23 +36,19 @@ import CompanyFaqs from "./Pages/faqs/company-faqs.pages";
 import JobseekerFaqs from "./Pages/faqs/job-seeker-faqs.pages";
 
 function App() {
-
-
-  
   // use state
   const [showNavBar, setShowNavBar] = useState(true);
   return (
     <>
       <Router>
-      <UserProvider>
+        <UserProvider>
           <JobsProvider>
-      
             <Routes>
               <Route
                 path="/"
                 element={<Home setShowNavBar={setShowNavBar} />}
               />
-             <Route
+              <Route
                 path="/login"
                 element={<Login setShowNavBar={setShowNavBar} />}
               />{" "}
@@ -71,21 +67,20 @@ function App() {
               <Route
                 path="/job-seeker-signup"
                 element={<JobSeekerSignup setShowNavBar={setShowNavBar} />}
-              />{" "} 
-                <Route
+              />{" "}
+              <Route
                 path="/browse-jobs"
                 element={<BrowseJobs setShowNavBar={setShowNavBar} />}
               />
-                  <Route
+              <Route
                 path="/browse-schools"
                 element={<SchoolsList setShowNavBar={setShowNavBar} />}
               />
-      
               <Route
                 path="/company-guide"
                 element={<CompanyGuide setShowNavBar={setShowNavBar} />}
               />
-               <Route
+              <Route
                 path="/job-seeker-faq"
                 element={<JobseekerFaqs setShowNavBar={setShowNavBar} />}
               />{" "}
@@ -93,58 +88,63 @@ function App() {
               <Route
                 path="/company-faq"
                 element={<CompanyFaqs setShowNavBar={setShowNavBar} />}
-              />{" "} 
-               <Route
+              />{" "}
+              <Route
                 path="/employee-dashboard"
                 element={<EmployeeDashboard setShowNavBar={setShowNavBar} />}
               />
-
+              <Route
+                path="/upload-cvs"
+                element={<UploadCV setShowNavBar={setShowNavBar} />}
+              />
               <Route
                 path="/employee-guide"
                 element={<EmployeeGuide setShowNavBar={setShowNavBar} />}
               />
-                <Route
+              <Route
                 path="/post-a-job"
                 element={<PostJobsByCompany setShowNavBar={setShowNavBar} />}
               />
-        
               <Route
                 path="/company-dashboard"
                 element={<CompanyDashboard setShowNavBar={setShowNavBar} />}
               />
-               <Route
+              <Route
                 path="/company-jobs"
                 element={<JobsPostedByCompany setShowNavBar={setShowNavBar} />}
               />
-               <Route
+              <Route
                 path="/browse-applicants"
                 element={
                   <BrowseSchoolApplicantCVs setShowNavBar={setShowNavBar} />
                 }
               />
-                  <Route
+              <Route
+                path="/view-profile"
+                element={<ViewProfileDashboard setShowNavBar={setShowNavBar} />}
+              />
+              <Route
                 path="/browse-companies"
                 element={<CompanyList setShowNavBar={setShowNavBar} />}
               />
-                <Route
+              <Route
                 path="/company-details"
                 element={<CompanyDetails setShowNavBar={setShowNavBar} />}
               />
-                 <Route
+              <Route
                 path="/job-details"
                 element={<JobDetails setShowNavBar={setShowNavBar} />}
               />
-              
-                 <Route
+              <Route
                 path="/cvs"
                 element={<BrowseCVs setShowNavBar={setShowNavBar} />}
               />
-                <Route
+              <Route
                 path="*"
                 element={<Home setShowNavBar={setShowNavBar} />}
               />
             </Routes>
-            </JobsProvider>
+          </JobsProvider>
         </UserProvider>
       </Router>
     </>
