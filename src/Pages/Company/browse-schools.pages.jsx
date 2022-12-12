@@ -108,7 +108,7 @@ function SchoolsList(props) {
         </div>
       </div>
 
-      <div className="wrapper my-6 md:grid-cols-3 sm:grid-cols-1 gap-5 grid">
+      <div className="wrapper my-6 md:grid-cols-3 sm:grid-cols-1 gap-12 grid">
         <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
           <img className="rounded-md h-[300px]  " src={img1}></img>
           <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">

@@ -40,7 +40,7 @@ function JobApplications(props) {
           </h3>
           <div className="flex gap-4 md:w-6/12 sm:w-12/12">
             <button
-              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
               // onClick={(e) => setIsCompany(false)}
             >
@@ -65,7 +65,7 @@ function JobApplications(props) {
           </h3>
           <div className="flex gap-4 md:w-6/12 sm:w-12/12">
             <button
-              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
               // onClick={(e) => setIsCompany(false)}
             >
@@ -96,7 +96,7 @@ function JobApplications(props) {
           </h3>
           <div className="flex gap-4 md:w-6/12 sm:w-12/12">
             <button
-              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
               // onClick={(e) => setIsCompany(false)}
             >
