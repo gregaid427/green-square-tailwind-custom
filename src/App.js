@@ -27,7 +27,7 @@ import PostJobsByCompany from "./Pages/Company/post-jobs-by-company.pages";
 // import PlansAndPricingIndividual from "./Pages/Guide/plans-and-pricing.pages";
 // import PlansAndPricingCompanies from "./Pages/Guide/plans-and-pricing-companies.pages";
 import SchoolsList from "./Pages/Company/browse-schools.pages";
-// import BrowseSchoolApplicantCVs from "./Pages/Company/browse-applicants.pages";
+import BrowseSchoolApplicantCVs from "./Pages/Company/browse-applicants.pages";
 import ForgotPassword from "./Pages/Auth/forgot-password.page";
 import ResetPassword from "./Pages/Auth/reset-password.page";
 import { UserProvider } from "./Context/auth.context";
@@ -115,6 +115,12 @@ function App() {
                <Route
                 path="/company-jobs"
                 element={<JobsPostedByCompany setShowNavBar={setShowNavBar} />}
+              />
+               <Route
+                path="/browse-applicants"
+                element={
+                  <BrowseSchoolApplicantCVs setShowNavBar={setShowNavBar} />
+                }
               />
                   <Route
                 path="/browse-companies"
