@@ -109,92 +109,92 @@ function UploadCV(props) {
 
   return (
     <>
-      
       <Nav />
-      <Header title={"Applicants Name"} subtitle={"Upload A CV"} amount={"25.0"} />
+      <Header
+        title={"Applicants Name"}
+        subtitle={"Upload A CV"}
+        amount={"25.0"}
+      />
 
       <div className="flex wrapper flex-col my-5 gap-4 ">
-        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full  sm:flex-col" >
-        <div className=" flex flex-col gap-2 w-full ">
-        <h2 className="font-semibold text-xl" >Field Name</h2>
-          <input
-            type="text"          
-            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
-            name=""
-            // onChange={(e) => setPosition(e.target.value)}
-          />
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full  sm:flex-col">
+          <div className=" flex flex-col gap-2 w-full ">
+            <h2 className="font-semibold text-xl">Field Name</h2>
+            <input
+              type="text"
+              className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+              name=""
+              // onChange={(e) => setPosition(e.target.value)}
+            />
+          </div>
+          <div className=" flex flex-col gap-2 w-full ">
+            <h2 className="font-semibold text-xl">Field Name</h2>
+            <input
+              type="text"
+              className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+              name=""
+              // onChange={(e) => setPosition(e.target.value)}
+            />
+          </div>
         </div>
-        <div className=" flex flex-col gap-2 w-full ">
-        <h2 className="font-semibold text-xl" >Field Name</h2>
-          <input
-            type="text"          
-            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
-            name=""
-            // onChange={(e) => setPosition(e.target.value)}
-          />
-        </div>
-        </div>
-        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col" >
-        <div className=" flex flex-col gap-2 w-full ">
-        <h2 className="font-semibold text-xl" >Field Name</h2>
-          <input
-            type="text"          
-            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
-            name=""
-            // onChange={(e) => setMode(e.target.value)}
-          />
-        </div>
-        <div className=" flex flex-col gap-2 w-full ">
-        <h2 className="font-semibold text-xl" >Field Name</h2>
-          <input
-            type="text"          
-            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
-            name=""
-            onChange={(e) => setCountry(e.target.value)}
-          />
-        </div>
-        </div>
-
-        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col" >
-        <div className=" flex flex-col gap-2 w-full ">
-        <h2 className="font-semibold text-xl" >Field Name</h2>
-          <textarea
-          rows={6}
-            type="text"          
-            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
-            name=""
-            onChange={(e) => setRegion(e.target.value)}
-          />
-        </div>
-     
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col">
+          <div className=" flex flex-col gap-2 w-full ">
+            <h2 className="font-semibold text-xl">Field Name</h2>
+            <input
+              type="text"
+              className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+              name=""
+              // onChange={(e) => setMode(e.target.value)}
+            />
+          </div>
+          <div className=" flex flex-col gap-2 w-full ">
+            <h2 className="font-semibold text-xl">Field Name</h2>
+            <input
+              type="text"
+              className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+              name=""
+              onChange={(e) => setCountry(e.target.value)}
+            />
+          </div>
         </div>
 
-        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col" >
-        <div className=" flex flex-col gap-2 w-full ">
-        <h2 className="font-semibold text-xl" >Field Name</h2>
-          <textarea
-          rows={6}
-            type="text"          
-            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
-            name=""
-            onChange={(e) => setRegion(e.target.value)}
-          />
-        </div>
-     
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col">
+          <div className=" flex flex-col gap-2 w-full ">
+            <h2 className="font-semibold text-xl">Field Name</h2>
+            <textarea
+              rows={6}
+              type="text"
+              className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+              name=""
+              onChange={(e) => setRegion(e.target.value)}
+            />
+          </div>
         </div>
 
-        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col" >
-        <div className=" flex flex-col gap-2 w-full ">
-          <h2 className="font-semibold text-xl" >Field Name</h2>
-          <textarea
-          rows={6}
-            type="text"          
-            className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
-            name=""
-            onChange={(e) => setRegion(e.target.value)}
-          />
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col">
+          <div className=" flex flex-col gap-2 w-full ">
+            <h2 className="font-semibold text-xl">Field Name</h2>
+            <textarea
+              rows={6}
+              type="text"
+              className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+              name=""
+              onChange={(e) => setRegion(e.target.value)}
+            />
+          </div>
         </div>
-     
+
+        <div className="  flex justify-between md:gap-8 md:flex-row sm:gap-3 w-full sm:flex-col">
+          <div className=" flex flex-col gap-2 w-full ">
+            <h2 className="font-semibold text-xl">Field Name</h2>
+            <textarea
+              rows={6}
+              type="text"
+              className="w-full px-2 py-2 text-xl   bg-[#f2f2f2]  "
+              name=""
+              onChange={(e) => setRegion(e.target.value)}
+            />
+          </div>
         </div>
         <div className="flex gap-4  mx-auto  md:w-[400px] sm:w-full items-center sm:px-6  justify-center ">
           {" "}
@@ -204,7 +204,7 @@ function UploadCV(props) {
             // onClick={(e) => setIsCompany(false)}
           >
             <Link to=" " className="">
-          Save Draft
+              Save Draft
             </Link>
           </button>
           <button
@@ -215,8 +215,6 @@ function UploadCV(props) {
             <Link to=" ">Publish CV</Link>
           </button>
         </div>
-        
-       
       </div>
       <Footer></Footer>
     </>

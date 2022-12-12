@@ -21,7 +21,7 @@ import JobsPostedByCompany from "./Pages/Company/jobs-posted-by-company.pages";
 import BrowseCVs from "./Pages/Company/browse-cvs.pages";
 // import MessageList from "./Pages/Account/messages.pages";
 import PostJobsByCompany from "./Pages/Company/post-jobs-by-company.pages";
-// import JobApplications from "./Pages/Candidates/applications.pages";
+import JobApplications from "./Pages/Candidates/applications.pages";
 import UploadCV from "./Pages/Candidates/upload-cv.pages";
 import ViewProfileDashboard from "./Pages/Candidates/view-profile-dashboard.pages";
 // import PlansAndPricingIndividual from "./Pages/Guide/plans-and-pricing.pages";
@@ -118,6 +118,10 @@ function App() {
                 element={
                   <BrowseSchoolApplicantCVs setShowNavBar={setShowNavBar} />
                 }
+              />
+                <Route
+                path="/job-applications"
+                element={<JobApplications setShowNavBar={setShowNavBar} />}
               />
               <Route
                 path="/view-profile"

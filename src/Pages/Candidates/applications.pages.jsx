@@ -4,6 +4,8 @@ import JobContainer from "./../../Components/Containers/job-container.components
 import { Link } from "react-router-dom";
 import { UserContext } from "../../Context/auth.context";
 import { useJobServices } from "../../Context/jobs.context";
+import Header from "../../Components/header/header";
+import Nav from "../../Components/NavBar/nav.component";
 
 function JobApplications(props) {
   props.setShowNavBar(true);
@@ -20,56 +22,103 @@ function JobApplications(props) {
 
   return (
     <>
-      <div className="bg-light rounded-3 p-3">
-        <div className="container py-4">
-          <div className="row">
-            <div className="col-6">
-              <h1 className="display-4">
-                <span className="text-success">Applicant Name</span>
-                <br />
-                Pending Responses
-              </h1>
-            </div>
-            <div className="col-6">
-              <div className="card float-end" style={{ width: "15rem" }}>
-                <div className="card-body">
-                  <h3 className="display-6">
-                    <span style={{ fontSize: "14px" }} className="">
-                      GHS
-                    </span>{" "}
-                    <span>25.00</span>
-                  </h3>
-                  <div className="d-flex gap-3">
-                    <span>Available Credit</span>
-                    <Link to="#" className="text-success">
-                      Top Up
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Nav />
+      <Header
+        title={"Applicants Name"}
+        subtitle={"Pending Responses"}
+        amount={"25.0"}
+      />
 
-      <div className="container py-5">
-        <div className="row">
-          <div className="">
-            {appliedJobs.map((job) => (
-              <Link
-                className="text-decoration-none text-black"
-                to="/job-details"
-                state={job}
-              >
-                <JobContainer
-                  hasApplied={true}
-                  job={job}
-                  className="col-12 col-md-6"
-                />
+      <div className="flex  flex-col gap-1 my-6  wrapper">
+        <h3 className="text-2xl font-semibold sm:text-center py-4">
+          Python Software Engineering Associate – Credit Technology
+        </h3>
+
+        <div className="flex my-3 flex-col md:w-9/12 sm:w-12/12 p-5 bg-[#f2f2f2] justify-between rounded-xl ">
+          <h3 className="text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </h3>
+          <div className="flex gap-4 md:w-6/12 sm:w-12/12">
+            <button
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+
+              // onClick={(e) => setIsCompany(false)}
+            >
+              <Link to=" " className="">
+                UPLOAD FILE
               </Link>
-            ))}
+            </button>
+            <button
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+
+              // onClick={(e) => setIsCompany(false)}
+            >
+              <Link to=" ">VIEW FILE</Link>
+            </button>
           </div>
         </div>
+
+
+        <div className="flex my-3 flex-col md:w-9/12 sm:w-12/12 p-5 bg-[#f2f2f2] justify-between rounded-xl ">
+          <h3 className="text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </h3>
+          <div className="flex gap-4 md:w-6/12 sm:w-12/12">
+            <button
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+
+              // onClick={(e) => setIsCompany(false)}
+            >
+              <Link to=" " className="">
+                UPLOAD FILE
+              </Link>
+            </button>
+            <button
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+
+              // onClick={(e) => setIsCompany(false)}
+            >
+              <Link to=" ">VIEW FILE</Link>
+            </button>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div className="flex my-3 flex-col md:w-9/12 sm:w-12/12 p-5 bg-[#f2f2f2] justify-between rounded-xl ">
+          <h3 className="text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </h3>
+          <div className="flex gap-4 md:w-6/12 sm:w-12/12">
+            <button
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+
+              // onClick={(e) => setIsCompany(false)}
+            >
+              <Link to=" " className="">
+                UPLOAD FILE
+              </Link>
+            </button>
+            <button
+              className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
+
+              // onClick={(e) => setIsCompany(false)}
+            >
+              <Link to=" ">VIEW FILE</Link>
+            </button>
+          </div>
+        </div>
+
+
+
+
+
+
       </div>
 
       <Footer></Footer>
