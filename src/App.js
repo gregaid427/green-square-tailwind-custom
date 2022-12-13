@@ -80,13 +80,13 @@ function App() {
                 path="/company-guide"
                 element={<CompanyGuide setShowNavBar={setShowNavBar} />}
               />
-                <Route
+              <Route
                 path="/plans-and-pricing"
                 element={
                   <PlansAndPricingIndividual setShowNavBar={setShowNavBar} />
                 }
               />
-                 <Route
+              <Route
                 path="/messages"
                 element={<MessageList setShowNavBar={setShowNavBar} />}
               />
@@ -107,7 +107,7 @@ function App() {
                 path="/upload-cvs"
                 element={<UploadCV setShowNavBar={setShowNavBar} />}
               />
-               <Route
+              <Route
                 path="/view-profile"
                 element={<ViewProfileDashboard setShowNavBar={setShowNavBar} />}
               />
@@ -119,7 +119,7 @@ function App() {
                 path="/post-a-job"
                 element={<PostJobsByCompany setShowNavBar={setShowNavBar} />}
               />
-               <Route
+              <Route
                 path="/plans-and-pricing-companies"
                 element={
                   <PlansAndPricingCompanies setShowNavBar={setShowNavBar} />
@@ -139,11 +139,10 @@ function App() {
                   <BrowseSchoolApplicantCVs setShowNavBar={setShowNavBar} />
                 }
               />
-                <Route
+              <Route
                 path="/job-applications"
                 element={<JobApplications setShowNavBar={setShowNavBar} />}
               />
-             
               <Route
                 path="/browse-companies"
                 element={<CompanyList setShowNavBar={setShowNavBar} />}
