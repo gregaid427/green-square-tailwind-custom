@@ -40,21 +40,24 @@ function MessageList(props) {
 
             <hr></hr>
             <div className="w-full border-l-4 bg-[#f2f2f2] sm:flex-col md:flex-row border-[#69C080] p-2 flex m-2 gap-3 justify-between">
-             
-             <div className="flex ">
-              <img src={SmilingWoman} className="rounded-full w-3/12 "></img>
-              <div className="flex w-9/12 flex-col  gap-1 ">
-                <div className="flex justify-between">
-                  <h3 className="text-xm font-semibold ">Christiana Mensah</h3>
-                  <h3>5 oct</h3>
+              <div className="flex gap-2 ">
+                <img src={SmilingWoman} className="rounded-full w-3/12 "></img>
+                <div className="flex w-9/12 flex-col  gap-1 ">
+                  <div className="flex justify-between">
+                    <h3 className="text-xm font-semibold ">
+                      Christiana Mensah
+                    </h3>
+                    <h3>5 oct</h3>
+                  </div>
+                  <h3>previous message goes here</h3>
                 </div>
-                <h3>previous message goes here</h3>
-              </div>
               </div>
 
               <div className="md:hidden bg-white sm:flex-col flex rounded-md h-fit gap-2 p-2">
-               
-                <h3>previous message goes here  message goes here message goes here message goes here message goes here</h3>
+                <h3>
+                  previous message goes here message goes here message goes here
+                  message goes here message goes here
+                </h3>
                 <hr></hr>
                 <div className="relative w-full bottom-0  align-bottom ">
                   <input
