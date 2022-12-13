@@ -115,7 +115,7 @@ export default function PlansAndPricingIndividual(props) {
             <div className="flex justify-center items-end p-2   font-semibold rounded-xl  gap-2  ">
                 <h3 className="text-md">GHS</h3>
 
-                <h3 className="text-3xl  ">180.00</h3>
+                <h3 className="text-3xl  ">5.00</h3>
               </div>
               <h3 className="text-xl">Per Application</h3>
             </div>

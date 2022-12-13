@@ -19,7 +19,7 @@ import EmployeeGuide from "./Pages/Guide/employee-guide.pages";
 import BrowseJobs from "./Pages/Jobs/browse-jobs.pages";
 import JobsPostedByCompany from "./Pages/Company/jobs-posted-by-company.pages";
 import BrowseCVs from "./Pages/Company/browse-cvs.pages";
-// import MessageList from "./Pages/Account/messages.pages";
+import MessageList from "./Pages/Account/messages.pages";
 import PostJobsByCompany from "./Pages/Company/post-jobs-by-company.pages";
 import JobApplications from "./Pages/Candidates/applications.pages";
 import UploadCV from "./Pages/Candidates/upload-cv.pages";
@@ -86,6 +86,10 @@ function App() {
                   <PlansAndPricingIndividual setShowNavBar={setShowNavBar} />
                 }
               />
+                 <Route
+                path="/messages"
+                element={<MessageList setShowNavBar={setShowNavBar} />}
+              />
               <Route
                 path="/job-seeker-faq"
                 element={<JobseekerFaqs setShowNavBar={setShowNavBar} />}
@@ -102,6 +106,10 @@ function App() {
               <Route
                 path="/upload-cvs"
                 element={<UploadCV setShowNavBar={setShowNavBar} />}
+              />
+               <Route
+                path="/view-profile"
+                element={<ViewProfileDashboard setShowNavBar={setShowNavBar} />}
               />
               <Route
                 path="/employee-guide"
@@ -135,10 +143,7 @@ function App() {
                 path="/job-applications"
                 element={<JobApplications setShowNavBar={setShowNavBar} />}
               />
-              <Route
-                path="/view-profile"
-                element={<ViewProfileDashboard setShowNavBar={setShowNavBar} />}
-              />
+             
               <Route
                 path="/browse-companies"
                 element={<CompanyList setShowNavBar={setShowNavBar} />}
