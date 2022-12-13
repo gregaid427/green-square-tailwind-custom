@@ -110,7 +110,7 @@ function SchoolsList(props) {
 
       <div className="wrapper my-6 md:grid-cols-3 sm:grid-cols-1 gap-12 grid">
         <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
-          <img className="rounded-md h-[300px]  " src={img1}></img>
+          <img className="rounded-md h-[270px]  " src={img2}></img>
           <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">
                 {" "}
                 <IconPack1 fill="#ffc107" />
@@ -128,7 +128,7 @@ function SchoolsList(props) {
         </div>
 
         <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
-          <img className="rounded-md h-[300px]  " src={img1}></img>
+        <img className="rounded-md h-[270px]  " src={img3}></img>
           <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">
                 {" "}
                 <IconPack2 fill="#ffc107" />
@@ -146,7 +146,7 @@ function SchoolsList(props) {
         </div>
 
         <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
-          <img className="rounded-md h-[300px]  " src={img1}></img>
+        <img className="rounded-md h-[270px]  " src={img1}></img>
           <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">
                 {" "}
                 <IconPack1 fill="rgb(148,162,184)" />
@@ -163,7 +163,7 @@ function SchoolsList(props) {
           </div>
         </div>
         <div className=" row-span-1 rounded-md flex flex-col shadow-md relative ">
-          <img className="rounded-md h-[300px]  " src={img1}></img>
+        <img className="rounded-md h-[270px]  " src={img3}></img>
           <div style={{ height: "50px", width: "50px" }} className=" top-3 absolute right-3 ">
                 {" "}
                 <IconPack1 fill="#ffc107" />
