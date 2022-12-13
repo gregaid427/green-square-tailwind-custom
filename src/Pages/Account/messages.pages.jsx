@@ -22,7 +22,7 @@ function MessageList(props) {
       />
       <div className="wrapper  my-8">
         <div className="rounded-xl  shadow-xl p-2 gap-5 border border-slate-200 flex ">
-          <div className="flex w-4/12  flex-col">
+          <div className="flex md:w-4/12 sm:w-12/12 sm:pr-2  flex-col">
             <div className="w-full py-3 flex m-2 justify-between">
               <h3 className="text-xl">Messaging</h3>
               <div className="flex gap-2 justify-between items-center ">
@@ -39,7 +39,9 @@ function MessageList(props) {
             {/* <IconPack1 className="h-5  absolute top-3 left-0" />{" "} */}
 
             <hr></hr>
-            <div className="w-full border-l-4 bg-[#f2f2f2] border-[#69C080] p-2 flex m-2 gap-3 justify-between">
+            <div className="w-full border-l-4 bg-[#f2f2f2] sm:flex-col md:flex-row border-[#69C080] p-2 flex m-2 gap-3 justify-between">
+             
+             <div className="flex ">
               <img src={SmilingWoman} className="rounded-full w-3/12 "></img>
               <div className="flex w-9/12 flex-col  gap-1 ">
                 <div className="flex justify-between">
@@ -47,6 +49,22 @@ function MessageList(props) {
                   <h3>5 oct</h3>
                 </div>
                 <h3>previous message goes here</h3>
+              </div>
+              </div>
+
+              <div className="md:hidden bg-white sm:flex-col flex rounded-md h-fit gap-2 p-2">
+               
+                <h3>previous message goes here  message goes here message goes here message goes here message goes here</h3>
+                <hr></hr>
+                <div className="relative w-full bottom-0  align-bottom ">
+                  <input
+                    type="text"
+                    placeholder="Type a message here... "
+                    className=" w-full  p-1  text-md    bg-slate-200 rounded-md "
+                    name=""
+                  />
+                  <IconPack1 className="h-5 fill-[#69C080] absolute right-2 top-2 " />{" "}
+                </div>
               </div>
             </div>
 
@@ -94,7 +112,7 @@ function MessageList(props) {
               </div>
             </div>
           </div>
-          <div className="flex w-8/12 px-4 border-l-2 flex-col">
+          <div className="flex w-8/12 sm:hidden md:flex px-4 border-l-2 flex-col">
             <div className="w-full flex m-2 justify-between">
               <div className="flex w-full justify-between items-center">
                 <div className="flex flex-col">
