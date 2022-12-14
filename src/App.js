@@ -35,6 +35,8 @@ import JobsProvider from "./Context/jobs.context";
 import CompanyFaqs from "./Pages/faqs/company-faqs.pages";
 import JobseekerFaqs from "./Pages/faqs/job-seeker-faqs.pages";
 import Applicantsresponses from "./Pages/Company/applicants-responses.pages";
+import DetailedResume from "./Pages/Candidates/detailed-resume.pages";
+
 
 
 function App() {
@@ -81,6 +83,10 @@ function App() {
               <Route
                 path="/company-guide"
                 element={<CompanyGuide setShowNavBar={setShowNavBar} />}
+              />
+              <Route
+                path="/detailed-resume"
+                element={<DetailedResume setShowNavBar={setShowNavBar} />}
               />
               <Route
                 path="/plans-and-pricing"
