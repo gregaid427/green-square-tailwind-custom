@@ -34,6 +34,8 @@ import { UserProvider } from "./Context/auth.context";
 import JobsProvider from "./Context/jobs.context";
 import CompanyFaqs from "./Pages/faqs/company-faqs.pages";
 import JobseekerFaqs from "./Pages/faqs/job-seeker-faqs.pages";
+import Applicantsresponses from "./Pages/Company/applicants-responses.pages";
+
 
 function App() {
   // use state
@@ -142,6 +144,10 @@ function App() {
               <Route
                 path="/job-applications"
                 element={<JobApplications setShowNavBar={setShowNavBar} />}
+              />
+              <Route
+                path="/applicants-responses"
+                element={<Applicantsresponses setShowNavBar={setShowNavBar} />}
               />
               <Route
                 path="/browse-companies"

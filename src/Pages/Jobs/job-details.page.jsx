@@ -17,6 +17,7 @@ import { ReactComponent as IconPack4 } from "./../../Assets/icons/Icons-01.svg";
 import { ReactComponent as IconPack6 } from "./../../Assets/icons/Icons-02.svg";
 
 function JobDetails(props) {
+  const [showModal, setShowModal] = React.useState(false);
   return (
     <>
       <Nav></Nav>
@@ -31,7 +32,9 @@ function JobDetails(props) {
             <h2 className="text-4xl sm:text-center md:text-left ">
               Python Software Engineering Associate – Credit Technology
             </h2>
-            <h3 className="text-2xl text-slate-500 sm:text-center md:text-left ">Company Name</h3>
+            <h3 className="text-2xl text-slate-500 sm:text-center md:text-left ">
+              Company Name
+            </h3>
           </div>
         </div>
       </div>
@@ -152,10 +155,13 @@ function JobDetails(props) {
               </div>
             </div>
           </div>
-    
-        <button className=" my-3 p-4 text-white text-3xl fon bg-[#69C080] font-bold w-full rounded-md ">
-          <Link to="">APPLY NOW</Link>
-        </button>
+
+          <button
+            onClick={(e) => setShowModal(true)}
+            className=" my-3 p-4 text-white text-3xl fon bg-[#69C080] font-bold w-full rounded-md "
+          >
+            <Link to="">APPLY NOW</Link>
+          </button>
         </div>
       </div>
 
@@ -269,6 +275,61 @@ function JobDetails(props) {
         </div>
         <img className="md:w-6/12 sm:12/12" src={SmilingManWithLaptop}></img>
       </div>
+
+      {showModal ? (
+        <>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              {/*content*/}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/*header*/}
+                <div className="flex   justify-between p-5 flex-col rounded-t">
+                  <h3 className="text-2xl text-[#69C080] text-center font-semibold">
+                    Apply Now
+                  </h3>
+                  <h3 className="text-md text-center ">
+                    To complete your application, please answer the following
+                    optional prompt from "company name"
+                  </h3>
+                  <h3 className="text-md text-center font-semibold">
+                    optional question prompt goes here
+                  </h3>
+                  <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                      ×
+                    </span>
+                  </button>
+               
+                {/*body*/}
+
+                <textarea className="w-full bg-[#f2f2f2] rounded-xl p-2 " rows={6}></textarea>
+                </div>
+                {/*footer*/}
+                <div className="flex items-center justify-center gap-5 p-3 ">
+                  <button
+                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Apply Now
+                  </button>
+                  <button
+                    className="bg-[#f2f2f2] text-black active:bg-emerald-600 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
 
       <Footer></Footer>
     </>

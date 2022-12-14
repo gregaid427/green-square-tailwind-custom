@@ -48,6 +48,8 @@ export default function BrowseJobs(props) {
       });
   }, []);
   const [optionState, setoptionState] = useState("value");
+
+
   return (
     <>
       <Nav></Nav>
@@ -216,11 +218,13 @@ export default function BrowseJobs(props) {
               <h4 className="text-md">Full Time Role</h4>{" "}
               <div className=" flex md:flex-row relative sm:flex-col  md:justify-between sm:items-start">
                 {" "}
+               
                 <div className="p-2 mb-2 flex gap-2 md:absolute  sm:mx-auto bottom-5 right-0   rounded-md bg-[#69C080] ">
                   <h4 className="  text-md text-white  ">
                     APPLY FOR THIS JOB{" "}
                   </h4>{" "}
                 </div>
+             
               </div>
             </div>
           </div>
@@ -316,6 +320,14 @@ carouselgoes here
         </div>
         <img className="md:w-6/12 sm:12/12" src={SmilingManWithLaptop}></img>
       </div>
+
+
+
+  
+
+
+
+
 
       <Footer></Footer>
     </>
