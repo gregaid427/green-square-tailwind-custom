@@ -290,13 +290,13 @@ function DetailedResume(props) {
             <h3 className="text-xl ">
               Porttitor amet massa Done cporttitor dolor et nisl molestie ium
               feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
-              ollcitudin est dolor time.
+              ollcitudin est dolo time.
             </h3>
           </div>
         </div>
       </div>
 
-      <IdealCandidateSection />
+    
 
       <Footer></Footer>
     </>
