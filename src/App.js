@@ -36,6 +36,7 @@ import CompanyFaqs from "./Pages/faqs/company-faqs.pages";
 import JobseekerFaqs from "./Pages/faqs/job-seeker-faqs.pages";
 import Applicantsresponses from "./Pages/Company/applicants-responses.pages";
 import DetailedResume from "./Pages/Candidates/detailed-resume.pages";
+import PostedJobQuestions from "./Pages/Company/posted-job-questions.pages";
 
 
 
@@ -166,6 +167,10 @@ function App() {
               <Route
                 path="/job-details"
                 element={<JobDetails setShowNavBar={setShowNavBar} />}
+              />
+              <Route
+                path="/posted-job-questions"
+                element={<PostedJobQuestions setShowNavBar={setShowNavBar} />}
               />
               <Route
                 path="/cvs"
