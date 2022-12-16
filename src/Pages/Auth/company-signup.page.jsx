@@ -1,13 +1,23 @@
 
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+
 // import LoadingModal from "../../Components/Modal/loading-modal.component";
 import Background from "./../../Assets/images/bg2.jpg";
+import { toast } from "react-toastify";
+
 
 function CompanySignup(props) {
   props.setShowNavBar(false);
   let navigate = useNavigate();
+
+
+
+  const [showModal, setShowModal] = React.useState(false);
+  const [modalMessage, setmodalMessage] = React.useState("");
+  const [modalMessage1, setmodalMessage1] = React.useState("");
+  const [modalMessage2, setmodalMessage2] = React.useState("");
 
   const [companyName, setCompanyName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -15,12 +25,12 @@ function CompanySignup(props) {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
-  const [loadingModalIsOpen, setLoadingModalIsOpen] = useState(false);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // show loading modal
-    setLoadingModalIsOpen(true);
+    reset();
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -46,14 +56,19 @@ function CompanySignup(props) {
     fetch(`${process.env.REACT_APP_HOST}/register-company`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        setLoadingModalIsOpen(false);
+   
 
         if ("errors" in result) {
-          alert(result.errors.number);
+     
+          setmodalMessage(result?.errors.name);
+          setmodalMessage2(result?.errors.password);
+          setmodalMessage1(result?.errors.email);
+
+          setShowModal(true);
         } else {
           if (result.success) {
-            // hide the modal
-            navigate(`/login`);
+            toast.success("Account Created Successfully");
+            setTimeout(() => navigate(`/login`), 3000);
           } else {
             // alert(result.message);
           }
@@ -63,11 +78,19 @@ function CompanySignup(props) {
       .catch((error) => console.log("error", error));
   };
 
+  function reset(){
+
+    
+    setmodalMessage("");
+    setmodalMessage1("");
+    setmodalMessage2("");
+ 
+  }
   return (
     <>
     
     <div
-      className={`justify-center   bg-no-repeat bg-cover bg-center md:h-screen sm:h-max
+      className={`justify-center   bg-no-repeat bg-cover bg-center md:h-max sm:h-max
   
   
   `}
@@ -98,18 +121,21 @@ function CompanySignup(props) {
                     type="text"
                         required
                         placeholder="Company Name"
-                        className="w-full p-2 text-center text-xl font-semibold text-black bg-slate-200  "
+                        className="w-full p-2 text-center text-md  text-black bg-slate-200  "
                         name=""
+                        onChange={(e) => setCompanyName(e.target.value)}
                       />
+                          <h3 className="text-sm   text-red-600 ">{modalMessage}</h3>
                     </div>
                   <div className="flex flex-wrap  ">
                     <div className="flex w-6/12 pr-1 justify-between flex-col ">
                       <input
-                        type="email"
+                        type="text"
                         required
                         placeholder="Last Name"
-                        className=" w-full py-2 px-1 text-center text-xl font-semibold text-black bg-slate-200 "
+                        className=" w-full py-2 px-1 text-center text-md  text-black bg-slate-200 "
                         name=""
+                        onChange={(e) => setLastName(e.target.value)}
                       />
                     </div>
                     <div className="flex  w-6/12 pl-1 justify-between flex-col">
@@ -117,27 +143,31 @@ function CompanySignup(props) {
                     type="text"
                         required
                         placeholder="First Name"
-                        className="w-full py-2 px-1 text-center text-xl font-semibold text-black bg-slate-200  "
+                        className="w-full py-2 px-1 text-center text-md  text-black bg-slate-200  "
                         name=""
+                        onChange={(e) => setFirstName(e.target.value)}
                       />
                     </div>
                   </div>
                   <div className="flex justify-between flex-col">
                       <input
-                      type="text"
+                      type="email"
                         required
                         placeholder="Email Address"
-                        className="w-full p-2 text-center text-xl font-semibold text-black bg-slate-200  "
+                        className="w-full p-2 text-center text-md  text-black bg-slate-200  "
                         name=""
+                        onChange={(e) => setEmail(e.target.value)}
                       />
+                          <h3 className="text-sm   text-red-600 ">{modalMessage1}</h3>
                     </div>
                     <div className="flex justify-between flex-col">
                       <input
                     type="text"
                         required
                         placeholder="Phone Number"
-                        className="w-full p-2 text-center text-xl font-semibold text-black bg-slate-200  "
+                        className="w-full p-2 text-center text-md  text-black bg-slate-200  "
                         name=""
+                        onChange={(e) => setPhoneNumber(e.target.value)}
                       />
                     </div>
                   
@@ -146,9 +176,11 @@ function CompanySignup(props) {
                         type="password"
                         required
                         placeholder="Password"
-                        className="w-full p-2 text-center text-xl font-semibold text-black bg-slate-200  "
+                        className="w-full p-2 text-center text-md  text-black bg-slate-200  "
                         name=""
+                        onChange={(e) => setPassword(e.target.value)}
                       />
+                                   <h3 className="text-sm   text-red-600 ">{modalMessage2}</h3>
                     </div>
                   
 
@@ -179,12 +211,9 @@ function CompanySignup(props) {
       </div>
     </div>
 
-    
 
-      {/* <LoadingModal
-        isOpen={loadingModalIsOpen}
-        text={"Creating company account."}
-      /> */}
+
+ 
     </>
   );
 }

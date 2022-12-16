@@ -38,6 +38,9 @@ import Applicantsresponses from "./Pages/Company/applicants-responses.pages";
 import DetailedResume from "./Pages/Candidates/detailed-resume.pages";
 import PostedJobQuestions from "./Pages/Company/posted-job-questions.pages";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -46,6 +49,7 @@ function App() {
   return (
     <>
       <Router>
+      <ToastContainer />
         <UserProvider>
           <JobsProvider>
             <Routes>

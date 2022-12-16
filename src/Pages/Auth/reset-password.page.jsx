@@ -5,11 +5,13 @@ import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 import { useNavigate } from "react-router-dom";
 import Background from "./../../Assets/images/bg2.jpg";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function ResetPassword(props) {
   props.setShowNavBar(false);
   const [verificationCode, setVerificationCode] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [email, setEmail] = useState("");
   // const { email } = useContext(UserContext);
   let navigate = useNavigate();
 
@@ -23,6 +25,7 @@ function ResetPassword(props) {
       // email: email,
       code: verificationCode,
       newPassword: newPassword,
+      email: email
     });
 
     console.log(raw);
@@ -34,14 +37,20 @@ function ResetPassword(props) {
       redirect: "follow",
     };
 
-    fetch("https://btc-wallet-app.herokuapp.com/reset-password", requestOptions)
+    fetch("https://oyster-app-s8ura.ondigitalocean.app/reset-password", requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        alert(result.message);
 
+        if(result.success){
+          toast.success(result.message);
+        }else{
+          toast.error(result.message);
+        }
+ 
+    
         if (result.success) {
           // redirect to the password reset page.
-          navigate(`/home`);
+          navigate(`/login`);
         }
       })
       .catch((error) => console.log("error", error));
@@ -73,26 +82,47 @@ function ResetPassword(props) {
                 <div className=" px-5 bg-white py-5 rounded-xl ">
                   <form onSubmit={(e) => handleFormSubmit(e)}>
                     <div className=" flex flex-col   gap-2 ">
-                      <h4 className="text-2xl mb-2 font-bold text-center text-green-500 ">
+                    <h4 className="text-2xl mb-2 font-bold text-center text-green-500 ">
                         Reset Password
                       </h4>
                       <div className="flex justify-between flex-col ">
                         <input
                           type="email"
                           required
-                          placeholder="Code"
-                          className=" w-full  p-2 text-center text-xl text-black font-semibold  bg-slate-200 "
+                          placeholder="Email"
+                          className=" w-full  p-2 text-center text-md text-black   bg-slate-200 "
                           name=""
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                          }}
+                        />
+                      </div>
+
+                    
+                      <div className="flex justify-between flex-col ">
+                        <input
+                          type="text"
+                          required
+                          placeholder="Code"
+                          className=" w-full  p-2 text-center text-md text-black   bg-slate-200 "
+                          name=""
+                          onChange={(e) => {
+                            setVerificationCode(e.target.value);
+                          }}
                         />
                       </div>
 
                       <div className="flex justify-between flex-col ">
                         <input
-                          type="email"
+                          type="text"
                           required
                           placeholder="New Password"
-                          className=" w-full  p-2 text-center text-xl text-black font-semibold  bg-slate-200 "
+                          className=" w-full  p-2 text-center text-md text-black   bg-slate-200 "
                           name=""
+                          onChange={(e) => {
+                            setNewPassword(e.target.value);
+                          }}
+                          
                         />
                       </div>
                   
@@ -101,7 +131,7 @@ function ResetPassword(props) {
                         
                           <Link to="/login">
                             {" "}
-                            <span className="text-xl font-light text-green-500 ">
+                            <span className="text-md font-light text-green-500 ">
                            Back to log in {" "}
                             </span>
                           </Link>
@@ -109,7 +139,7 @@ function ResetPassword(props) {
                       </div>
 
                       <input
-                        className="text-xl mt-3 w-full py-2 bg-green-500 hover:bg-green-600 cursor-pointer font-bold text-white"
+                        className="text-xl mt-1 w-full py-2 bg-green-500 hover:bg-green-600 cursor-pointer font-bold text-white"
                         type="submit"
                         id=""
                         value="SUBMIT"
