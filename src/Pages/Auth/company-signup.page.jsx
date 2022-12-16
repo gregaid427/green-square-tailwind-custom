@@ -44,7 +44,8 @@ function CompanySignup(props) {
       password: password,
     });
 
-    console.log(raw);
+
+    
 
     var requestOptions = {
       method: "POST",
@@ -192,15 +193,15 @@ function CompanySignup(props) {
                   />
                   <div className="flex justify-between flex-col">
                   <label for="Label" className="flex justify-center ">
-                      <span className="text-md font-light mr-2 ">
+                    <p>  <span className="text-md font-light mr-2 ">
                        Already Registered?
                       </span>
                       <Link to="/login">
                         {" "}
                         <span className="text-md font-light text-[#69C080] ">
-                          Click here to log in{" "}
+                          log in{" "}
                         </span>
-                      </Link>
+                      </Link></p>
                     </label>
                   </div>
                 </div>

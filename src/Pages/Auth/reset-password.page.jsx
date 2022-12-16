@@ -28,7 +28,7 @@ function ResetPassword(props) {
       email: email
     });
 
-    console.log(raw);
+
 
     var requestOptions = {
       method: "POST",

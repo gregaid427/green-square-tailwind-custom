@@ -16,7 +16,7 @@ function Login(props) {
 
   // use context
   const { setUser, setIsCompany } = useContext(UserContext);
-  console.log(process.env.REACT_APP_HOST);
+
 
   // useNavigate
   let navigate = useNavigate();
@@ -43,8 +43,7 @@ function Login(props) {
       password: password,
     });
 
-    console.log(raw);
-    // console.log(userType);
+
 
     var requestOptions = {
       method: "POST",
@@ -59,18 +58,17 @@ function Login(props) {
     fetch(`${process.env.REACT_APP_HOST}/login`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
-     
-        console.log(result);
+    
         if (result.success) {
           // setUser(result);
           if (result.hasOwnProperty("user")) {
             // navigate to the user's dashboard
-            console.log("/employee-guide");
+     
             setIsCompany(false);
             navigate(`/employee-guide`);
           } else {
             // navigate to the company's dashboard
-            console.log("/company-guide");
+         
             setIsCompany(true);
             navigate(`/company-guide`);
           }
@@ -78,7 +76,7 @@ function Login(props) {
           // true
         } else {
           toast.error("Invalid Username or Password")
-          console.log(result.message);
+
         }
       })
       

@@ -18,7 +18,7 @@ function ForgotPassword(props) {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // show loading modal
-    console.log("pressed");
+
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -36,12 +36,12 @@ function ForgotPassword(props) {
     fetch(`${process.env.REACT_APP_HOST}/forgot-password`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
+      
         if (result.success) {
           // setEmailForPassword(email);
 
           // hide the modal
-          console.log(result.message);
+    
           toast.success(result.message);
        
 

@@ -37,8 +37,8 @@ function JobSeekerSignup(props) {
       role: "user",
     });
 
-    console.log(raw);
-    console.log(`${process.env.REACT_APP_HOST}/register`);
+  
+
 
     var requestOptions = {
       method: "POST",
@@ -51,7 +51,7 @@ function JobSeekerSignup(props) {
       .then((response) => response.json())
       .then((result) => {
         let message = "";
-        console.log(result);
+     
         if ("errors" in result) {
           setmodalMessage(result?.errors.name);
           setmodalMessage2(result?.errors.password);
@@ -98,7 +98,7 @@ function JobSeekerSignup(props) {
     `}
         style={{ backgroundImage: `url(${Background})` }}
       >
-        <div className="wrapper mx-auto sm:pb-8 md:pb-[70px] ">
+        <div className="wrapper mx-auto sm:pb-20 md:pb-[70px] ">
           <div className="flex sm:justify-center md:justify-start ">
             {" "}
             <img src={GreenSquareLogo} className=" w-[200px]   " />
@@ -198,15 +198,15 @@ function JobSeekerSignup(props) {
                     />
                     <div className="flex justify-between flex-col">
                       <label for="Label" className="flex justify-center ">
-                        <span className="text-md font-light mr-2 ">
+                      <p>  <span className="text-md font-light mr-2 ">
                           Already Registered?
                         </span>
                         <Link to="/login">
                           {" "}
                           <span className="text-md font-light text-[#69C080] ">
-                            Click here to log in{" "}
+                           log in{" "}
                           </span>
-                        </Link>
+                        </Link></p>
                       </label>
                     </div>
                   </div>
