@@ -98,7 +98,7 @@ function JobSeekerSignup(props) {
     `}
         style={{ backgroundImage: `url(${Background})` }}
       >
-        <div className="wrapper mx-auto sm:pb-20 md:pb-[70px] ">
+        <div className="wrapper mx-auto sm:pb-[100px] md:pb-[70px] ">
           <div className="flex sm:justify-center md:justify-start ">
             {" "}
             <img src={GreenSquareLogo} className=" w-[200px]   " />

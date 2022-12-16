@@ -54,24 +54,26 @@ function CompanySignup(props) {
       redirect: "follow",
     };
 
-    fetch(`${process.env.REACT_APP_HOST}/register-company`, requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-   
-
+ 
+        fetch(`${process.env.REACT_APP_HOST}/register-company`, requestOptions)
+        .then((response) => response.json())
+        .then((result) => {
+          console.log(result)
         if ("errors" in result) {
      
           setmodalMessage(result?.errors.name);
           setmodalMessage2(result?.errors.password);
           setmodalMessage1(result?.errors.email);
 
-          setShowModal(true);
+        
         } else {
           if (result.success) {
+            console.log(result)
             toast.success("Account Created Successfully");
             setTimeout(() => navigate(`/login`), 3000);
           } else {
             // alert(result.message);
+            setmodalMessage1(result?.message);
           }
         }
         return;
