@@ -99,7 +99,7 @@ function CompanySignup(props) {
   `}
       style={{ backgroundImage: `url(${Background})` }}
     >
-       <div className="wrapper mx-auto sm:pb-8 md:pb-[70px] ">
+       <div className="wrapper mx-auto sm:pb-20 md:pb-[70px] ">
         <div className="flex sm:justify-center md:justify-start ">
           {" "}
           <img src={GreenSquareLogo} className=" w-[200px]   " />
