@@ -63,13 +63,12 @@ function HeroSection(props) {
               </button>
             </div>
           </div>
-          <div className="adv-search-btn">
-            <span className="banner-headline-alt">
-              Need more search options?{" "}
-            </span>
-            <a className="text-success" href="/job-listings/">
-              Advanced Search <i className="la la-long-arrow-alt-right"></i>
-            </a>
+          <div className=" text-xl flex gap-2 font-semibold  ">
+            <h3 className="">Need more search options? {" "}
+            <Link to="/advanced-search">
+              {" "}
+              <span className=" text-[#69C080]">Advanced Search</span>{" "}
+            </Link>{" "}</h3>
           </div>
         </div>
       </div>

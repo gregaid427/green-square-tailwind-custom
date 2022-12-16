@@ -40,6 +40,7 @@ import PostedJobQuestions from "./Pages/Company/posted-job-questions.pages";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BrowseSchoolGradYears from "./Pages/Candidates/browse-school-grad.pages";
 
 
 
@@ -76,6 +77,10 @@ function App() {
               <Route
                 path="/job-seeker-signup"
                 element={<JobSeekerSignup setShowNavBar={setShowNavBar} />}
+              />{" "}
+                <Route
+                path="/browse-school-grad"
+                element={<BrowseSchoolGradYears setShowNavBar={setShowNavBar} />}
               />{" "}
               <Route
                 path="/browse-jobs"

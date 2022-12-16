@@ -99,13 +99,13 @@ function SchoolsList(props) {
             </Link>
           </button>
         </div>
-        <div className=" pb-8 text-xl flex gap-2 md:py-10 sm:py-4 font-semibold  ">
-          <h3 className="">Need more search options? </h3>{" "}
-          <Link to="/advanced-search">
-            {" "}
-            <h3 className=" text-[#69C080]">Advanced Search</h3>{" "}
-          </Link>{" "}
-        </div>
+        <div className=" text-xl flex gap-2 font-semibold  ">
+            <h3 className="">Need more search options? {" "}
+            <Link to="/advanced-search">
+              {" "}
+              <span className=" text-[#69C080]">Advanced Search</span>{" "}
+            </Link>{" "}</h3>
+          </div>
       </div>
 
       <div className="wrapper my-6 md:grid-cols-3 sm:grid-cols-1 gap-12 grid">

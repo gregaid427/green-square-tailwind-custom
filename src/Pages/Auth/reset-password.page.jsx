@@ -52,6 +52,7 @@ function ResetPassword(props) {
           // redirect to the password reset page.
           navigate(`/login`);
         }
+        
       })
       .catch((error) => console.log("error", error));
   };

@@ -108,13 +108,13 @@ export default function BrowseJobs(props) {
           </button>
         </div>
 
-        <div className=" pb-8 text-xl flex gap-2 font-semibold  ">
-          <h3 className="">Need more search options? </h3>{" "}
-          <Link to="/advanced-search">
-            {" "}
-            <h3 className=" text-[#69C080]">Advanced Search</h3>{" "}
-          </Link>{" "}
-        </div>
+        <div className=" text-xl flex gap-2 font-semibold  ">
+            <h3 className="">Need more search options? {" "}
+            <Link to="/advanced-search">
+              {" "}
+              <span className=" text-[#69C080]">Advanced Search</span>{" "}
+            </Link>{" "}</h3>
+          </div>
       </div>
       </div>
 <div className="wrapper my-5" >
