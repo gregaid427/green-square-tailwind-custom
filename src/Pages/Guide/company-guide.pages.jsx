@@ -38,7 +38,9 @@ function classNames(...classes) {
 function GuidePage(props) {
   const { user } = useContext(UserContext);
   props.setShowNavBar(true);
-
+  // console.log(user)
+  // const {isCompany} = user;
+  // console.log(isCompany)
   return (
     <>
       <NavAlt className0="high-z" />
@@ -71,7 +73,7 @@ function GuidePage(props) {
 
             // onClick={(e) => setIsCompany(false)}
           >
-            <Link to="/employee-guide w-6/12 ">
+            <Link to="/">
               {" "}
               <p className="text-center flex mx-auto  uppercase">
                 Post a job
@@ -96,14 +98,14 @@ function GuidePage(props) {
 
             // onClick={(e) => setIsCompany(false)}
           >
-            <Link to="/employee-guide w-6/12 ">REGISTER</Link>
+            <Link to="/company-signup ">REGISTER</Link>
           </button>
           <button
             className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md text-2xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
 
             // onClick={(e) => setIsCompany(false)}
           >
-            <Link to="/employee-guide w-6/12 ">SIGN IN</Link>
+            <Link to="/login ">SIGN IN</Link>
           </button>
         </div>
       </div>

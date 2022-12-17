@@ -5,10 +5,11 @@ import { useContext } from "react";
 
 function Footer() {
   const { isCompany } = useContext(UserContext);
+
   return (
     <>
             <div className="wrapper bg-black ">
-        <div className=" flex md:flex-row sm:flex-col sm:text-center py-12 text-white ">
+        <div className=" flex md:flex-row  sm:flex-col sm:text-center py-12 text-white ">
           <div className=" flex flex-col md:w-3/12  sm:w-12/12 ">
             {" "}
             <img
@@ -28,8 +29,12 @@ function Footer() {
           </div>
           <div className="flex md:flex-col sm:mt-5 md:w-9/12 sm:w-12/12 flex-wrap ">
             <div className="flex md:flex-row sm:flex-col sm:justify-center sm:mx-auto sm:items-center sm:gap-5">
+           
+            {isCompany ? (
+              
               <div className="flex flex-col gap-2 md:w-4/12 sm:mx-auto sm:w-12/12 ">
                 {" "}
+             
                 <h5 className="text-xl text-[#69C080] font-bold ">Companies</h5>
                 <p className="text-xl">
                   <Link to="/" className="text-reset">
@@ -47,6 +52,7 @@ function Footer() {
                   </Link>
                 </p>
               </div>
+                    ) : (
               <div className="flex flex-col gap-2 sm:w-12/12 md:w-4/12">
                 <h5 className="text-xl text-[#69C080] font-bold ">
                   Job Seekers
@@ -72,6 +78,7 @@ function Footer() {
                   </Link>
                 </p>
               </div>
+                   )}
               <div className="flex flex-col gap-2 md:w-4/12 sm:w-12/12">
                 {" "}
                 <h5 className="text-xl text-[#69C080] font-bold ">Company</h5>
