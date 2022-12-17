@@ -96,7 +96,7 @@ function JobsPostedByCompany(props) {
               <h4 className="  text-md text-white  ">View</h4>
             </button>
             <button className="px-2 py-1 flex uppercase  h-fit  rounded-md bg-[#69C080] ">
-              <h4 className="  text-md text-white  ">Edit</h4>
+              <h4 className="  text-md text-white ">Edit</h4>
             </button>
             <button className="px-2  py-1 flex uppercase   h-fit  rounded-md bg-[#69C080] ">
               <h4 className="  text-md text-white  ">Hide</h4>
