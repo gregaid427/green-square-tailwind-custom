@@ -81,7 +81,7 @@ function JobsPostedByCompany(props) {
 
       <div className=" my-5 flex wrapper gap-3  flex-col justify-between ">
         <div className="py-3 px-4 w-full rounded-md  bg-[#f2f2f2] flex sm:flex-col justify-between">
-          <div className="  w-[9/12] flex flex-col justify-between gap-3">
+          <div className="  w-[9/12] flex flex-col justify-between gap-1">
             <h3 className="text-xl ">
               Python Software Engineering Associate – Credit Technology
             </h3>
@@ -105,7 +105,7 @@ function JobsPostedByCompany(props) {
         </div>
 
         <div className="py-3 px-4 w-full rounded-md  bg-[#f2f2f2] flex sm:flex-col justify-between">
-          <div className="  w-[9/12] flex flex-col justify-between gap-3">
+          <div className="  w-[9/12] flex flex-col justify-between gap-1">
             <h3 className="text-xl ">Associate Software Engineer Java</h3>
             <h4 className="text-md">London, England</h4>
             <h4 className="text-md">$100,000</h4>

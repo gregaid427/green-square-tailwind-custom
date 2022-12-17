@@ -32,21 +32,21 @@ function CompanyFaq(props) {
      
 
       <div className="wrapper  md:mb-5  sm:mb-2 ">
-      <ul className="tab-list">
+      <ul className="tab-list z-0 gap-2 ">
           <li
-            className={`tabs ${getActiveClass(1, "active-tabs")}`}
+            className={`tabs ${getActiveClass(1, "active-tabs")}  bg-[#f2f2f2]`}
             onClick={() => toggleTab(1)}
           >
-            <h4 className="text-xl font-bold py-2">FAQs</h4>
+            <h4 className="text-xl font-bold  py-2">FAQs</h4>
           </li>
           <li
-            className={`tabs ${getActiveClass(2, "active-tabs")}`}
+            className={`tabs ${getActiveClass(2, "active-tabs")} bg-[#f2f2f2] `}
             onClick={() => toggleTab(2)}
           >
-            <h4 className="text-xl font-bold py-2">How it Works</h4>
+            <h4 className="text-xl font-bold  py-2">How it Works</h4>
           </li>
         </ul>
-        <div className="content-container">
+        <div className="content-container shadow-2xl ">
           <div className={`content ${getActiveClass(1, "active-content")}`}>
           <Faq
               title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit?"}

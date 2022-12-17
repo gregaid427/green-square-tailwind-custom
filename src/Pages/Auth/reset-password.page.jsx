@@ -52,7 +52,7 @@ function ResetPassword(props) {
           // redirect to the password reset page.
           navigate(`/login`);
         }
-        
+
       })
       .catch((error) => console.log("error", error));
   };
@@ -83,7 +83,7 @@ function ResetPassword(props) {
                 <div className=" px-5 bg-white py-5 rounded-xl ">
                   <form onSubmit={(e) => handleFormSubmit(e)}>
                     <div className=" flex flex-col   gap-2 ">
-                    <h4 className="text-2xl mb-2 font-bold text-center text-green-500 ">
+                    <h4 className="text-2xl mb-2 font-extrabold text-center text-[#69C080] ">
                         Reset Password
                       </h4>
                       <div className="flex justify-between flex-col ">
@@ -132,7 +132,7 @@ function ResetPassword(props) {
                         
                           <Link to="/login">
                             {" "}
-                            <span className="text-md font-light text-green-500 ">
+                            <span className="text-md font-light text-[#69C080]">
                            Back to log in {" "}
                             </span>
                           </Link>
@@ -140,7 +140,7 @@ function ResetPassword(props) {
                       </div>
 
                       <input
-                        className="text-xl mt-1 w-full py-2 bg-green-500 hover:bg-green-600 cursor-pointer font-bold text-white"
+                        className="text-xl mt-1 w-full py-2 bg-[#69C080] hover:bg-green-600 cursor-pointer font-bold text-white"
                         type="submit"
                         id=""
                         value="SUBMIT"

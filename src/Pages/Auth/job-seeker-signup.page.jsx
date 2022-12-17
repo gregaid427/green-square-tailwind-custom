@@ -115,7 +115,7 @@ function JobSeekerSignup(props) {
               <div className=" px-5 bg-white py-5 rounded-xl ">
                 <form onSubmit={(e) => handleFormSubmit(e)}>
                   <div className=" flex flex-col   gap-2 ">
-                    <h4 className="text-2xl mb-2 font-bold text-center text-[#69C080] ">
+                    <h4 className="text-2xl mb-2 font-extrabold text-center text-[#69C080] ">
                       Sign Up
                     </h4>
                     <div className="flex flex-wrap  ">

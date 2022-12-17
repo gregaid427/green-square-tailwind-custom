@@ -35,11 +35,11 @@ function Home(props) {
                   </h4>{" "}
                   <Link to="/employee-guide">
                     <div
-                      className=" justify-end w-8/12 md:p-3 sm:p-2 mt-2 align-bottom  rounded-md md:text-3xl sm:text-2xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
+                      className=" justify-end w-8/12 md:p-3 sm:p-2 mt-2 align-bottom  rounded-md md:text-3xl sm:text-2xl mx-auto  text-center font-bold bg-[#FFBE24] text-black"
 
                       onClick={(e) => setIsCompany(false)}
                     >
-                      JOB SEEKER
+                     Earner
                     </div>
                   </Link>
                 </div>
@@ -49,11 +49,11 @@ function Home(props) {
                   </h4>{" "}
                   <Link to="/company-guide">
                     <div
-                      className=" justify-end w-8/12 md:p-3 sm:p-2 p-4 mt-2 align-bottom  rounded-md md:text-3xl sm:text-2xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
+                      className=" justify-end w-8/12 md:p-3 sm:p-2 p-4 mt-2 align-bottom  rounded-md md:text-3xl sm:text-2xl mx-auto  text-center font-bold bg-[#FFBE24] text-black"
 
                       onClick={(e) => setIsCompany(true)}
                     >
-                      EMPLOYERS
+                     Organisation
                     </div>
                   </Link>
                 </div>

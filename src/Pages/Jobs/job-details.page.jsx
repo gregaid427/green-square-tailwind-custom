@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useLocation, useNavigate, useParams  } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import JobDetailSection from "../../Components/Hero/job.component";
 import Footer from "../../Components/Footer/footer.component";
 import SmilingManWithLaptop from "../../Assets/images/african-american-man-working-laptop-writing-notebook-man-with-beard-sitting-cafe.jpeg";
@@ -19,51 +19,48 @@ import { ReactComponent as IconPack6 } from "./../../Assets/icons/Icons-02.svg";
 function JobDetails(props) {
   const [showModal, setShowModal] = React.useState(false);
 
-  let { jobId,companyId } = useParams();
-console.log(companyId)
-    const [jobs, setJobs] = useState([]); 
-    const [company, setCompany] = useState([]);
-  
-    useEffect(() => {
-      var requestOptions = {
-        method: "GET",
-        redirect: "follow",
-      };
-  
-      fetch(`${process.env.REACT_APP_HOST}/jobs/${jobId} `, requestOptions)
-        .then((response) => response.json())
-        .then((result) => {
-          // console.log(result);
-          if (result.success) {
-            console.log(result.job);
-            setJobs(result.job);
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          // alert(error.message);
-        });
+  let { jobId, companyId } = useParams();
+  console.log(companyId);
+  const [jobs, setJobs] = useState([]);
+  const [company, setCompany] = useState([]);
 
-///////////////////////////////////////////////////////////
+  useEffect(() => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
 
-
-
-
-    }, [jobId]);
-
-
-    useEffect(() => {
-      var requestOptions = {
-        method: "GET",
-        redirect: "follow",
-      };
-      fetch(`${process.env.REACT_APP_HOST}/companies/638284f4c5a64a66a83318b5`, requestOptions)
+    fetch(`${process.env.REACT_APP_HOST}/jobs/${jobId} `, requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        
+        // console.log(result);
+        if (result.success) {
+          console.log(result.job);
+          setJobs(result.job);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        // alert(error.message);
+      });
+
+    ///////////////////////////////////////////////////////////
+  }, [jobId]);
+
+  useEffect(() => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+    fetch(
+      `${process.env.REACT_APP_HOST}/companies/638284f4c5a64a66a83318b5`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
         // console.log(result);
         if (result?._id) {
-          console.log("entered")
+          console.log("entered");
           console.log(result);
           setCompany(result);
         }
@@ -71,21 +68,14 @@ console.log(companyId)
       .catch((error) => {
         console.log(error);
         // alert(error.message);
-      });/////////////////////////////////////////
-console.log(companyId)
+      }); /////////////////////////////////////////
+    console.log(companyId);
+  }, [companyId]);
 
+  const money = jobs?.salary;
+  const area = jobs?.location;
 
-
-    }, [companyId]);
-
-
-
- 
-
- const money  = jobs?.salary ;
- const area  = jobs?.location ;
-
-console.log(company)
+  console.log(company);
 
   return (
     <>
@@ -99,7 +89,7 @@ console.log(company)
           ></img>
           <div className="flex flex-col justify-center gap-3">
             <h2 className="text-4xl sm:text-center md:text-left ">
-            {jobs?.position}
+              {jobs?.position}
             </h2>
             <h3 className="text-2xl text-slate-500 sm:text-center md:text-left ">
               Company Name
@@ -110,16 +100,15 @@ console.log(company)
 
       <div className="wrapper flex md:flex-row sm:flex-col gap-5 p-3 my-10 ">
         <div className=" md:w-8/12 sm:w-12/12">
-          <h3 className="text-xl font-semibold py-8">
-          {jobs.description}
-          </h3>
+          <h3 className="text-xl font-semibold py-8">{jobs.description}</h3>
           <hr></hr>
           <div className="my-3">
             <h3 className="text-xl font-semibold my-3 ">
               Experience Required/More Information
             </h3>
             <h3 className="text-xl   ">
-              Hardcoded text because api doesnt return any info below ,,,it returns description above <br></br>
+              Hardcoded text because api doesnt return any info below ,,,it
+              returns description above <br></br>
               Porttitor amet massa Done cporttitor dolor et nisl molestie ium
               feliscon lore ipsum dolor tfringilla. lorem lorem ipsum.
               ollcitudin est dolor time.
@@ -193,11 +182,13 @@ console.log(company)
           <div className=" flex shadow-2xl p-4 rounded-xl h-fit flex-col gap-3  text-center">
             <h3 className="text-4xl font-semibold py-3">Jobs Details</h3>
             <h3 className="text-xl font-semibold text-slate-400 ">
-        {area?.region+ ", "+ area?.country}
+              {area?.region + ", " + area?.country}
             </h3>
-            <h3 className="text-xl font-semibold text-slate-400 ">{money?.currency + money?.budget}</h3>
             <h3 className="text-xl font-semibold text-slate-400 ">
-           {jobs.mode}
+              {money?.currency + money?.budget}
+            </h3>
+            <h3 className="text-xl font-semibold text-slate-400 ">
+              {jobs.mode}
             </h3>
             <hr></hr>
             <div className="justify-center items-center px-2 flex gap-3">
@@ -367,10 +358,13 @@ console.log(company)
                       ×
                     </span>
                   </button>
-               
-                {/*body*/}
 
-                <textarea className="w-full bg-[#f2f2f2] rounded-xl p-2 " rows={6}></textarea>
+                  {/*body*/}
+
+                  <textarea
+                    className="w-full bg-[#f2f2f2] rounded-xl p-2 "
+                    rows={6}
+                  ></textarea>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-center gap-5 p-3 ">
