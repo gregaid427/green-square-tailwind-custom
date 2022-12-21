@@ -32,7 +32,7 @@ function PostJobsByCompany(props) {
 
     // todo:
     // Change to get company data from context.
-    let company_id = user.company.company_id;
+    // let company_id = user.company.company_id;
 
     var raw = JSON.stringify({
       positon: position,

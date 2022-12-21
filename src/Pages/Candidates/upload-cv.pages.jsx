@@ -23,10 +23,10 @@ function UploadCV(props) {
 
   // use context
 
-  let user_id = "";
-  if (user) {
-    user_id = user.user.userId;
-  }
+  // let user_id = "";
+  // if (user) {
+  //   user_id = user.user.userId;
+  // }
 
   const handleJobSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ function UploadCV(props) {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-      userId: user_id,
+      // userId: user_id,
       resume: {
         education: {
           highestLevelOfEeducation: highestLevelOfEeducation,
