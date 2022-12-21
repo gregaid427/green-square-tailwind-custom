@@ -1,12 +1,12 @@
-import { useContext } from "react";
+
 import { Link } from "react-router-dom";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 import Background from "./../../Assets/images/background1.jpg";
-import { UserContext } from "../../Context/auth.context";
+
 
 function Home(props) {
   //   props.setShowNavBar(false);
-  const { setIsCompany } = useContext(UserContext);
+  // const { set0 } = useContext(UserContext);
 
   return (
     <>
@@ -37,7 +37,7 @@ function Home(props) {
                     <div
                       className=" justify-end w-8/12 md:p-3 sm:p-2 mt-2 align-bottom  rounded-md md:text-3xl sm:text-2xl mx-auto  text-center font-bold bg-[#FFBE24] text-black"
 
-                      onClick={(e) => setIsCompany(false)}
+                      // onClick={(e) => set0(false)}
                     >
                      Earner
                     </div>
@@ -51,7 +51,7 @@ function Home(props) {
                     <div
                       className=" justify-end w-8/12 md:p-3 sm:p-2 p-4 mt-2 align-bottom  rounded-md md:text-3xl sm:text-2xl mx-auto  text-center font-bold bg-[#FFBE24] text-black"
 
-                      onClick={(e) => setIsCompany(true)}
+                      // onClick={(e) => set0(true)}
                     >
                      Organisation
                     </div>

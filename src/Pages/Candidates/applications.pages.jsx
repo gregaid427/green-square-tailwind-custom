@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, useRef } from "react";
 import Footer from "../../Components/Footer/footer.component";
 import JobContainer from "./../../Components/Containers/job-container.components";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/auth.context";
+
 import { useJobServices } from "../../Context/jobs.context";
 import Header from "../../Components/header/header";
 import Nav from "../../Components/NavBar/nav.component";
@@ -42,7 +42,7 @@ function JobApplications(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" " className="">
                 UPLOAD FILE
@@ -51,7 +51,7 @@ function JobApplications(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" ">VIEW FILE</Link>
             </button>
@@ -67,7 +67,7 @@ function JobApplications(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" " className="">
                 UPLOAD FILE
@@ -76,7 +76,7 @@ function JobApplications(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" ">VIEW FILE</Link>
             </button>
@@ -98,7 +98,7 @@ function JobApplications(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" " className="">
                 UPLOAD FILE
@@ -107,7 +107,7 @@ function JobApplications(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-slate-600 rounded-md  text-md mx-auto  text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" ">VIEW FILE</Link>
             </button>

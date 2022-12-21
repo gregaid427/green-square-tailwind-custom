@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import Footer from "../../Components/Footer/footer.component";
 import { Link, useNavigate } from "react-router-dom";
-import { UserContext } from "../../Context/auth.context";
+
 import Nav from "../../Components/NavBar/nav.component";
 import Header from "../../Components/header/header";
 
 function PostJobsByCompany(props) {
-  const { user } = useContext(UserContext);
+
   props.setShowNavBar(true);
 
   const [jobCategories, setJobCategories] = useState("");
@@ -32,11 +32,11 @@ function PostJobsByCompany(props) {
 
     // todo:
     // Change to get company data from context.
-    let company_id = user.company.company_id;
+    // let company_id = user.company.company_id;
 
     var raw = JSON.stringify({
       positon: position,
-      company: company_id,
+      // company: company_id,
       location: {
         country: country,
         region: region,
@@ -56,26 +56,26 @@ function PostJobsByCompany(props) {
 
     console.log(raw);
 
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
+  //   var requestOptions = {
+  //     method: "POST",
+  //     headers: myHeaders,
+  //     body: raw,
+  //     redirect: "follow",
+  //   };
 
-    fetch(
-      `${process.env.REACT_APP_HOST}/companies/${company_id}/jobs`,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result);
-        alert(result.message);
-        if (result.success) {
-          navigate("/company-jobs");
-        }
-      })
-      .catch((error) => console.log("error", error));
+  //   fetch(
+  //     `${process.env.REACT_APP_HOST}/companies/${company_id}/jobs`,
+  //     requestOptions
+  //   )
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //       console.log(result);
+  //       alert(result.message);
+  //       if (result.success) {
+  //         navigate("/company-jobs");
+  //       }
+  //     })
+  //     .catch((error) => console.log("error", error));
   };
 
   useEffect(() => {
@@ -192,7 +192,7 @@ function PostJobsByCompany(props) {
           <button
             className=" w-6/12    md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-black rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#FFBE24] "
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to=" " className="">
           Save Draft
@@ -201,7 +201,7 @@ function PostJobsByCompany(props) {
           <button
             className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  bg-[#69C080] rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold  text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to=" ">Post Job</Link>
           </button>

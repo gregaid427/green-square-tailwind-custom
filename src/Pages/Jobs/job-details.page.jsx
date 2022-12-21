@@ -3,7 +3,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import JobDetailSection from "../../Components/Hero/job.component";
 import Footer from "../../Components/Footer/footer.component";
 import SmilingManWithLaptop from "../../Assets/images/african-american-man-working-laptop-writing-notebook-man-with-beard-sitting-cafe.jpeg";
-import { UserContext } from "../../Context/auth.context";
+
 import comp1 from "../../Assets/images/morgan-stanley.jpeg";
 
 import { Link } from "react-router-dom";

@@ -10,7 +10,7 @@ import caro1 from "./../../Assets/images/african-american-business-woman-by-wind
 import caro4 from "./../../Assets/images/smiling-young-african-man-sitting-coworking-chatting-by-phone.png";
 import Carousel from "nuka-carousel";
 
-import { UserContext } from "../../Context/auth.context";
+
 import { ReactComponent as IconPack1 } from "./../../Assets/icons/Icons-04.svg";
 import { ReactComponent as IconPack2 } from "./../../Assets/icons/Icons-02.svg";
 import { ReactComponent as IconPack3 } from "./../../Assets/icons/Icons-03.svg";
@@ -24,7 +24,7 @@ import JobContainer from "../../Components/Containers/job-container.components";
 import EmployeeChoice from "../../Components/Containers/Sections/employee-choice";
 
 function GuidePage(props) {
-  const { user } = useContext(UserContext);
+
 
   props.setShowNavBar(true);
   const [jobs, setJobs] = useState([]);
@@ -86,7 +86,7 @@ function GuidePage(props) {
           <button
             className=" md:mt-5  md:px-4  sm:px-2 sm:mx-auto sm:flex     md:py-2 sm:p-2 mt-2   rounded-md text-2xl   text-center font-semibold bg-[#69C080]  text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to="/browse-jobs">
               {" "}
@@ -145,7 +145,7 @@ function GuidePage(props) {
           <button
             className=" sm:rounded-sm  md:w-3/12 sm:w-12/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2    rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to="/employee-guide w-6/12 " className="text-white">
               SEARCH JOBS
@@ -160,7 +160,7 @@ function GuidePage(props) {
         <button
           className=" md:w-2/12 sm:w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2 align-center  rounded-md text-xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
 
-          // onClick={(e) => setIsCompany(false)}
+          // onClick={(e) => set0(false)}
         >
           <Link to="/employee-guide w-6/12 ">BROWSE JOBS</Link>
         </button>

@@ -32,8 +32,6 @@ export default function BrowseJobs(props) {
       redirect: "follow",
     };
 
-    
-
     fetch(`${process.env.REACT_APP_HOST}/jobs`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
@@ -49,76 +47,77 @@ export default function BrowseJobs(props) {
   }, []);
   const [optionState, setoptionState] = useState("value");
 
-
   return (
     <>
       <Nav></Nav>
-<div className="bg-[#f2f2f2] " >
-      <div className="mb-6  wrapper  flex flex-col gap-6">
-        <div className="pt-8 flex flex-col gap-6">
-          <div className=" sm:justify-center font-semibold gap-2 text-4xl flex">
-            <h3 className="">Browse </h3>
-            <h3 className=" text-[#69C080]">Jobs</h3>{" "}
+      <div className="bg-[#f2f2f2] ">
+        <div className="mb-6  wrapper  flex flex-col gap-6">
+          <div className="pt-8 flex flex-col gap-6">
+            <div className=" sm:justify-center font-semibold gap-2 text-4xl flex">
+              <h3 className="">Browse </h3>
+              <h3 className=" text-[#69C080]">Jobs</h3>{" "}
+            </div>
+          </div>
+
+          <div className="flex  md:gap-2 sm:gap-1 w-full sm:flex-col md:flex-row   justify-between ">
+            {" "}
+            <input
+              required
+              type="text"
+              name="emailAddress"
+              id="emailAddress"
+              placeholder="Job title or keyword"
+              className="form-control bg-white border-0 sm:rounded-sm md:w-3/12 sm:w-12/12 md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+              onChange={(e) => {
+                // setEmail(e.target.value);
+              }}
+            />
+            <input
+              required
+              type="text"
+              name="emailAddress"
+              id="emailAddress"
+              placeholder="Location "
+              className="form-control border-0 sm:rounded-sm md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+              onChange={(e) => {
+                // setEmail(e.target.value);
+              }}
+            />
+            <input
+              required
+              type="text"
+              name="emailAddress"
+              id="emailAddress"
+              placeholder="[variable goes here] "
+              className="form-control border-0 sm:rounded-sm md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
+              onChange={(e) => {
+                // setEmail(e.target.value);
+              }}
+            />
+            <button
+              className=" sm:rounded-sm  md:w-3/12 sm:w-12/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2    rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
+
+              // onClick={(e) => set0(false)}
+            >
+              <Link to="/employee-guide w-6/12 " className="text-white">
+                SEARCH JOBS
+              </Link>
+            </button>
+          </div>
+
+          <div className=" text-xl flex gap-2 font-semibold  ">
+            <h3 className="">
+              Need more search options?{" "}
+              <Link to="/advanced-search">
+                {" "}
+                <span className=" text-[#69C080]">Advanced Search</span>{" "}
+              </Link>{" "}
+            </h3>
           </div>
         </div>
-
-        <div className="flex  md:gap-2 sm:gap-1 w-full sm:flex-col md:flex-row   justify-between ">
-          {" "}
-          <input
-            required
-            type="text"
-            name="emailAddress"
-            id="emailAddress"
-            placeholder="Job title or keyword"
-            className="form-control bg-white border-0 sm:rounded-sm md:w-3/12 sm:w-12/12 md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
-            onChange={(e) => {
-              // setEmail(e.target.value);
-            }}
-          />
-          <input
-            required
-            type="text"
-            name="emailAddress"
-            id="emailAddress"
-            placeholder="Location "
-            className="form-control border-0 sm:rounded-sm md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
-            onChange={(e) => {
-              // setEmail(e.target.value);
-            }}
-          />
-          <input
-            required
-            type="text"
-            name="emailAddress"
-            id="emailAddress"
-            placeholder="[variable goes here] "
-            className="form-control border-0 sm:rounded-sm md:w-3/12 sm:w-12/12  md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-xl text-center"
-            onChange={(e) => {
-              // setEmail(e.target.value);
-            }}
-          />
-          <button
-            className=" sm:rounded-sm  md:w-3/12 sm:w-12/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2    rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
-
-            // onClick={(e) => setIsCompany(false)}
-          >
-            <Link to="/employee-guide w-6/12 " className="text-white">
-              SEARCH JOBS
-            </Link>
-          </button>
-        </div>
-
-        <div className=" text-xl flex gap-2 font-semibold  ">
-            <h3 className="">Need more search options? {" "}
-            <Link to="/advanced-search">
-              {" "}
-              <span className=" text-[#69C080]">Advanced Search</span>{" "}
-            </Link>{" "}</h3>
-          </div>
       </div>
-      </div>
-<div className="wrapper my-5" >
-      <div className=" flex   shadow-md p-8  w-full flex-col  ">
+      <div className="wrapper my-5">
+        <div className=" flex   shadow-md p-8  w-full flex-col  ">
           <h3 className="font-semibold text-3xl">Filters</h3>
           <div className="flex   gap-2  md:gap-2 sm:gap-1 w-full sm:flex-col md:flex-row    justify-between ">
             {" "}
@@ -199,109 +198,37 @@ export default function BrowseJobs(props) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="wrapper flex w-12/12 gap-3 flex-col my-20 ">
+        <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
+          <img
+            src={feature4}
+            className="md:w-2/12 sm:w-12/12 h-[150px] object-contain "
+          ></img>
+
+          <div className="md:w-10/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-2 md:my-auto bg-[#f2f2f2] ">
+            <h3 className="text-xl ">Associate Software Engineer Java</h3>
+            <h4 className="text-md">London, England</h4>
+            <h4 className="text-md">$100,000</h4>
+            <h4 className="text-md">Full Time Role</h4>{" "}
+            <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
+              {" "}
+              <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
+                <IconPack4 fill="#000000" className="h-5 my-auto" />
+                <h4 className=" text-md  "> PRO</h4>{" "}
+              </div>
+            </div>
+          </div>
         </div>
-
-
-        <div className="wrapper flex w-12/12 gap-3 flex-col my-20 ">
-          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
-            <img
-              src={feature1}
-              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
-            ></img>
-
-            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-5 md:my-auto bg-[#f2f2f2] ">
-              <h3 className="text-xl ">
-                Python Software Engineering Associate – Credit Technology
-              </h3>
-              <h4 className="text-md">London, England</h4>
-              <h4 className="text-md">$100,000</h4>
-              <h4 className="text-md">Full Time Role</h4>{" "}
-              <div className=" flex md:flex-row relative sm:flex-col  md:justify-between sm:items-start">
-                {" "}
-               
-                <div className="p-2 mb-2 flex gap-2 md:absolute  sm:mx-auto bottom-5 right-0   rounded-md bg-[#69C080] ">
-                  <h4 className="  text-md text-white  ">
-                    APPLY FOR THIS JOB{" "}
-                  </h4>{" "}
-                </div>
-             
-              </div>
-            </div>
-          </div>
-
-          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
-            <img
-              src={feature2}
-              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
-            ></img>
-
-            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-5 md:my-auto bg-[#f2f2f2] ">
-              <h3 className="text-xl ">Associate Software Engineer Java</h3>
-              <h4 className="text-md">London, England</h4>
-              <h4 className="text-md">$100,000</h4>
-              <h4 className="text-md">Full Time Role</h4>{" "}
-              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
-                {" "}
-                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
-                  <IconPack4 fill="#000000" className="h-5 my-auto" />
-                  <h4 className=" text-md  "> PRO</h4>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
-            <img
-              src={feature3}
-              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
-            ></img>
-
-            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-5 md:my-auto bg-[#f2f2f2] ">
-              <h3 className="text-xl ">Associate Software Engineer Java</h3>
-              <h4 className="text-md">London, England</h4>
-              <h4 className="text-md">$100,000</h4>
-              <h4 className="text-md">Full Time Role</h4>{" "}
-              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
-                {" "}
-                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
-                  <IconPack4 fill="#000000" className="h-5 my-auto" />
-                  <h4 className=" text-md  "> PRO</h4>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:w-12/12 sm:w-12/12 flex sm:flex-col  bg-white ">
-            <img
-              src={feature4}
-              className="md:w-3/12 sm:w-12/12 h-[170px] object-contain "
-            ></img>
-
-            <div className="md:w-8/12 sm:w-12/12 sm:py-2   px-4 py-2  flex flex-col gap-5 md:my-auto bg-[#f2f2f2] ">
-              <h3 className="text-xl ">Associate Software Engineer Java</h3>
-              <h4 className="text-md">London, England</h4>
-              <h4 className="text-md">$100,000</h4>
-              <h4 className="text-md">Full Time Role</h4>{" "}
-              <div className=" flex md:flex-row sm:w-3/12  relative sm:flex-col md:justify-between ">
-                {" "}
-                <div className="p-2 mb-2 flex md:absolute bottom-5 right-0  gap-2 rounded-md float-right bg-[#FFBE24] ">
-                  <IconPack4 fill="#000000" className="h-5 my-auto" />
-                  <h4 className=" text-md  "> PRO</h4>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>{" "}
-
-        <div className="my-6 bg-[#f2f2f2]">
-          <div className=" wrapper  ">
-
-<h3 className="text-3xl font-semibold text-center py-4" >Popular Categories</h3>
-carouselgoes here
-          </div>
-
+      </div>{" "}
+      <div className="my-6 bg-[#f2f2f2]">
+        <div className=" wrapper  ">
+          <h3 className="text-3xl font-semibold text-center py-4">
+            Popular Categories
+          </h3>
+          carouselgoes here
         </div>
-
+      </div>
       <div className=" w-full flex md:flex-row  bg-[#69C080] sm:flex-col">
         <div className="md:w-6/12 flex my-auto sm:text-center sm:justify-center sm:py-7  sm:12/12">
           <div className="flex md:pl-[134px] sm:pl-0 sm:justify-center flex-col gap-4  ">
@@ -320,15 +247,6 @@ carouselgoes here
         </div>
         <img className="md:w-6/12 sm:12/12" src={SmilingManWithLaptop}></img>
       </div>
-
-
-
-  
-
-
-
-
-
       <Footer></Footer>
     </>
   );

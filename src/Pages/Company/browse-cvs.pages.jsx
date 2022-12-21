@@ -145,7 +145,7 @@ function BrowseCVs(props) {
             <button
               className="  md:w-3/12 sm:w-12/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2    rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to="/employee-guide w-6/12 " className="text-white">
                 SEARCH JOBS
@@ -175,7 +175,7 @@ function BrowseCVs(props) {
               <button
                 className=" w-10/12 py-1 h-fit  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-                // onClick={(e) => setIsCompany(false)}
+                // onClick={(e) => set0(false)}
               >
                 <Link to={"/post-a-job"} className="">
                   VIEW PROFILE
@@ -184,7 +184,7 @@ function BrowseCVs(props) {
               <button
                 className=" w-10/12 py-1  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-                // onClick={(e) => setIsCompany(false)}
+                // onClick={(e) => set0(false)}
               >
                 <Link to={"/post-a-job"} className="">
                   DOWNLOAD CV
@@ -193,7 +193,7 @@ function BrowseCVs(props) {
               <button
                 className=" w-10/12 py-1  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-                // onClick={(e) => setIsCompany(false)}
+                // onClick={(e) => set0(false)}
               >
                 <Link to={"/post-a-job"} className="">
                   SEND MESSAGE
@@ -215,7 +215,7 @@ function BrowseCVs(props) {
               <button
                 className=" w-10/12 py-1 h-fit  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-                // onClick={(e) => setIsCompany(false)}
+                // onClick={(e) => set0(false)}
               >
                 <Link to={"/post-a-job"} className="">
                   VIEW PROFILE
@@ -224,7 +224,7 @@ function BrowseCVs(props) {
               <button
                 className=" w-10/12 py-1  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-                // onClick={(e) => setIsCompany(false)}
+                // onClick={(e) => set0(false)}
               >
                 <Link to={"/post-a-job"} className="">
                   DOWNLOAD CV
@@ -233,7 +233,7 @@ function BrowseCVs(props) {
               <button
                 className=" w-10/12 py-1  rounded-md md:text-md sm:text-md mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-                // onClick={(e) => setIsCompany(false)}
+                // onClick={(e) => set0(false)}
               >
                 <Link to={"/post-a-job"} className="">
                   SEND MESSAGE

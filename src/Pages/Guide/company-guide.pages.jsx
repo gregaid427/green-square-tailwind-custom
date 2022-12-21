@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+
 // import  from "./../../Assets/images/african-american-business-woman-by-window.png";
 import caro1 from "./../../Assets/images/african-american-business-woman-by-window.png";
 import caro4 from "./../../Assets/images/smiling-young-african-man-sitting-coworking-chatting-by-phone.png";
@@ -9,7 +9,7 @@ import caro2 from "./../../Assets/images/smiling_man.jpg";
 // import Footer from "../../Components/Footer/footer.component";
 // import EmployeeTestimonialComponent from "../../Components/Containers/Sections/employee-testimonial.component";
 // import OurTrackRecord from "../../Components/Containers/Sections/our-track-record.component";
-import { UserContext } from "../../Context/auth.context";
+
 // import NavBar from "../../Components/NavBar/nav.component";
 import { ReactComponent as IconPack1 } from "./../../Assets/icons/Icons-04.svg";
 import { ReactComponent as IconPack2 } from "./../../Assets/icons/Icons-02.svg";
@@ -36,11 +36,11 @@ function classNames(...classes) {
 }
 
 function GuidePage(props) {
-  const { user } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
   props.setShowNavBar(true);
   // console.log(user)
-  // const {isCompany} = user;
-  // console.log(isCompany)
+  // const {0} = user;
+  // console.log(0)
   return (
     <>
       <NavAlt className0="high-z" />
@@ -71,7 +71,7 @@ function GuidePage(props) {
           <button
             className=" md:mt-2  md:px-4  sm:px-2 sm:mx-auto sm:flex     md:py-2 sm:p-2 mt-2   rounded-md text-2xl   text-center font-semibold bg-[#69C080] text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to="/">
               {" "}
@@ -96,14 +96,14 @@ function GuidePage(props) {
           <button
             className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to="/company-signup ">REGISTER</Link>
           </button>
           <button
             className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md text-2xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to="/login ">SIGN IN</Link>
           </button>
@@ -148,7 +148,7 @@ function GuidePage(props) {
         <button
           className=" md:w-2/12 sm:w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2 align-center  rounded-md text-xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
 
-          // onClick={(e) => setIsCompany(false)}
+          // onClick={(e) => set0(false)}
         >
           <Link to="/employee-guide w-6/12 ">LEARN MORE</Link>
         </button>

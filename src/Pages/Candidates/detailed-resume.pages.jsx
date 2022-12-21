@@ -4,7 +4,7 @@ import Suitcase from "./../../Assets/images/suitcase.png";
 import ApplicantModel from "./../../Assets/images/applicant.jpeg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { UserContext } from "../../Context/auth.context";
+
 import IdealCandidateSection from "../../Components/Containers/Sections/ideal-candidate.component";
 import Nav from "../../Components/NavBar/nav.component";
 import SmilingWoman from "./../../Assets/images/applicant.jpeg";
@@ -17,7 +17,7 @@ function DetailedResume(props) {
   const applicant = useLocation().state;
   const navigate = useNavigate();
   const [viewDetailedCV, setViewDetailedCV] = useState(false);
-  const { user } = useContext(UserContext);
+
 
   return (
     <>

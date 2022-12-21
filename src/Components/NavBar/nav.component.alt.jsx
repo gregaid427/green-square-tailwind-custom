@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 // import Logo from "../assets/logo.jpg";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, Navigate } from "react-router-dom";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
-import { UserContext } from "../../Context/auth.context";
+
 import {
   FaBars,
   FaTimes,
@@ -12,17 +12,58 @@ import {
   FaMailBulk,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  logoutAction,
+  reset,
+  setUserInfo,
+} from "../../redux/slices/UsersSlice";
 
 export const NavAlt = () => {
-  const { user, isCompany, logOut } = useContext(UserContext);
+  const dispatch = useDispatch();
+  const myuser = useSelector((state) => state?.myusers);
+
+  const id = JSON.parse(localStorage.getItem("users"));
+
+  var data = {
+    user_id: id?.user.user_id,
+    email: id?.user.email,
+    role: id?.user.role,
+    name: id?.user.name,
+    isAdmin: id?.isAdmin,
+    expiresIn: id?.expiresIn,
+    isLoggedIn: id?.isLoggedIn,
+    isCompany: id?.isCompany,
+    message: id?.message,
+    success: id?.success,
+    token: id?.token,
+  };
+
+  var user = myuser;
+  if (id) {
+    var user = id;
+
+    if (myuser?.isLoggedIn === false) {
+      dispatch(setUserInfo(data));
+    }
+  } else {
+    var user = myuser;
+  }
+
+  function logout() {
+    const id = JSON.parse(localStorage.getItem("users"));
+
+    dispatch(logoutAction(id?.user.user_id));
+    dispatch(reset());
+    localStorage.setItem("users", null);
+  }
+  useEffect(() => {}, [user?.success]);
+
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
   };
-  console.log(user);
-  console.log(user);
-  console.log(user);
-  console.log(user?.isLoggedIn);
+
   return (
     <div className="navPadding absolute w-full  high-z flex items-center   text-white">
       <div className="wrapper sm:hidden flex w-full items-center  justify-between  ">
@@ -31,30 +72,27 @@ export const NavAlt = () => {
           <img src={GreenSquareLogo}></img>
         </Link>
         <div className="w-10/12 flex  justify-between pl-20 ">
-
-
-        <div className= { !user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }>   
-         <ul className= {isCompany ? "sm:hidden md:flex " : "hidden " }>
-        
-          <Link to="/company-faq">
+          <div className={!user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
+            <ul className={0 ? "sm:hidden md:flex " : "hidden "}>
+              <Link to="/company-faq">
                 <li>
                   <p className="text-2xl">How It Works</p>
                 </li>
               </Link>
             </ul>
           </div>
-            
-          <div className= { !user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }> 
-            <ul className= {!isCompany ? "sm:hidden md:flex " : "hidden " }>
+
+          <div className={!user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
+            <ul className={!0 ? "sm:hidden md:flex " : "hidden "}>
               <Link to="/job-seeker-faq">
                 <li>
                   <p className="text-2xl">How It Works</p>
                 </li>
               </Link>
             </ul>
-            </div>
+          </div>
 
-          <ul className={isCompany ? "sm:hidden md:flex " : "hidden "}>
+          <ul className={0 ? "sm:hidden md:flex " : "hidden "}>
             <Link to="/cvs">
               <li>
                 <p className="text-2xl"> Browse CVs</p>
@@ -62,7 +100,7 @@ export const NavAlt = () => {
             </Link>
           </ul>
 
-          <ul className={!isCompany ? "sm:hidden md:flex " : "hidden "}>
+          <ul className={!0 ? "sm:hidden md:flex " : "hidden "}>
             <Link to="/browse-jobs">
               <li>
                 <p className="text-2xl"> Browse Jobs</p>
@@ -70,7 +108,7 @@ export const NavAlt = () => {
             </Link>
           </ul>
 
-          <ul className={isCompany ? "sm:hidden md:flex " : "hidden "}>
+          <ul className={0 ? "sm:hidden md:flex " : "hidden "}>
             <Link to="/post-a-job">
               <li>
                 <p className="text-2xl"> Post a Job</p>
@@ -79,14 +117,14 @@ export const NavAlt = () => {
           </ul>
 
           <ul className={user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
-            <Link to={isCompany ? "/company-dashboard" : "/employee-dashboard"}>
+            <Link to={0 ? "/company-dashboard" : "/employee-dashboard"}>
               <li>
                 <p className="text-2xl"> Dashboard</p>
               </li>
             </Link>
           </ul>
 
-          {/* <ul className= {!isCompany ? user ? "sm:hidden md:flex " : "hidden " }>
+          {/* <ul className= {!0 ? user ? "sm:hidden md:flex " : "hidden " }>
             <Link to="/employee-dashboard">
               <li>
                 <p className="text-2xl"> Dashboard</p>
@@ -94,7 +132,7 @@ export const NavAlt = () => {
             </Link>
           </ul> */}
 
-          {/* { isCompany ? ( 
+          {/* { 0 ? ( 
           <ul className="sm:hidden md:flex ">
             <Link to="/plans-and-pricing-companies">
               <li>
@@ -111,17 +149,17 @@ export const NavAlt = () => {
             </Link>
           </ul>
             )} */}
-            <div className={!isCompany ? "sm:hidden md:flex " : "hidden "}>
-          <ul className={user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
-            <Link to="/browse-companies">
-              <li>
-                <p className="text-2xl">Browse Companies</p>
-              </li>
-            </Link>
-          </ul>
+          <div className={!0 ? "sm:hidden md:flex " : "hidden "}>
+            <ul className={user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
+              <Link to="/browse-companies">
+                <li>
+                  <p className="text-2xl">Browse Companies</p>
+                </li>
+              </Link>
+            </ul>
           </div>
 
-          <ul className={!isCompany ? "sm:hidden md:flex " : "hidden "}>
+          <ul className={!0 ? "sm:hidden md:flex " : "hidden "}>
             <Link to="/browse-jobs">
               <li>
                 <p className="text-2xl">Apply For Jobs</p>
@@ -130,26 +168,29 @@ export const NavAlt = () => {
           </ul>
 
           <div className={user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
-          <ul className="sm:hidden md:flex ">
-            <Link to="/">
-              <li>
-                <p className="text-2xl">Sign Out</p>
-              </li>
-            </Link>
-          </ul>
+            <ul className="sm:hidden md:flex ">
+              <Link
+                to="/"
+                onClick={() => {
+                  logout();
+                }}
+              >
+                <li>
+                  <p className="text-2xl">Sign Out</p>
+                </li>
+              </Link>
+            </ul>
           </div>
-
 
           <div className={!user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
-          <ul className="sm:hidden md:flex ">
-            <Link to="/login">
-              <li>
-                <p className="text-2xl">Sign In</p>
-              </li>
-            </Link>
-          </ul>
+            <ul className="sm:hidden md:flex ">
+              <Link to="/login">
+                <li>
+                  <p className="text-2xl">Sign In</p>
+                </li>
+              </Link>
+            </ul>
           </div>
-
         </div>
       </div>
       {/* Hamburger */}
@@ -168,7 +209,7 @@ export const NavAlt = () => {
           className={
             !nav
               ? "hidden"
-              : "absolute  right-0  z-10  left-0 w-11/12 mx-auto rounded-sm  text-[#69C080] bg-slate-200 flex flex-col   justify-center px-5"
+              : "absolute  right-0  z-10  left-0 w-user/12 mx-auto rounded-sm  text-[#69C080] bg-slate-200 flex flex-col   justify-center px-5"
           }
         >
           {" "}

@@ -15,16 +15,16 @@ function IdealCandidateSection() {
           <button
             className=" w-6/12    md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#000000] text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link     to={"/post-a-job"}className="">
               POST A JOB
             </Link>
           </button>
           <button
-            className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
+            className=" w-6/12   md:px-3  sm:px-2  md:py-2 sm:p-2 mt-2   rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#FFBE24] text-black"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link   to={"/cvs"}>BROWSE CVS</Link>
           </button>

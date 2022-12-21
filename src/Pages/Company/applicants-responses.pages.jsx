@@ -62,7 +62,7 @@ function BrowseSchoolApplicantCVs(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md   text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" " className="">
              VIEW FILE
@@ -80,7 +80,7 @@ function BrowseSchoolApplicantCVs(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md   text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" " className="">
              VIEW FILE
@@ -98,7 +98,7 @@ function BrowseSchoolApplicantCVs(props) {
             <button
               className=" w-6/12   md:px-2  sm:px-1  md:py-1 sm:p-1 mt-2  bg-[#69C080] rounded-md  text-md   text-center fw-bold  text-white"
 
-              // onClick={(e) => setIsCompany(false)}
+              // onClick={(e) => set0(false)}
             >
               <Link to=" " className="">
              VIEW FILE

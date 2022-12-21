@@ -92,7 +92,7 @@ function SchoolsList(props) {
           <button
             className=" sm:rounded-sm  md:w-3/12 sm:w-12/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2    rounded-md text-2xl mx-auto  text-center fw-bold bg-[#69C080] text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to="/employee-guide w-6/12 " className="text-white">
               SEARCH JOBS

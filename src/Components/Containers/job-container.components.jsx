@@ -7,11 +7,11 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function JobContainer(props) {
-  const { appliedJobs, getAppliedJobs } = useJobServices();
-  useEffect(() => {
-    !appliedJobs.length && getAppliedJobs();
-  }, []);
-  const disableApply = !!appliedJobs.find((job) => job._id === props.job._id);
+  // const { appliedJobs, getAppliedJobs } = useJobServices();
+  // useEffect(() => {
+  //   !appliedJobs.length && getAppliedJobs();
+  // }, []);
+  // const disableApply = !!appliedJobs.find((job) => job._id === props.job._id);
   return (
     <>
       {" "}

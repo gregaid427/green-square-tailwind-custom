@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 // import Logo from "../assets/logo.jpg";
 import { Outlet, Link } from "react-router-dom";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
-import { UserContext } from "../../Context/auth.context";
+
 
 import {
   FaBars,
@@ -13,9 +13,51 @@ import {
   FaMailBulk,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutAction, reset, setUserInfo } from "../../redux/slices/UsersSlice";
 
 export const Nav = () => {
-  const { user, isCompany, logOut } = useContext(UserContext);
+  const dispatch = useDispatch();
+  const myuser = useSelector((state) => state?.myusers);
+
+  const id = JSON.parse(localStorage.getItem("users"));
+
+
+  var data = {
+    user_id: id?.user.user_id,
+    email: id?.user.email,
+    role: id?.user.role,
+    name: id?.user.name,
+    isAdmin: id?.isAdmin,
+    expiresIn: id?.expiresIn,
+    isLoggedIn: id?.isLoggedIn,
+    isCompany: id?.isCompany,
+    message: id?.message,
+    success: id?.success,
+    token: id?.token,
+  };
+
+  var user = myuser;
+  if (id) {
+    var user = id;
+
+    if (myuser?.isLoggedIn === false) {
+
+      dispatch(setUserInfo(data));
+    }
+  } else {
+    var user = myuser;
+  }
+
+  function logout() {
+    const id = JSON.parse(localStorage.getItem("users"));
+
+    dispatch(logoutAction(id?.user.user_id));
+    dispatch(reset());
+    localStorage.setItem("users", null);
+  }
+  useEffect(() => {}, [user?.success]);
+
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
@@ -28,7 +70,7 @@ export const Nav = () => {
           <div className="w-10/12 flex  justify-between pl-20 " >
           
           <div className= { !user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }>   
-         <ul className= {isCompany ? "sm:hidden md:flex " : "hidden " }>
+         <ul className= {0 ? "sm:hidden md:flex " : "hidden " }>
         
           <Link to="/company-faq">
                 <li>
@@ -39,7 +81,7 @@ export const Nav = () => {
           </div>
             
           <div className= { !user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }> 
-            <ul className= {!isCompany ? "sm:hidden md:flex " : "hidden " }>
+            <ul className= {!0 ? "sm:hidden md:flex " : "hidden " }>
               <Link to="/job-seeker-faq">
                 <li>
                   <p className="text-2xl">How It Works</p>
@@ -49,7 +91,7 @@ export const Nav = () => {
             </div>
           
         
-            <ul className= {isCompany ? "sm:hidden md:flex " : "hidden " }>
+            <ul className= {0 ? "sm:hidden md:flex " : "hidden " }>
             <Link to="/cvs">
               <li>
                 <p className="text-2xl"> Browse CVs</p>
@@ -57,7 +99,7 @@ export const Nav = () => {
             </Link>
           </ul>
   
-          <ul className= {!isCompany ? "sm:hidden md:flex " : "hidden " }>
+          <ul className= {!0 ? "sm:hidden md:flex " : "hidden " }>
             <Link to="/browse-jobs">
               <li>
                 <p className="text-2xl"> Browse Jobs</p>
@@ -65,7 +107,7 @@ export const Nav = () => {
             </Link>
           </ul>
                 
-          <ul className= {isCompany ? "sm:hidden md:flex " : "hidden " }>
+          <ul className= {0 ? "sm:hidden md:flex " : "hidden " }>
      
             <Link to="/post-a-job">
               <li>
@@ -76,14 +118,14 @@ export const Nav = () => {
        
               
           <ul className= { user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }>
-            <Link to={isCompany ?"/company-dashboard" : "/employee-dashboard" }>
+            <Link to={0 ?"/company-dashboard" : "/employee-dashboard" }>
               <li>
                 <p className="text-2xl"> Dashboard</p>
               </li>
             </Link>
           </ul>
       
-                {/* <ul className= {!isCompany ? user ? "sm:hidden md:flex " : "hidden " }>
+                {/* <ul className= {!0 ? user ? "sm:hidden md:flex " : "hidden " }>
             <Link to="/employee-dashboard">
               <li>
                 <p className="text-2xl"> Dashboard</p>
@@ -91,7 +133,7 @@ export const Nav = () => {
             </Link>
           </ul> */}
             
-                       {/* { isCompany ? ( 
+                       {/* { 0 ? ( 
           <ul className="sm:hidden md:flex ">
             <Link to="/plans-and-pricing-companies">
               <li>
@@ -117,7 +159,7 @@ export const Nav = () => {
             </Link>
           </ul>     
        
-          <ul className= {!isCompany ? "sm:hidden md:flex " : "hidden " }>
+          <ul className= {!0 ? "sm:hidden md:flex " : "hidden " }>
             <Link to="/browse-jobs">
               <li>
                 <p className="text-2xl">Apply For Jobs</p>
@@ -162,7 +204,7 @@ export const Nav = () => {
             className={
               !nav
                 ? "hidden"
-                : "absolute  right-0  z-10  left-0 w-11/12 mx-auto rounded-sm  text-[#69C080] bg-slate-200 flex flex-col   justify-center px-5"
+                : "absolute  right-0  z-10  left-0 w-user/12 mx-auto rounded-sm  text-[#69C080] bg-slate-200 flex flex-col   justify-center px-5"
             }
           >
             {" "}

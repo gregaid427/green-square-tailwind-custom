@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import Footer from "../../Components/Footer/footer.component";
 import { Link, useNavigate } from "react-router-dom";
-import { UserContext } from "../../Context/auth.context";
+
 import Faq from "../../Components/Faq/faq.component";
 import FaqImg1 from "./../../Assets/faq/faq3.jpeg";
 import FaqImg2 from "./../../Assets/faq/faq9.jpeg";

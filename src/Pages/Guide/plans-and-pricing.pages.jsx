@@ -124,7 +124,7 @@ export default function PlansAndPricingIndividual(props) {
         <button
             className=" md:mt-5 w-full flex items-center justify-center md:px-4  sm:px-2 sm:mx-auto sm:flex     md:py-4 sm:p-2 mt-2   rounded-md text-2xl   text-center font-semibold bg-[#69C080]  text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to="/employee-guide   ">
               {" "}

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/auth.context";
+
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
-import { useContext } from "react";
+
 
 function FaqStepsAlt(props) {
  

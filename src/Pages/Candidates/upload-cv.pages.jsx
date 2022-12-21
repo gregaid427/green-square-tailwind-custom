@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import Footer from "../../Components/Footer/footer.component";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/auth.context";
+
 import Header from "../../Components/header/header";
 import Nav from "../../Components/NavBar/nav.component";
 
@@ -22,7 +22,7 @@ function UploadCV(props) {
   const [lifestyle, setLifeStyle] = useState("");
 
   // use context
-  const { user } = useContext(UserContext);
+
   let user_id = "";
   if (user) {
     user_id = user.user.userId;
@@ -201,7 +201,7 @@ function UploadCV(props) {
           <button
             className=" w-6/12    md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  text-black rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold bg-[#FFBE24] "
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to=" " className="">
               Save Draft
@@ -210,7 +210,7 @@ function UploadCV(props) {
           <button
             className=" w-6/12   md:px-4  sm:px-2  md:py-2 sm:p-2 mt-2  bg-[#69C080] rounded-md md:text-2xl sm:text-xl mx-auto  text-center fw-bold  text-white"
 
-            // onClick={(e) => setIsCompany(false)}
+            // onClick={(e) => set0(false)}
           >
             <Link to=" ">Publish CV</Link>
           </button>

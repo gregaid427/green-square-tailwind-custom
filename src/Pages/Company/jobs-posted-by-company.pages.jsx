@@ -3,7 +3,7 @@ import Footer from "../../Components/Footer/footer.component";
 import { Link } from "react-router-dom";
 import JobContainer from "./../../Components/Containers/job-container.components";
 import IdealCandidateSection from "../../Components/Containers/Sections/ideal-candidate.component";
-import { UserContext } from "../../Context/auth.context";
+
 import Nav from "../../Components/NavBar/nav.component";
 import Header from "../../Components/header/header";
 

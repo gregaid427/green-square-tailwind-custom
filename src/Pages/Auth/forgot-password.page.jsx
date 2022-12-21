@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import LoadingModal from "../../Components/Modal/loading-modal.component";
-// import { UserContext } from "../../Context/auth.context";
+// 
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 import Background from "./../../Assets/images/bg2.jpg";
 import { toast } from "react-toastify";

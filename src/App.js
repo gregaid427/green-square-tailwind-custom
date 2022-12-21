@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,  } from "react-router-dom";
 import Nav from "./Components/NavBar/nav.component";
 import JobSeekerSignup from "./Pages/Auth/job-seeker-signup.page";
 import CompanySignup from "./Pages/Auth/company-signup.page";
@@ -30,8 +30,8 @@ import SchoolsList from "./Pages/Company/browse-schools.pages";
 import BrowseSchoolApplicantCVs from "./Pages/Company/browse-applicants.pages";
 import ForgotPassword from "./Pages/Auth/forgot-password.page";
 import ResetPassword from "./Pages/Auth/reset-password.page";
-import { UserProvider } from "./Context/auth.context";
-import JobsProvider from "./Context/jobs.context";
+// import { UserProvider } from "./Context/auth.context";
+// import JobsProvider from "./Context/jobs.context";
 import CompanyFaqs from "./Pages/faqs/company-faqs.pages";
 import JobseekerFaqs from "./Pages/faqs/job-seeker-faqs.pages";
 import Applicantsresponses from "./Pages/Company/applicants-responses.pages";
@@ -41,6 +41,8 @@ import PostedJobQuestions from "./Pages/Company/posted-job-questions.pages";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BrowseSchoolGradYears from "./Pages/Candidates/browse-school-grad.pages";
+import store from "./redux/store/store";
+import { Provider } from "react-redux";
 
 
 
@@ -51,8 +53,8 @@ function App() {
     <>
       <Router>
       <ToastContainer />
-        <UserProvider>
-          <JobsProvider>
+   
+      <Provider store={ store   }>
             <Routes>
               <Route
                 path="/"
@@ -190,8 +192,7 @@ function App() {
                 element={<Home setShowNavBar={setShowNavBar} />}
               />
             </Routes>
-          </JobsProvider>
-        </UserProvider>
+            </Provider>
       </Router>
     </>
   );

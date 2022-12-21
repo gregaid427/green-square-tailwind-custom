@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { UserContext } from "../../Context/auth.context";
+
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
-import { useContext } from "react";
+
 
 function Footer() {
-  const { isCompany } = useContext(UserContext);
+  // const { 0 } = useContext(UserContext);
 
   return (
     <>
@@ -30,7 +30,7 @@ function Footer() {
           <div className="flex md:flex-col sm:mt-5 md:w-9/12 sm:w-12/12 flex-wrap ">
             <div className="flex md:flex-row sm:flex-col sm:justify-center sm:mx-auto sm:items-center sm:gap-5">
            
-            {isCompany ? (
+            {0 ? (
               
               <div className="flex flex-col gap-2 md:w-4/12 sm:mx-auto sm:w-12/12 ">
                 {" "}
