@@ -71,7 +71,7 @@ export const NavAlt = () => {
           {" "}
           <img src={GreenSquareLogo}></img>
         </Link>
-        <div className="w-10/12 flex  justify-between pl-20 ">
+        <div className="w-10/12 flex  justify-between pl-20  l">
           <div className={!user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
             <ul className={0 ? "sm:hidden md:flex " : "hidden "}>
               <Link to="/company-faq">
