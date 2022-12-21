@@ -3,7 +3,6 @@ import React, { useState, useContext, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import GreenSquareLogo from "./../../Assets/images/green_square_logo.png";
 
-
 import {
   FaBars,
   FaTimes,
@@ -14,14 +13,17 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { logoutAction, reset, setUserInfo } from "../../redux/slices/UsersSlice";
+import {
+  logoutAction,
+  reset,
+  setUserInfo,
+} from "../../redux/slices/UsersSlice";
 
 export const Nav = () => {
   const dispatch = useDispatch();
   const myuser = useSelector((state) => state?.myusers);
 
   const id = JSON.parse(localStorage.getItem("users"));
-
 
   var data = {
     user_id: id?.user.user_id,
@@ -42,7 +44,6 @@ export const Nav = () => {
     var user = id;
 
     if (myuser?.isLoggedIn === false) {
-
       dispatch(setUserInfo(data));
     }
   } else {
@@ -66,74 +67,76 @@ export const Nav = () => {
     <div className="">
       <div className=" w-full high-z flex items-center  text-black">
         <div className="wrapper sm:hidden flex w-full items-center   justify-between  ">
-        <Link  className="w-2/12 sm:hidden " to="/" >    <img src={ GreenSquareLogo}   ></img></Link>
-          <div className="w-10/12 flex  justify-between pl-20 " >
-          
-          <div className= { !user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }>   
-         <ul className= {0 ? "sm:hidden md:flex " : "hidden " }>
-        
-          <Link to="/company-faq">
-                <li>
-                  <p className="text-2xl">How It Works</p>
-                </li>
-              </Link>
-            </ul>
-          </div>
-            
-          <div className= { !user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }> 
-            <ul className= {!0 ? "sm:hidden md:flex " : "hidden " }>
-              <Link to="/job-seeker-faq">
-                <li>
-                  <p className="text-2xl">How It Works</p>
-                </li>
-              </Link>
-            </ul>
+          <Link className="w-2/12 sm:hidden " to="/">
+            {" "}
+            <img src={GreenSquareLogo}></img>
+          </Link>
+          <div className="w-10/12 flex  justify-between pl-20 ">
+            <div
+              className={!user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}
+            >
+              <ul className={0 ? "sm:hidden md:flex " : "hidden "}>
+                <Link to="/company-faq">
+                  <li>
+                    <p className="text-2xl">How It Works</p>
+                  </li>
+                </Link>
+              </ul>
             </div>
-          
-        
-            <ul className= {0 ? "sm:hidden md:flex " : "hidden " }>
-            <Link to="/cvs">
-              <li>
-                <p className="text-2xl"> Browse CVs</p>
-              </li>
-            </Link>
-          </ul>
-  
-          <ul className= {!0 ? "sm:hidden md:flex " : "hidden " }>
-            <Link to="/browse-jobs">
-              <li>
-                <p className="text-2xl"> Browse Jobs</p>
-              </li>
-            </Link>
-          </ul>
-                
-          <ul className= {0 ? "sm:hidden md:flex " : "hidden " }>
-     
-            <Link to="/post-a-job">
-              <li>
-                <p className="text-2xl"> Post a Job</p>
-              </li>
-            </Link>
-          </ul>
-       
-              
-          <ul className= { user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }>
-            <Link to={0 ?"/company-dashboard" : "/employee-dashboard" }>
-              <li>
-                <p className="text-2xl"> Dashboard</p>
-              </li>
-            </Link>
-          </ul>
-      
-                {/* <ul className= {!0 ? user ? "sm:hidden md:flex " : "hidden " }>
+
+            <div
+              className={!user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}
+            >
+              <ul className={!0 ? "sm:hidden md:flex " : "hidden "}>
+                <Link to="/job-seeker-faq">
+                  <li>
+                    <p className="text-2xl">How It Works</p>
+                  </li>
+                </Link>
+              </ul>
+            </div>
+
+            <ul className={0 ? "sm:hidden md:flex " : "hidden "}>
+              <Link to="/cvs">
+                <li>
+                  <p className="text-2xl"> Browse CVs</p>
+                </li>
+              </Link>
+            </ul>
+
+            <ul className={!0 ? "sm:hidden md:flex " : "hidden "}>
+              <Link to="/browse-jobs">
+                <li>
+                  <p className="text-2xl"> Browse Jobs</p>
+                </li>
+              </Link>
+            </ul>
+
+            <ul className={0 ? "sm:hidden md:flex " : "hidden "}>
+              <Link to="/post-a-job">
+                <li>
+                  <p className="text-2xl"> Post a Job</p>
+                </li>
+              </Link>
+            </ul>
+
+            <ul className={user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
+              <Link to={0 ? "/company-dashboard" : "/employee-dashboard"}>
+                <li>
+                  <p className="text-2xl"> Dashboard</p>
+                </li>
+              </Link>
+            </ul>
+
+            {/* <ul className= {!0 ? user ? "sm:hidden md:flex " : "hidden " }>
             <Link to="/employee-dashboard">
               <li>
                 <p className="text-2xl"> Dashboard</p>
               </li>
             </Link>
           </ul> */}
-            
-                       {/* { 0 ? ( 
+
+            {/* { 0 ? ( 
           <ul className="sm:hidden md:flex ">
             <Link to="/plans-and-pricing-companies">
               <li>
@@ -150,43 +153,45 @@ export const Nav = () => {
             </Link>
           </ul>
             )} */}
-          <ul className= {user?.isLoggedIn ? "sm:hidden md:flex " : "hidden " }>
+            <ul className={user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
+              <Link to="/browse-companies">
+                <li>
+                  <p className="text-2xl">Browse Companies</p>
+                </li>
+              </Link>
+            </ul>
 
-            <Link to="/browse-companies">
-              <li>
-                <p className="text-2xl">Browse Companies</p>
-              </li>
-            </Link>
-          </ul>     
-       
-          <ul className= {!0 ? "sm:hidden md:flex " : "hidden " }>
-            <Link to="/browse-jobs">
-              <li>
-                <p className="text-2xl">Apply For Jobs</p>
-              </li>
-            </Link>
-          </ul>  
-          <div className={user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
-          <ul className="sm:hidden md:flex ">
-            <Link to="/">
-              <li>
-                <p className="text-2xl">Sign Out</p>
-              </li>
-            </Link>
-          </ul>
+            <ul className={!0 ? "sm:hidden md:flex " : "hidden "}>
+              <Link to="/browse-jobs">
+                <li>
+                  <p className="text-2xl">Apply For Jobs</p>
+                </li>
+              </Link>
+            </ul>
+            <div
+              className={user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}
+            >
+              <ul className="sm:hidden md:flex ">
+                <Link to="/">
+                  <li>
+                    <p className="text-2xl">Sign Out</p>
+                  </li>
+                </Link>
+              </ul>
+            </div>
+
+            <div
+              className={!user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}
+            >
+              <ul className="sm:hidden md:flex ">
+                <Link to="/login">
+                  <li>
+                    <p className="text-2xl">Sign In</p>
+                  </li>
+                </Link>
+              </ul>
+            </div>
           </div>
-
-
-          <div className={!user?.isLoggedIn ? "sm:hidden md:flex " : "hidden "}>
-          <ul className="sm:hidden md:flex ">
-            <Link to="/login">
-              <li>
-                <p className="text-2xl">Sign In</p>
-              </li>
-            </Link>
-          </ul>
-          </div>
-        </div>
         </div>
         {/* Hamburger */}
         <div className=" h-auto w-auto realtive">
