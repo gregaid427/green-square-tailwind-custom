@@ -30,7 +30,7 @@ function Home(props) {
               </h3>
               <div className="grid grid-cols-2 md:grid-flow-col md:w-8/12 sm:w-12/12 gap-3  sm:flex sm:flex-col">
                 <div className="flex flex-col justify-between rounded-xl md:px-2 sm:px-4 md:py-9 sm:py-5 w-full row-span-1 bg-[#69C080] bg  content-center mx-auto  ">
-                  <h4 className=" md:text-3xl sm:text-2xl text-center text-white">
+                  <h4 className=" md:text-3xl sm:text-2xl u text-center text-white">
                     The career of <br /> your dreams.
                   </h4>{" "}
                   <Link to="/employee-guide">
