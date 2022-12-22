@@ -39,6 +39,7 @@ function Home(props) {
 
                       // onClick={(e) => set0(false)}
                     >
+                      
                      Earner
                     </div>
                   </Link>
